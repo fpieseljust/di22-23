@@ -1,0 +1,50 @@
+site_name: Desenvolupament d'interfícies 21-22
+site_url: https://fpieseljust.github.io/di21-22/
+docs_dir: 'md'
+site_dir: 'docs'
+nav:
+    - Home: index.md
+    - Unitats:
+      - Unitat 1 - Programació amb Python:
+        - Introducció: unitats/python/teoria/1 - Introducció.md
+        - Control de fluxe: unitats/python/teoria/2 - Control de fluxe.md
+        - Funcions: unitats/python/teoria/3 - Funcions.md
+        - Tractament de fitxers: unitats/python/teoria/4 - Fitxers.md
+        - Errors i excepcions: unitats/python/teoria/5 - Excepcions.md
+        - Programació oorientada a objectes: unitats/python/teoria/6 - POO.md
+    - Pràctiques:
+      - Pràctica 1 - PyGame: 
+        - Introducció:  unitats/python/pràctiques/1 - PyGame.md
+        - Disseny del joc:  unitats/python/pràctiques/2 - Disseny.md
+        - Sprites:  unitats/python/pràctiques/3 - Sprites.md
+        - Imatges:  unitats/python/pràctiques/4 - Imatges.md
+        - Sons:  unitats/python/pràctiques/5 - So.md
+        - Conclusió:  unitats/python/pràctiques/6 - Conclusió.md
+        - Tasques:
+          - Part obligatòria (30%): unitats/python/pràctiques/tasques/1 - Obligatori.md
+          - Part d'ampliació - projecte (70%): unitats/python/pràctiques/tasques/2 - Projecte.md
+          - Qualificació: unitats/python/pràctiques/tasques/3 - Qualificació.md
+    - About: about.md
+theme:
+  name: material
+  features:
+    - content.code.annotate
+    - search.suggest
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+- https://polyfill.io/v3/polyfill.min.js?features=es6
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -1,0 +1,2133 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fpieseljust.github.io/di21-22/unitats/python/teoria/1%20-%20Introducci%C3%B3/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Introducció - Desenvolupament d'interfícies 21-22</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccio-a-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desenvolupament d'interfícies 21-22
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducció
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Desenvolupament d'interfícies 21-22
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Unitats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitats" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unitats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Unitat 1 - Programació amb Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 1 - Programació amb Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 1 - Programació amb Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introducció
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introducció
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comencant-amb-python" class="md-nav__link">
+    Començant amb Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Començant amb Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-python" class="md-nav__link">
+    Què és Python?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucio-de-python" class="md-nav__link">
+    Execució de Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perque-python" class="md-nav__link">
+    Perquè Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installacio-de-python-3" class="md-nav__link">
+    Instal·lació de Python 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació de Python 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisits-previs" class="md-nav__link">
+    Requisits previs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-pas-configurant-python-3" class="md-nav__link">
+    Primer pas - Configurant Python 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segon-pas-configurem-un-entorn-virtual-de-desenvolupament" class="md-nav__link">
+    Segon pas - Configurem un entorn virtual de desenvolupament
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modes-dexecucio" class="md-nav__link">
+    Modes d'execució
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-1" class="md-nav__link">
+    Activitat 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraules-reservades-i-identificadors" class="md-nav__link">
+    Paraules reservades i identificadors
+  </a>
+  
+    <nav class="md-nav" aria-label="Paraules reservades i identificadors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paraules-reservades" class="md-nav__link">
+    Paraules reservades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificadors" class="md-nav__link">
+    Identificadors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruccions-i-sagnat" class="md-nav__link">
+    Instruccions i sagnat
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruccions i sagnat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruccions" class="md-nav__link">
+    Instruccions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sagnat" class="md-nav__link">
+    Sagnat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentaris" class="md-nav__link">
+    Comentaris
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstrings" class="md-nav__link">
+    Docstrings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-constants-i-tipus" class="md-nav__link">
+    Variables, constants i tipus
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables, constants i tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipus" class="md-nav__link">
+    Tipus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-2" class="md-nav__link">
+    Activitat 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversio-entre-tipus" class="md-nav__link">
+    Conversió entre tipus
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversió entre tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversio-implicita" class="md-nav__link">
+    Conversió implícita
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversio-explicita" class="md-nav__link">
+    Conversió explícita
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-3" class="md-nav__link">
+    Activitat 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-eixida-i-import" class="md-nav__link">
+    Entrada, eixida i import
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada, eixida i import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada" class="md-nav__link">
+    Entrada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eixida" class="md-nav__link">
+    Eixida
+  </a>
+  
+    <nav class="md-nav" aria-label="Eixida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activitat-4" class="md-nav__link">
+    Activitat 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espai-de-noms-i-ambit-de-variables" class="md-nav__link">
+    Espai de noms i àmbit de variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Espai de noms i àmbit de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noms" class="md-nav__link">
+    Noms
+  </a>
+  
+    <nav class="md-nav" aria-label="Noms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activitat-5" class="md-nav__link">
+    Activitat 5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espais-de-noms-namespaces" class="md-nav__link">
+    Espais de noms (namespaces)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambit-de-les-variables" class="md-nav__link">
+    Àmbit de les variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Àmbit de les variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activitat-6" class="md-nav__link">
+    Activitat 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-7" class="md-nav__link">
+    Activitat 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2%20-%20Control%20de%20fluxe/" class="md-nav__link">
+        Control de fluxe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3%20-%20Funcions/" class="md-nav__link">
+        Funcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4%20-%20Fitxers/" class="md-nav__link">
+        Tractament de fitxers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5%20-%20Excepcions/" class="md-nav__link">
+        Errors i excepcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6%20-%20POO/" class="md-nav__link">
+        Programació oorientada a objectes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Pràctiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pràctiques" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pràctiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Pràctica 1 - PyGame
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pràctica 1 - PyGame" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pràctica 1 - PyGame
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
+        Disseny del joc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
+        Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
+        Imatges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
+        Sons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
+        Conclusió
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_7" type="checkbox" id="__nav_3_1_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_7">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
+        Part obligatòria (30%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
+        Part d'ampliació - projecte (70%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
+        Qualificació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comencant-amb-python" class="md-nav__link">
+    Començant amb Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Començant amb Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-python" class="md-nav__link">
+    Què és Python?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucio-de-python" class="md-nav__link">
+    Execució de Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perque-python" class="md-nav__link">
+    Perquè Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installacio-de-python-3" class="md-nav__link">
+    Instal·lació de Python 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació de Python 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisits-previs" class="md-nav__link">
+    Requisits previs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-pas-configurant-python-3" class="md-nav__link">
+    Primer pas - Configurant Python 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segon-pas-configurem-un-entorn-virtual-de-desenvolupament" class="md-nav__link">
+    Segon pas - Configurem un entorn virtual de desenvolupament
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modes-dexecucio" class="md-nav__link">
+    Modes d'execució
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-1" class="md-nav__link">
+    Activitat 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraules-reservades-i-identificadors" class="md-nav__link">
+    Paraules reservades i identificadors
+  </a>
+  
+    <nav class="md-nav" aria-label="Paraules reservades i identificadors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paraules-reservades" class="md-nav__link">
+    Paraules reservades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificadors" class="md-nav__link">
+    Identificadors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruccions-i-sagnat" class="md-nav__link">
+    Instruccions i sagnat
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruccions i sagnat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruccions" class="md-nav__link">
+    Instruccions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sagnat" class="md-nav__link">
+    Sagnat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentaris" class="md-nav__link">
+    Comentaris
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstrings" class="md-nav__link">
+    Docstrings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-constants-i-tipus" class="md-nav__link">
+    Variables, constants i tipus
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables, constants i tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipus" class="md-nav__link">
+    Tipus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-2" class="md-nav__link">
+    Activitat 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversio-entre-tipus" class="md-nav__link">
+    Conversió entre tipus
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversió entre tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversio-implicita" class="md-nav__link">
+    Conversió implícita
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversio-explicita" class="md-nav__link">
+    Conversió explícita
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-3" class="md-nav__link">
+    Activitat 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-eixida-i-import" class="md-nav__link">
+    Entrada, eixida i import
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada, eixida i import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada" class="md-nav__link">
+    Entrada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eixida" class="md-nav__link">
+    Eixida
+  </a>
+  
+    <nav class="md-nav" aria-label="Eixida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activitat-4" class="md-nav__link">
+    Activitat 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espai-de-noms-i-ambit-de-variables" class="md-nav__link">
+    Espai de noms i àmbit de variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Espai de noms i àmbit de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noms" class="md-nav__link">
+    Noms
+  </a>
+  
+    <nav class="md-nav" aria-label="Noms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activitat-5" class="md-nav__link">
+    Activitat 5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espais-de-noms-namespaces" class="md-nav__link">
+    Espais de noms (namespaces)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambit-de-les-variables" class="md-nav__link">
+    Àmbit de les variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Àmbit de les variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activitat-6" class="md-nav__link">
+    Activitat 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitat-7" class="md-nav__link">
+    Activitat 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introduccio-a-python">Introducció a Python</h1>
+<h2 id="comencant-amb-python">Començant amb Python</h2>
+<h3 id="que-es-python">Què és Python?</h3>
+<p><img alt="logo de python" src="https://www.python.org/static/img/python-logo.png" /></p>
+<p>Python és un llenguatge de propòsit general, al igual que Java o C. El seu ús ha augmentat durant els últims temps gràcies a:</p>
+<ul>
+<li>La seua flexibilitat i simplicitat, que el fan fàcil d'aprendre</li>
+<li>El seu ús extens en camps com el "Data Science", la IA i l'aprenentatge de programació.</li>
+<li>Llenguatge d'scripting d'alt nivell.</li>
+<li>Multiplataforma.</li>
+<li>Gran quantitat i varietat de llibreries. Web frameworks, clients correu, gestors de contingut, concurrència, generació de documents, gràfics, intel·ligència artificial, ...</li>
+<li>Lliure!! Mantés per la  Python Software Foundation</li>
+</ul>
+<h3 id="execucio-de-python">Execució de Python</h3>
+<p><img alt="execució_python" src="../images/execucio_python.png" title="Execució de Python" /></p>
+<h3 id="perque-python">Perquè Python</h3>
+<p>El llenguatge de programació Python és una opció cada vegada més utilitzada per principiants com per desenvolupadors experimentats. Flexible i versàtil, Python té punts forts en scripts, automatització, anàlisi de dades, aprenentatge automàtic i desenvolupament de back-end. Publicat per primera vegada el 1991 amb un nom inspirat en el grup de comèdia britànic Monty Python, l’equip de desenvolupament volia fer de Python un llenguatge divertit d’utilitzar.</p>
+<p>C és el llenguatge de programació més popular a l’índex TIOBE, mentre que Python és el llenguatge més buscat a l’índex PYPL. Python i Java segueixen de prop a C al TIOBE. A PYPL, la diferència és més gran, ja que Python, que ocupa el primer lloc, supera en un 12% a Java, que ocupa el segon lloc.</p>
+<p>Aquest curs, aprendrem a utilitzar Python i el framework Qt per desenvolupar aplicacions amb interfície d'usuari.</p>
+<h3 id="installacio-de-python-3">Instal·lació de Python 3</h3>
+<p>Anem a instal·lar a l'Ubuntu 20.04 un entorn de programació Python 3, encara que valdrà per a qualsevol distribució basada en Debian Linux, com és el cas. En cas d'utilitzar Windows o MacOS, busqueu la forma d'instal·lar-lo.</p>
+<h4 id="requisits-previs">Requisits previs</h4>
+<p>Per poder instal·lar, haureu de tindre un usuari amb privilegis sudo en l'Ubuntu 20.04.</p>
+<h4 id="primer-pas-configurant-python-3">Primer pas - Configurant Python 3</h4>
+<p>Ubuntu 20.04 ja inclou Python 3 preinstal·lat. Per assegurar-nos que les nostres versions estan actualitzades, actualitzem els repositoris i actualitzem el sistema amb l'ordre apt:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>$ sudo apt update
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>$ sudo apt -y upgrade
+</code></pre></div></td></tr></table></div>
+<p>L'opció -y confirmarà que estem d'acord per instal·lar totes les actualitzacions, però, segons la vostra versió de Linux, és possible que hàgiu de confirmar les sol·licituds addicionals.</p>
+<p>Una vegada finalitzat el procés, podem comprovar la versió de Python 3 que s’instal·la al sistema escrivint:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$ python3 -V
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Python <span class="m">3</span>.8.10
+</code></pre></div></td></tr></table></div>
+<p>El terminal vos indicarà el número de versió. No es tracta de l'última versió estable de Python (3.9.7), però si de la última disponibles als repositoris d'Ubuntu.</p>
+<p>Per gestionar paquets de programari per a Python, instal·leu pip, una eina que instal·larà i gestionarà paquets de programació que és possible que vulguem utilitzar en els nostres projectes de desenvolupament.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>$ sudo apt install -y python3-pip
+</code></pre></div></td></tr></table></div>
+<p>Ara podrem utilitzar pip3 per instal·lar paquets de Python3.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>$ pip3 install <span class="s2">&quot;paquet&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>A més, instl·larem algunes llibreries necessàries per a la construcció dels nostres mòduls i extensions.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+</code></pre></div></td></tr></table></div>
+<h4 id="segon-pas-configurem-un-entorn-virtual-de-desenvolupament">Segon pas - Configurem un entorn virtual de desenvolupament</h4>
+<p>Els entorns virtuals ens permeten tenir un espai aïllat per a desenvolupament de projectes Python, cosa que garanteix que cadascun dels vostres projectes puga tindre el seu propi conjunt de dependències que no interrompin cap dels vostres altres projectes.</p>
+<p>Configurar un entorn de programació proporciona un major control sobre els projectes de Python i sobre com es gestionen les diferents versions dels paquets. Això és especialment important quan es treballa amb paquets de tercers.</p>
+<p>Podeu configurar tants entorns de programació Python com vulgueu. Cada entorn és bàsicament un directori que conté uns quants scripts per fer-lo actuar com a entorn aïllat de la resta de programes i llibreries de l'ordinador.</p>
+<p>Tot i que hi ha algunes maneres d’aconseguir un entorn de programació a Python, farem servir el mòdul venv, que forma part de la biblioteca estàndard de Python 3. Instal·lem venv escrivint:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>$ sudo apt install -y python3-venv
+</code></pre></div></td></tr></table></div>
+<p>Amb açò, estem preparats per crear entorns virtuals <em>(virtual environments)</em>. Trieu en quin directori volem situar els nostres entorns de programació Python o bé creeu un directori nou amb mkdir:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>$ mkdir environments
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>$ <span class="nb">cd</span> environments
+</code></pre></div></td></tr></table></div>
+Una vegada esteu al directori on voleu que es creen els entorns, podeu crear un entorn executant l'ordre següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>$ python3 -m venv my_env
+</code></pre></div></td></tr></table></div>
+<p>Essencialment, pyvenv crea un nou directori que conté alguns elements:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>bin include lib lib64 pyvenv.cfg share
+</code></pre></div></td></tr></table></div>
+<p>Junts, aquests fitxers funcionen per assegurar-vos que els vostres projectes estiguen aïllats, de manera que els fitxers del sistema i els fitxers de projecte no es mesclen i entren en conflicte. Aquesta és una bona pràctica per al control de versions i per garantir que cadascun dels vostres projectes tinga accés als paquets particulars que necessita.</p>
+<p>Per utilitzar aquest entorn, l'heu d'activar, cosa que podeu aconseguir escrivint l'ordre següent que crida a l'script d'activació:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>$ <span class="nb">source</span> my_env/bin/activate 
+</code></pre></div></td></tr></table></div>
+<p>El vostre indicador d’ordres ara tindrà el prefix amb el nom del vostre entorn, en aquest cas s’anomena my_env. Depenent de la versió de Debian Linux que utilitzeu, el vostre prefix pot aparèixer de manera diferent, però el nom del vostre entorn entre parèntesis hauria de ser el primer que veieu a la vostra línia:</p>
+<p>Aquest prefix ens permet saber que l’entorn my_env està actiu actualment, és a dir, que quan creem programes aquí, només utilitzaran la configuració i els paquets d’aquest entorn concret.</p>
+<p>Nota: a l’entorn virtual, podeu utilitzar l’ordre python en lloc de python3 i pip en lloc de pip3 si ho preferiu. Si utilitzeu Python 3 a la vostra màquina fora d’un entorn, haureu d’utilitzar exclusivament les ordres python3 i pip3.</p>
+<p>Després de seguir aquests passos, el vostre entorn virtual ja es pot utilitzar.</p>
+<p>Per a desactivar l'entorn virtual, simplement tanquem la consola o utilitzem l'ordre <strong>deactivate</strong>. Deapareixerà el nom de l'entorn virtual abans del prompt.</p>
+<h3 id="modes-dexecucio">Modes d'execució</h3>
+<ol>
+<li>Interactiva a través de l'intèrpret</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>~$ python3
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Python <span class="m">3</span>.7.3 <span class="o">(</span>default, Jul <span class="m">25</span> <span class="m">2020</span>, <span class="m">13</span>:03:44<span class="o">)</span> 
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">[</span>GCC <span class="m">8</span>.3.0<span class="o">]</span> on linux
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>&gt;&gt;&gt; 
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Execució d'un fitxer Python</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>~$ python3 hola_mon.py
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Hola món
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Execució d'un script</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>hola_mon.py
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>---
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">#!/usr/bin/env python3</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>print<span class="o">(</span><span class="s2">&quot;Hola món&quot;</span><span class="o">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>---
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>~$ chmod u+x hola_mon.py
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>~$ ./hola_mon.py
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>Hola món
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Des d'un Entorn de Desenvolupament IDE</li>
+</ol>
+<h3 id="activitat-1">Activitat 1</h3>
+<p>Implementa el "Hola món!" i executa-lo de les quatre formes possibles.</p>
+<h2 id="paraules-reservades-i-identificadors">Paraules reservades i identificadors</h2>
+<h3 id="paraules-reservades">Paraules reservades</h3>
+<p>No es poden utilitzar coma identificador de variables ni nom de funcions, ja que s'utilitzen per a definir la sintaxi i l'estructura d'un programa.
+Les paraules reservades són:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>await</td>
+<td>else</td>
+<td>import</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>None</td>
+<td>break</td>
+<td>except</td>
+<td>in</td>
+<td>raise</td>
+</tr>
+<tr>
+<td>True</td>
+<td>class</td>
+<td>finally</td>
+<td>is</td>
+<td>return</td>
+</tr>
+<tr>
+<td>and</td>
+<td>continue</td>
+<td>for</td>
+<td>lambda</td>
+<td>try</td>
+</tr>
+<tr>
+<td>as</td>
+<td>def</td>
+<td>from</td>
+<td>nonlocal</td>
+<td>while</td>
+</tr>
+<tr>
+<td>assert</td>
+<td>del</td>
+<td>global</td>
+<td>not</td>
+<td>with</td>
+</tr>
+<tr>
+<td>async</td>
+<td>elif</td>
+<td>if</td>
+<td>or</td>
+<td>yield</td>
+</tr>
+</tbody>
+</table>
+<p>Per a obtindre la llista completa des de l'intèrpret:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">keyword</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="identificadors">Identificadors</h3>
+<p>Per convenció, els noms de les variables i funcions han de ser:</p>
+<ul>
+<li>combinacions de lletres minúscules i números</li>
+<li>començar per lletra</li>
+<li>descriptius (excepte en bucles o se sol utilitzar <em>i</em> i <em>j</em>)</li>
+<li>amb paraules separades per guió baix</li>
+</ul>
+<p>Per exemple: nom_usuari, numero_telefon, cognom1, sumar(), ...</p>
+<p><strong>Recorda que Python és un llenguatge <em>case sensitive</em></strong>. Per tant Var i var no són el mateix identificador.</p>
+<h2 id="instruccions-i-sagnat">Instruccions i sagnat</h2>
+<h3 id="instruccions">Instruccions</h3>
+<p>L'intèrpret de Python va executant línia a línia cada instrucció. Si volem que una instrucció ocupe diverses línies ho hem d'indicar amb el caràcter \.</p>
+<p>Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> \
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="o">...</span>     <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> \
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="o">...</span>     <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="mi">45</span>
+</code></pre></div></td></tr></table></div>
+<p>La continuació de línia és implicita dins de parèntesis (), corxets [] i claus {}.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>          <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>          <span class="s1">&#39;green&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>També podem posar diverses sentències en una línia:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="sagnat">Sagnat</h3>
+<p>La majoria de llenguatges de programació utilitzen les claus {} per a definir blocs de codi. En canvi, Python utilitza el sagnat (identation).</p>
+<p>Un bloc de codi (cos d'una funció, bucle, etc.) comença amb sagnat i acaba amb la primera línia sense sagnat. Depèn de vosaltres la quantitat de sagnat, però ha de ser coherent en tot el bloc. Generalment, s’utilitzen quatre espais en blanc per a sagnat i es prefereixen a les tabulacions. El resultat és un codi net i clar.
+Exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>        <span class="k">break</span>
+</code></pre></div></td></tr></table></div>
+<p>Un sagnat incorrecte llança un <em>IndentationError</em>.</p>
+<h3 id="comentaris">Comentaris</h3>
+<p>Els comentaris són molt importants en escriure un programa. Descriuen el que passa dins d’un programa, de manera que una persona que mira el codi font no tinga dificultats per entendre'l. A més, és possible que oblideu els detalls clau d'implementació del programa que acabeu d’escriure. Per tant, <strong>invertir temps per explicar aquests conceptes en forma de comentaris sempre és fructífer</strong>.</p>
+<p>A Python, fem servir el símbol coixinet (#) per començar a escriure un comentari. 
+S'estén fins al caràcter de línia nova. No cal que el comentari estiga a principi de línia, pot estar en mig.</p>
+<p>Per fer comentaris multilínia, podem utilitzar el coixinet a principi de cada línia. També podem fer servir les cometes dobles o simples tres vegades.</p>
+<p>Exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="sd">&#39;&#39;&#39; Comentari</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="sd">multilínia&#39;&#39;&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="docstrings">Docstrings</h3>
+<p>Una docstring és una abreviatura de text de documentació.</p>
+<p>La documentació de Python són els textos que apareixen just després de la definició d'una funció, mètode, classe o mòdul.</p>
+<p>S'utilitzen cometes triples durant l'escriptura de la documentació. </p>
+<p>Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">def</span> <span class="nf">doble</span> <span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    <span class="sd">&quot;&quot;&quot;Funció per duplicar el valor&quot;&quot;&quot;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num</span>
+</code></pre></div></td></tr></table></div>
+<p>La documentació s’associa a l’objecte com a atribut <strong>doc</strong>.</p>
+<p>Per tant, podem accedir a la documentació de la funció anterior amb les següents línies de codi:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">def</span> <span class="nf">doble</span> <span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>    <span class="sd">&quot;&quot;&quot;Funció per duplicar el valor&quot;&quot;&quot;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">doble</span><span class="o">.</span><span class="n">__</span> <span class="n">doc__</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">def</span> <span class="nf">suma_binaria</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    <span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="sd">    Torna la suma de dos enters en binari.</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="sd">            Paràmetres:</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="sd">                    a (int): Un enter</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="sd">                    b (int): Altre enter</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="sd">            Torna:</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="sd">                    suma_binaria (str): String amb els digits binaris de la suma</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="sd">    &#39;&#39;&#39;</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>    <span class="n">suma_binaria</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>    <span class="k">return</span> <span class="n">suma_binaria</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">suma_binaria</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="variables-constants-i-tipus">Variables, constants i tipus</h2>
+<h3 id="variables">Variables</h3>
+<p>En Python, quan declarem una variable i li assignem un valor, realment estem creant un objecte i assignant un valor per referència.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span> <span class="o">=</span> <span class="mf">10.0</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Podem inicialitzar múltiples variables en una mateixa línia, ja siga amb el mateix valor o diferent.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="s2">&quot;Hola&quot;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;iguals&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="constants">Constants</h3>
+<p>A Python no existeixen les constants a l'estil de <em>static final</em> de Java, sinó que simplement es defineix una variable que no es modifica el valor. Normalment es definixen en un mòdul a banda, utilitzant majúscules i guió baix si és necessari, que s'importa a l'arxiu principal.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">constants</span><span class="o">.</span><span class="n">py</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="o">---</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="n">main</span><span class="o">.</span><span class="n">py</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="o">---</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="kn">import</span> <span class="nn">constants.py</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="n">radi</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="n">perimetre</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">PI</span> <span class="o">*</span> <span class="n">radi</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">perimetre</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="tipus">Tipus</h3>
+<p>L'assignació de tipus és dinàmica i pot canviar, per això no declarem els tipus de les variables. Per determinar el tipus d'un objecte, fem servir el mètode <strong>type()</strong>. Els tipus d'objecte definits a Python3 són:
+1. Numèrics: </p>
+<p>1.1. Integer</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mb">0b1010</span> <span class="c1">#Binary</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    <span class="n">b</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#Decimal </span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    <span class="n">c</span> <span class="o">=</span> <span class="mo">0o310</span> <span class="c1">#Octal</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    <span class="n">d</span> <span class="o">=</span> <span class="mh">0x12c</span> <span class="c1">#Hexadecimal</span>
+</code></pre></div></td></tr></table></div>
+<p>1.2. Float</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>    <span class="n">float_1</span> <span class="o">=</span> <span class="mf">10.5</span> 
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>    <span class="n">float_2</span> <span class="o">=</span> <span class="mf">1.5e2</span>
+</code></pre></div></td></tr></table></div>
+<p>1.3. Complex</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">j</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Strings</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>    <span class="n">nom</span> <span class="o">=</span> <span class="s1">&#39;Ferran Cunyat&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>Els principals mètodes sobre un string són <strong>capitalize(), count(), find(), format(), lower(), replace(), split(), title(), translate(), upper()</strong>.</p>
+<ol>
+<li>Boolean</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span>
+<span class="normal"><a href="#__codelineno-29-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># True pren el valor numèric 1, mentre que False el 0</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="kc">True</span> <span class="o">+</span> <span class="mi">4</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a>    <span class="n">b</span> <span class="o">=</span> <span class="kc">False</span> <span class="o">+</span> <span class="mi">10</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Especials (None)</li>
+</ol>
+<p>S'utilitza per no donar-li valor a una variable.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">NoneType</span><span class="s1">&#39;&gt;</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Col·leccions</p>
+</li>
+<li>
+<p>Llista</p>
+<p>Són una seqüència d'elements, no necessàriament del mateix tipus, encara que normalment si que ho són. Es definix amb corxets i els elements separats per comes.
+Podem accedir a un element o un rang i és mutable.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span>
+<span class="normal"><a href="#__codelineno-31-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">40</span><span class="p">]</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Ferran&quot;</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a>    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;Ferran&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Algunes de les principals funcions que podem aplicar sobre llistes són <strong>apend(), clear(), copy(), extend(), insert(), remove(), reverse()</strong>.</p>
+</li>
+<li>
+<p>Tupla</p>
+<p>Són una seqüència d'elements, no necessàriament del mateix tipus, però esta vegada immutable.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">tupla</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;clavel&#39;</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a>    <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a>    <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Rang</li>
+</ol>
+<p>Seqüència immutable de números, generalment utilitzada per a iterar sobre for o generar llistes ràpidament.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>3</p>
+<p>. Conjunt (Set)</p>
+<p>Col·lecció desordenada d'elements únics. Ja que és una llista desordenada, no la podem indexar i per tant accedir als elements segons la seua posició.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span>
+<span class="normal"><a href="#__codelineno-34-5">5</a></span>
+<span class="normal"><a href="#__codelineno-34-6">6</a></span>
+<span class="normal"><a href="#__codelineno-34-7">7</a></span>
+<span class="normal"><a href="#__codelineno-34-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">}</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="n">File</span> <span class="s2">&quot;&lt;string&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">301</span><span class="p">,</span> <span class="ow">in</span> <span class="n">runcode</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="n">File</span> <span class="s2">&quot;&lt;interactive input&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;set&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">indexing</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Diccionari</li>
+</ol>
+<p>Diccionari és una col·lecció no ordenada de parells valor-clau.</p>
+<p>Generalment s’utilitza quan tenim una gran quantitat de dades. Els diccionaris estan optimitzats per recuperar dades. Hem de conèixer la clau per recuperar el valor.</p>
+<p>A Python, els diccionaris es defineixen entre claus {} i cada element és un parell que adopta la forma de clau:valor. La clau i el valor poden ser de qualsevol tipus.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span><span class="s1">&#39;clau&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>    <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">dict</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;d[1] = &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a>    <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span>  <span class="n">valor</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;d[&#39;clau&#39;] = &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;clau&#39;</span><span class="p">]);</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a>    <span class="n">d</span><span class="p">[</span><span class="s1">&#39;clau&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="mi">2</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;d[2] = &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a>    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a>    <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a>    <span class="ne">KeyError</span><span class="p">:</span> <span class="mi">2</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+<h3 id="activitat-2">Activitat 2</h3>
+<p>Fixa't en el següent fragment de codi:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span>
+<span class="normal"><a href="#__codelineno-36-4">4</a></span>
+<span class="normal"><a href="#__codelineno-36-5">5</a></span>
+<span class="normal"><a href="#__codelineno-36-6">6</a></span>
+<span class="normal"><a href="#__codelineno-36-7">7</a></span>
+<span class="normal"><a href="#__codelineno-36-8">8</a></span>
+<span class="normal"><a href="#__codelineno-36-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:]</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="err">???</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="err">???</span>
+</code></pre></div></td></tr></table></div>
+Quina serà l'eixida? Per qué?</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span>
+<span class="normal"><a href="#__codelineno-37-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">s</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="err">???</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="err">???</span>
+</code></pre></div></td></tr></table></div>
+I ara? Per qué?</p>
+<h3 id="conversio-entre-tipus">Conversió entre tipus</h3>
+<h4 id="conversio-implicita">Conversió implícita</h4>
+<p>Són conversions que fa el mateix llenguatge automàticament. Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-38-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-38-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-38-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-38-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-38-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-38-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="n">num_int</span> <span class="o">=</span> <span class="mi">123</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="n">num_flo</span> <span class="o">=</span> <span class="mf">1.23</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="n">num_nou</span> <span class="o">=</span> <span class="n">num_int</span> <span class="o">+</span> <span class="n">num_flo</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;num_int és de tipus:&quot;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">num_int</span><span class="p">))</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;num_flo és de tipus:&quot;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">num_flo</span><span class="p">))</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8"></a>
+<a id="__codelineno-38-9" name="__codelineno-38-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor de num_nou:&quot;</span><span class="p">,</span><span class="n">num_nou</span><span class="p">)</span>
+<a id="__codelineno-38-10" name="__codelineno-38-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;num_nou és de tipus:&quot;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">num_nou</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="conversio-explicita">Conversió explícita</h3>
+<p>Utilitzem funcions predefinides per a forçar la conversió <strong>int(), float(), str(), ...</strong>.</p>
+<h3 id="activitat-3">Activitat 3</h3>
+<p>Quin és el resultat d'executar el següent fragment de codi?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">enter</span> <span class="o">=</span> <span class="mi">123</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;456&quot;</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">suma</span> <span class="o">=</span> <span class="n">enter</span> <span class="o">+</span> <span class="n">cadena</span>
+</code></pre></div></td></tr></table></div>
+<p>Definix dues variables, una per a fer la suma entera (579) i l'altra per a concatrenar com a text (123456).</p>
+<h2 id="entrada-eixida-i-import">Entrada, eixida i import</h2>
+<h3 id="entrada">Entrada</h3>
+<p>Ja hem vist que per a introduir informació per teclat utilitzem la funció <strong>input([prompt])</strong>. </p>
+<h3 id="eixida">Eixida</h3>
+<p>Per a imprimir per ella utilitzarem la funció <strong>print()</strong>. 
+Moltes vegades s'utilitza en combinació amb la funció <strong>format()</strong> dels strings.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span>
+<span class="normal"><a href="#__codelineno-40-4">4</a></span>
+<span class="normal"><a href="#__codelineno-40-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor d</span><span class="se">\&#39;</span><span class="s1">x és </span><span class="si">{}</span><span class="s1"> i el de y és </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Fixeu-se que hem escapat el caracter &#39;</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="n">El</span> <span class="n">valor</span> <span class="n">d</span><span class="s1">&#39;x és 5 i el de y és 10</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola </span><span class="si">{nom}</span><span class="s1">, </span><span class="si">{salutacio}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">salutacio</span> <span class="o">=</span> <span class="s1">&#39;Bon dia&#39;</span><span class="p">,</span> <span class="n">nom</span> <span class="o">=</span> <span class="s1">&#39;Pau&#39;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="activitat-4">Activitat 4</h4>
+<p>Implementa el programa "Hola món" utilitzant la funció format.</p>
+<h3 id="import">Import</h3>
+<p>Quan volem fer ús del codi d'un altre mòdul (.py), l'hem d'importar al programa actual amb <strong>import</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>També podem importar sols alguna de les funcions o atributs amb <strong>from</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+</code></pre></div></td></tr></table></div>
+<p>En importar un mòdul, Python analitza diversos llocs definits a sys.path. És una llista de les ubicacions on buscar el mòdul.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">2</a></span>
+<span class="normal"><a href="#__codelineno-43-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/lib/python37.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/lib/python3.7&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/lib/python3.7/lib-dynload&#39;</span><span class="p">,</span> <span class="s1">&#39;/home/ferran/.local/lib/python3.7/site-packages&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/local/lib/python3.7/dist-packages&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/lib/python3/dist-packages&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Per a importar d'una altra carpeta, ho fem amb <strong>from <em>paquet<em> import </em>modul</em></strong>. Pots posar ubicacions absolutes o relatives.
+Si volem importar un codi d'una ubicació que no està al path.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span>
+<span class="normal"><a href="#__codelineno-44-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/path/a/la/carpeta&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="espai-de-noms-i-ambit-de-variables">Espai de noms i àmbit de variables</h2>
+<h3 id="noms">Noms</h3>
+<p>En Python, tot són objectes, inclús les funcions. Un nom és la forma d'accedir als objectes, i amb la funció <strong>id()</strong> podem veure la seua ubicació en memòria. Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
+<span class="normal"><a href="#__codelineno-45-2">2</a></span>
+<span class="normal"><a href="#__codelineno-45-3">3</a></span>
+<span class="normal"><a href="#__codelineno-45-4">4</a></span>
+<span class="normal"><a href="#__codelineno-45-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(2) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a><span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9062656</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(a) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5"></a><span class="n">d</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9062656</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="activitat-5">Activitat 5</h4>
+<p>Quin creus que serà el resultat a l'executar el següent fragment de codi?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-46-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-46-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-46-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-46-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-46-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-46-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-46-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-46-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-46-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(a) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(a) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(3) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a id="__codelineno-46-7" name="__codelineno-46-7"></a>
+<a id="__codelineno-46-8" name="__codelineno-46-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-46-9" name="__codelineno-46-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(b) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<a id="__codelineno-46-10" name="__codelineno-46-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(2) =&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="espais-de-noms-namespaces">Espais de noms (namespaces)</h3>
+<p>Els espais de noms a Python, són una col·lecció de noms. </p>
+<p>Diferents espais de noms poden coexistir, però estan completament aïllats.</p>
+<p>Quan iniciem Python, es crea un espai de noms amb totes les funcions que l'intèrpret reconeix, <strong>espai de noms predefinit</strong>. Aquesta és la raó per la qual funcions integrades com id (), print () etc. sempre estan disponibles per a nosaltres des de qualsevol part del programa.</p>
+<p>En canvi, cada mòdul crea el seu propi <strong>espai de noms global</strong>. Aquests espais de noms estan aïllats entre ells. Per tant, podem donar el mateix nom a objectes de mòduls diferents sense que entren en conflicte.</p>
+<p>Els mòduls poden contindre funcions i classes. Quan es crida una funció, es crea un <strong>espai de noms local</strong> que té noms propis definits. Similar, és el cas de la classe. El següent diagrama pot ajudar a aclarir aquest concepte.</p>
+<p><img alt="namespaces" src="../images/nested-namespaces-python.jpg" title="Espai de noms" /></p>
+<h3 id="ambit-de-les-variables">Àmbit de les variables</h3>
+<p>Tot i que hi ha diversos espais de noms definits, és possible que no puguem accedir a tots ells des de totes les parts del programa. El concepte d’àmbit entra en joc.</p>
+<p>Sempre hi ha almenys tres àmbits definits.</p>
+<ol>
+<li>Àmbit local a la funció amb nom locals</li>
+<li>Àmbit del mòdul que té noms globals</li>
+<li>Àmbit més extern que té noms predefinits</li>
+</ol>
+<p>Quan es fa una referència dins d'una funció, el nom es busca a l'espai de noms local, després a l'espai de noms global i finalment a l'espai de noms predefinit.</p>
+<p>Si hi ha una funció dins d’una altra funció, s’anida un nou àmbit dins de l'àmbit local.</p>
+<h4 id="activitat-6">Activitat 6</h4>
+<p>Quin serà el resultat mostrat per consola a l'executar el següent fragment de codi?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-47-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-47-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-47-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-47-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-47-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-47-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-47-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-47-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-47-10">10</a></span>
+<span class="normal"><a href="#__codelineno-47-11">11</a></span>
+<span class="normal"><a href="#__codelineno-47-12">12</a></span>
+<span class="normal"><a href="#__codelineno-47-13">13</a></span>
+<span class="normal"><a href="#__codelineno-47-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="k">def</span> <span class="nf">funcio_externa</span><span class="p">():</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a>
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a>    <span class="k">def</span> <span class="nf">funcio_interna</span><span class="p">():</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5"></a>        <span class="n">a</span> <span class="o">=</span> <span class="mi">30</span>
+<a id="__codelineno-47-6" name="__codelineno-47-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-47-7" name="__codelineno-47-7"></a>
+<a id="__codelineno-47-8" name="__codelineno-47-8"></a>    <span class="n">funcio_interna</span><span class="p">()</span>
+<a id="__codelineno-47-9" name="__codelineno-47-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-47-10" name="__codelineno-47-10"></a>
+<a id="__codelineno-47-11" name="__codelineno-47-11"></a>
+<a id="__codelineno-47-12" name="__codelineno-47-12"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-47-13" name="__codelineno-47-13"></a><span class="n">funcio_externa</span><span class="p">()</span>
+<a id="__codelineno-47-14" name="__codelineno-47-14"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="activitat-7">Activitat 7</h4>
+<p>Quin serà el resultat mostrat per consola a l'executar el següent fragment de codi?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-48-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-48-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-48-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-48-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-48-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-48-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-48-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-48-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-48-10">10</a></span>
+<span class="normal"><a href="#__codelineno-48-11">11</a></span>
+<span class="normal"><a href="#__codelineno-48-12">12</a></span>
+<span class="normal"><a href="#__codelineno-48-13">13</a></span>
+<span class="normal"><a href="#__codelineno-48-14">14</a></span>
+<span class="normal"><a href="#__codelineno-48-15">15</a></span>
+<span class="normal"><a href="#__codelineno-48-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="k">def</span> <span class="nf">funcio_externa</span><span class="p">():</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a>    <span class="k">global</span> <span class="n">a</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4"></a>
+<a id="__codelineno-48-5" name="__codelineno-48-5"></a>    <span class="k">def</span> <span class="nf">funcio_interna</span><span class="p">():</span>
+<a id="__codelineno-48-6" name="__codelineno-48-6"></a>        <span class="k">global</span> <span class="n">a</span>
+<a id="__codelineno-48-7" name="__codelineno-48-7"></a>        <span class="n">a</span> <span class="o">=</span> <span class="mi">30</span>
+<a id="__codelineno-48-8" name="__codelineno-48-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-48-9" name="__codelineno-48-9"></a>
+<a id="__codelineno-48-10" name="__codelineno-48-10"></a>    <span class="n">funcio_interna</span><span class="p">()</span>
+<a id="__codelineno-48-11" name="__codelineno-48-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-48-12" name="__codelineno-48-12"></a>
+<a id="__codelineno-48-13" name="__codelineno-48-13"></a>
+<a id="__codelineno-48-14" name="__codelineno-48-14"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-48-15" name="__codelineno-48-15"></a><span class="n">funcio_externa</span><span class="p">()</span>
+<a id="__codelineno-48-16" name="__codelineno-48-16"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../2%20-%20Control%20de%20fluxe/" class="md-footer__link md-footer__link--next" aria-label="Next: Control de fluxe" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Control de fluxe
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
