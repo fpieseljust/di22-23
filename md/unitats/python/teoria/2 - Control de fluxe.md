@@ -71,7 +71,7 @@ elif age >= 18:
 else: 
     "Ers massa jove per entrar a esta festa"
 
-# Output: You are too old to party, granny.
+# Output: Esta festa és sols per a joves.
 ~~~
 
 O definir una funció que executara aquesta funcionalitat:
@@ -94,7 +94,7 @@ print(switch("Python"))
 print(switch("Dart"))  
 
 """
-Output: 
+Eixida: 
 Seràs programador web.
 Seràs científic de dades.
 Seràs desenvolupador d'aplicacions mòbils
