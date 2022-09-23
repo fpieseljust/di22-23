@@ -858,18 +858,19 @@
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="c1"># obert per a escriptura</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>:::important
-És important que tingau en compte que quan l'intèrpret de python s'executa, ho fa des del directori del què s'ha llançat(el podeu obtindre mitjançant <em>os.getcwd()</em>), per això la càrrega de fitxers en rutes relatives en funcions tipus <em>open</em>, <em>load</em>, etc potser vos dóne un error indicant que no el troba.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>És important que tingau en compte que quan l'intèrpret de python s'executa, ho fa des del directori del què s'ha llançat(el podeu obtindre mitjançant <em>os.getcwd()</em>), per això la càrrega de fitxers en rutes relatives en funcions tipus <em>open</em>, <em>load</em>, etc potser vos dóne un error indicant que no el troba.</p>
 <p>f = open("ruta relativa/arxiu.txt")</p>
+</div>
 <p><strong>S'han d'evitar les rutes absolutes</strong>.</p>
 <p>El que podeu fer per evitar estos errors és obtindre la ruta des del fitxer font de la següent forma:
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+   <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">ruta_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">ruta_a_recurs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="s2">&quot;arxiu.txt&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">ruta_a_recurs</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-:::</p>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="close">Close</h3>
 <p>Python utilitza un <em>garbage collector</em> per netejar objectes sense referències, però no hem de confiar per tancar el fitxer.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -945,9 +946,9 @@
 </code></pre></div></td></tr></table></div>
 <p>També podem utilitzar la funció <strong>readline()</strong> per a llegir una línia, o <strong>readlines()</strong> per a que ens torne una llista de línies llegides.</p>
 <h4 id="activitat-11">Activitat 11</h4>
-<p>Crea una aplicació que vaja llegint operacions d'un fitxer (una operació per línia) i afegisca els resultats. Per exemple, si llig:
+<p>Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" (una operació per línia). Per exemple:
 4 + 4</p>
-<p>Haurà de generar:
+<p>Haurà de guardar els resultats en un altre arxiu "resultats.txt". Per exemple:
 4 + 4 = 8</p>
 <p>Utilitza funcions anònimes per a implementar les operacions.</p>
 <h2 id="directoris">Directoris</h2>

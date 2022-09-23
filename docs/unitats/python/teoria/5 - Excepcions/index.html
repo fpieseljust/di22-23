@@ -852,15 +852,19 @@
 
 
 <h1 id="errors-i-excepcions">Errors i excepcions</h1>
-<p>Podem cometre errors mentre programem. Estos errors es poden classificar bàsicament en dos tipus:
-1. Errors de sintaxi
-2. Errors en la lògica (Excepcions)</p>
+<p>Podem cometre errors mentre programem. Estos errors es poden classificar bàsicament en dos tipus:</p>
+<ol>
+<li>Errors de sintaxi</li>
+<li>Errors en la lògica (Excepcions)</li>
+</ol>
 <p>Els erros de sintaxi es produixen abans de l'execució, mentre que els erros lògics es produixen en temps d'execució.</p>
 <h2 id="excepcions">Excepcions</h2>
-<p>Algun exemple d'excepció són els següents:
-- Quan intentem obrir un fitxer (per llegir) que no existeix (FileNotFoundError)
-- Quan intentem dividir un nombre per zero (ZeroDivisionError)
-- Quan intentem importar un mòdul que no existeix (ImportError).</p>
+<p>Algun exemple d'excepció són els següents:</p>
+<ul>
+<li>Quan intentem obrir un fitxer (per llegir) que no existeix (FileNotFoundError)</li>
+<li>Quan intentem dividir un nombre per zero (ZeroDivisionError)</li>
+<li>Quan intentem importar un mòdul que no existeix (ImportError).</li>
+</ul>
 <p>Sempre que es produeixen aquests tipus d’errors d’execució, Python crea un objecte d’excepció. Si no el tractem, interrumpeix l'execució i imprimeix una traça de l'error juntament amb alguns detalls sobre per què ha produït aquest error.</p>
 <h3 id="excepcions-definides-en-python">Excepcions definides en Python</h3>
 <p>Per a consultar totes les excepcions definides podem utilitzar:</p>
@@ -926,7 +930,7 @@
 <p>Si no es gestiona mai, es mostrarà un missatge d'error i el nostre programa s'aturarà de sobte.</p>
 <h2 id="capturant-excepcions-en-python">Capturant excepcions en Python</h2>
 <p>A Python, les excepcions es poden gestionar mitjançant una sentència try.</p>
-<p>L'operació crítica que pot generar una excepció es col·loca dins de la clàusula try. El codi que gestiona les excepcions s’escriu a la clàusula except i s'executarà en produïr-se. Per tant, podem escollir quines operacions es realitzaran una vegada que haguem capturat l'excepció. </p>
+<p>L'operació crítica que pot generar una excepció es col·loca dins de la clàusula <strong>try</strong>. El codi que gestiona les excepcions s’escriu a la clàusula <strong>except</strong> i s'executarà en produïr-se. Per tant, podem escollir quines operacions es realitzaran una vegada que haguem capturat l'excepció. </p>
 <p>Exemple:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -1116,7 +1120,8 @@
 <h4 id="activitat-13">Activitat 13</h4>
 <p>Anem a implementar un xicotet joc per consola. El programa generarà un número aleatori entre 0 i 100 (utilitzeu randint() del mòdul random) i demanarà a l'usuari que introduïsca un número.</p>
 <p>Mentre el número siga massa menut, llançarà una excepció ErrorEnterMassaMenut indicant-li-ho. Si per contra és massa gran llançarà ErrorEnterMassaGran.</p>
-<p>El joc acabarà quan s'introduïsca un valor no numèric o quan s'introduïsca l'enter buscat, en este cas felicitarà a l'usuari.</p>
+<p>Si s'introdueix un valor no numèric, es llançarà una excepció de tipus ErrorNoEsEnter.</p>
+<p>El joc acabarà quan s'introduïsca l'enter buscat, felicitant a l'usuari.</p>
 
 
 
