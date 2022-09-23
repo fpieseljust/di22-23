@@ -39,20 +39,21 @@ A més, podem especificar el mode d'apertura i la codificació.
 >>> f = open("test.txt", mode='r', encoding='utf-8')
 ~~~
 
-:::important
-És important que tingau en compte que quan l'intèrpret de python s'executa, ho fa des del directori del què s'ha llançat(el podeu obtindre mitjançant *os.getcwd()*), per això la càrrega de fitxers en rutes relatives en funcions tipus *open*, *load*, etc potser vos dóne un error indicant que no el troba.
+!!! warning
 
-f = open("ruta relativa/arxiu.txt")
+    És important que tingau en compte que quan l'intèrpret de python s'executa, ho fa des del directori del què s'ha llançat(el podeu obtindre mitjançant *os.getcwd()*), per això la càrrega de fitxers en rutes relatives en funcions tipus *open*, *load*, etc potser vos dóne un error indicant que no el troba.
+ 
+    f = open("ruta relativa/arxiu.txt")
 
-**S'han d'evitar les rutes absolutes**.
+   **S'han d'evitar les rutes absolutes**.
 
-El que podeu fer per evitar estos errors és obtindre la ruta des del fitxer font de la següent forma:
-```py
-ruta_base = os.path.dirname(__file__)
-ruta_a_recurs = os.path.join(base_path, "arxiu.txt")
-f = open(ruta_a_recurs)
-```
-:::
+   El que podeu fer per evitar estos errors és obtindre la ruta des del fitxer font de la següent forma:
+   ```py
+   ruta_base = os.path.dirname(__file__)
+   ruta_a_recurs = os.path.join(base_path, "arxiu.txt")
+   f = open(ruta_a_recurs)
+   ```
+
 
 ### Close
 
@@ -120,10 +121,10 @@ També podem utilitzar la funció **readline()** per a llegir una línia, o **re
 
 #### Activitat 11
 
-Crea una aplicació que vaja llegint operacions d'un fitxer (una operació per línia) i afegisca els resultats. Per exemple, si llig:
+Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" (una operació per línia). Per exemple:
 4 + 4
 
-Haurà de generar:
+Haurà de guardar els resultats en un altre arxiu "resultats.txt". Per exemple:
 4 + 4 = 8
 
 Utilitza funcions anònimes per a implementar les operacions.
