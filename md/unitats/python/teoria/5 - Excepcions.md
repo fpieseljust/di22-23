@@ -1,6 +1,7 @@
 # Errors i excepcions
 
 Podem cometre errors mentre programem. Estos errors es poden classificar bàsicament en dos tipus:
+
 1. Errors de sintaxi
 2. Errors en la lògica (Excepcions)
 
@@ -9,6 +10,7 @@ Els erros de sintaxi es produixen abans de l'execució, mentre que els erros lò
 ## Excepcions
 
 Algun exemple d'excepció són els següents:
+
 - Quan intentem obrir un fitxer (per llegir) que no existeix (FileNotFoundError)
 - Quan intentem dividir un nombre per zero (ZeroDivisionError)
 - Quan intentem importar un mòdul que no existeix (ImportError).
@@ -89,7 +91,7 @@ Si no es gestiona mai, es mostrarà un missatge d'error i el nostre programa s'a
 
 A Python, les excepcions es poden gestionar mitjançant una sentència try.
 
-L'operació crítica que pot generar una excepció es col·loca dins de la clàusula try. El codi que gestiona les excepcions s’escriu a la clàusula except i s'executarà en produïr-se. Per tant, podem escollir quines operacions es realitzaran una vegada que haguem capturat l'excepció. 
+L'operació crítica que pot generar una excepció es col·loca dins de la clàusula **try**. El codi que gestiona les excepcions s’escriu a la clàusula **except** i s'executarà en produïr-se. Per tant, podem escollir quines operacions es realitzaran una vegada que haguem capturat l'excepció. 
 
 Exemple:
 
@@ -242,4 +244,6 @@ Anem a implementar un xicotet joc per consola. El programa generarà un número 
 
 Mentre el número siga massa menut, llançarà una excepció ErrorEnterMassaMenut indicant-li-ho. Si per contra és massa gran llançarà ErrorEnterMassaGran.
 
-El joc acabarà quan s'introduïsca un valor no numèric o quan s'introduïsca l'enter buscat, en este cas felicitarà a l'usuari.
+Si s'introdueix un valor no numèric, es llançarà una excepció de tipus ErrorNoEsEnter.
+
+El joc acabarà quan s'introduïsca l'enter buscat, felicitant a l'usuari.
