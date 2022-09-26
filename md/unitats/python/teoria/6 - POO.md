@@ -22,8 +22,12 @@ Una classe és una definició d'un objecte abstracte, que representa algun ent d
 
 L'exemple de classe de lloro pot ser:
 
+```py
 class Parrot():
     pass
+
+```
+
 Ací fem servir la paraula clau class per definir una classe Loro buida. 
 
 ## Objectes
@@ -241,9 +245,17 @@ Per utilitzar el polimorfisme, hem creat una interfície comuna, és a dir, la f
 
 ### Activitat 14
 
-Defineix una jerarquia de figures amb les classes *figura*, *cercle*, *triangle*, *rectangle* i *quadrat*.
+Defineix una jerarquia de figures amb les classes *Figura*, *Cercle*, *Triangle*, *Rectangle* i *Quadrat*.
 
-- La clase figura tindrá dos métodes abstractes àrea i perímetre, que implementarán la resta de classes.
-- El cercle rebrá el radi com a argument al seu constructor, el triangle el costat i el rectangle la base i l'altura.
-- Cercle, triangle i rectangle heredarán de figura directament.
-- Quadrat heredará de rectangle, però al constructor sols rebrá un argument, el costat.
+- La clase Figura tindrá dos métodes abstractes *area* i *perimetre*, que implementarán la resta de classes. La classe figura serà el que s'anomena una interfície informal, ja que tots els seus mètodes són abstractes. Per a definir que són abstractes, simplement utilitzeu la instrucció **pass** al bloc de la funció.
+
+    ```py
+    def area() -> int:
+        """Torna l'àrea d'una Figura"""
+        pass
+    ```
+
+- El Cercle rebrá el radi com a argument al seu constructor, el Triangle el costat i el Rectangle la base i l'altura.
+- Cercle, Triangle i Rectangle heredarán de Figura directament.
+- Quadrat heredará de Rectangle, però al constructor sols rebrá un argument, el costat.
+- Crea un objecte de cada tipus i imprimeix les seues característiques.

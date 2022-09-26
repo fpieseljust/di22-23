@@ -790,77 +790,17 @@
 <h2 id="classes">Classes</h2>
 <p>Una classe és una definició d'un objecte abstracte, que representa algun ent de la realitat al nostre programa. Conté tots els detalls comuns sobre tots els objectes del mateix tipus. </p>
 <p>L'exemple de classe de lloro pot ser:</p>
-<p>class Parrot():
-    pass
-Ací fem servir la paraula clau class per definir una classe Loro buida. </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">():</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+<p>Ací fem servir la paraula clau class per definir una classe Loro buida. </p>
 <h2 id="objectes">Objectes</h2>
 <p>Quan es defineix la classe, només es defineix la descripció de l'objecte. Per tant, no s’assignen recursos per a la seua execució, ni s'assignen valors als seus atributs. Quan este fet es produeix, aleshores tenim un objecte en memòria sobre el que podem actuar.</p>
 <p>L'exemple d'objecte de classe lloro pot ser:</p>
 <p>obj = Loro ()
 Aquí, obj és un objecte de la classe Loro.</p>
 <p>Suposem que tenim detalls de lloros. Ara, podem construir la classe i crear un objecte per a cada lloro.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="c1"># class attribute</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">species</span> <span class="o">=</span> <span class="s2">&quot;bird&quot;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="c1"># instance attribute</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># instantiate the Parrot class</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">blu</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">&quot;Blu&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">woo</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">&quot;Woo&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c1"># access the class attributes</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Blu is a </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">blu</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">species</span><span class="p">))</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woo is also a </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">woo</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">species</span><span class="p">))</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1"># access the instance attributes</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2"> years old&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">blu</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">blu</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2"> years old&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">woo</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">woo</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="o">---</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="n">Eixida</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="n">Blu</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">bird</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="n">Woo</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">a</span> <span class="n">bird</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">Blu</span> <span class="ow">is</span> <span class="mi">10</span> <span class="n">years</span> <span class="n">old</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="n">Woo</span> <span class="ow">is</span> <span class="mi">15</span> <span class="n">years</span> <span class="n">old</span>
-</code></pre></div></td></tr></table></div>
-<p>Al programa anterior, hem creat una classe Parrot. A continuació, hem definit uns atributs, que prendran valors diferents en la instanciació d'objectes diferents.</p>
-<p>Aquests atributs es defineixen dins del mètode <strong>init</strong> de la classe, que és el mètode inicialitzador que s’executarà només creem objectes.</p>
-<p>Després, creem instàncies de la classe Parrot. <em>blu i woo</em> són referències (valor) als nostres objectes nous.</p>
-<p>Podem accedir als atributs de classe mitjançant <code>__class__.species</code>. Els atributs de classe són els mateixos per a totes les instàncies d’una classe. De la mateixa manera, accedim als atributs de la instància mitjançant <code>objecte.nom_atribut</code>. Els atributs d’instància (valors) són diferents per a cada instància d’una classe.</p>
-<h2 id="metodes">Mètodes</h2>
-<p>Són funcions definides dins el cos d'una classe. S'utilitzen per a definir el comportament de l'objecte.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -883,34 +823,46 @@ Aquí, obj és un objecte de la classe Loro.</p>
 <span class="normal"><a href="#__codelineno-1-20">20</a></span>
 <span class="normal"><a href="#__codelineno-1-21">21</a></span>
 <span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">:</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="c1"># instance attributes</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="c1"># instance method</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="k">def</span> <span class="nf">sing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">song</span><span class="p">):</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> sings </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">song</span><span class="p">)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="k">def</span> <span class="nf">dance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is now dancing&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="c1"># class attribute</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">species</span> <span class="o">=</span> <span class="s2">&quot;bird&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="c1"># instance attribute</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1"># instantiate the Parrot class</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">blu</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">&quot;Blu&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">woo</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">&quot;Woo&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c1"># instantiate the object</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="n">blu</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">&quot;Blu&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="c1"># call our instance methods</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">blu</span><span class="o">.</span><span class="n">sing</span><span class="p">(</span><span class="s2">&quot;&#39;Happy&#39;&quot;</span><span class="p">))</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">blu</span><span class="o">.</span><span class="n">dance</span><span class="p">())</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="o">---</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="n">Blu</span> <span class="n">sings</span> <span class="s1">&#39;Happy&#39;</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="n">Blu</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">dancing</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c1"># access the class attributes</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Blu is a </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">blu</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">species</span><span class="p">))</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woo is also a </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">woo</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">species</span><span class="p">))</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1"># access the instance attributes</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2"> years old&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">blu</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">blu</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2"> years old&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">woo</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">woo</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="o">---</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="n">Eixida</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="n">Blu</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">bird</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="n">Woo</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">a</span> <span class="n">bird</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="n">Blu</span> <span class="ow">is</span> <span class="mi">10</span> <span class="n">years</span> <span class="n">old</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="n">Woo</span> <span class="ow">is</span> <span class="mi">15</span> <span class="n">years</span> <span class="n">old</span>
 </code></pre></div></td></tr></table></div>
-<p>Hem definit dos mètodes sing() i dnce(), que són mètodes d'instància, ja que es criden sobre un objecte.</p>
-<h2 id="herencia">Herència</h2>
-<p>L'herència és una forma de reutilitzar codi sense tindre-lo que reescriure. Açò facilita el manteniment de les aplicacions. </p>
-<p>Les noves classes s'anomenen classes derivades (o classe filla). La classes de les que deriven són les classes base (o classe pare).</p>
+<p>Al programa anterior, hem creat una classe Parrot. A continuació, hem definit uns atributs, que prendran valors diferents en la instanciació d'objectes diferents.</p>
+<p>Aquests atributs es defineixen dins del mètode <strong>init</strong> de la classe, que és el mètode inicialitzador que s’executarà només creem objectes.</p>
+<p>Després, creem instàncies de la classe Parrot. <em>blu i woo</em> són referències (valor) als nostres objectes nous.</p>
+<p>Podem accedir als atributs de classe mitjançant <code>__class__.species</code>. Els atributs de classe són els mateixos per a totes les instàncies d’una classe. De la mateixa manera, accedim als atributs de la instància mitjançant <code>objecte.nom_atribut</code>. Els atributs d’instància (valors) són diferents per a cada instància d’una classe.</p>
+<h2 id="metodes">Mètodes</h2>
+<p>Són funcions definides dins el cos d'una classe. S'utilitzen per a definir el comportament de l'objecte.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -933,60 +885,34 @@ Aquí, obj és un objecte de la classe Loro.</p>
 <span class="normal"><a href="#__codelineno-2-20">20</a></span>
 <span class="normal"><a href="#__codelineno-2-21">21</a></span>
 <span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span>
-<span class="normal"><a href="#__codelineno-2-35">35</a></span>
-<span class="normal"><a href="#__codelineno-2-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># parent class</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">class</span> <span class="nc">Bird</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bird is ready&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="k">def</span> <span class="nf">whoisThis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bird&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Swim faster&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1"># child class</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="k">class</span> <span class="nc">Penguin</span><span class="p">(</span><span class="n">Bird</span><span class="p">):</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a>        <span class="c1"># call super() function</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin is ready&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a>    <span class="k">def</span> <span class="nf">whoisThis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Run faster&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="n">peggy</span> <span class="o">=</span> <span class="n">Penguin</span><span class="p">()</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="n">peggy</span><span class="o">.</span><span class="n">whoisThis</span><span class="p">()</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="n">peggy</span><span class="o">.</span><span class="n">swim</span><span class="p">()</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="n">peggy</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="o">---</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="n">Bird</span> <span class="ow">is</span> <span class="n">ready</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="n">Penguin</span> <span class="ow">is</span> <span class="n">ready</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="n">Penguin</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="n">Swim</span> <span class="n">faster</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="n">Run</span> <span class="n">faster</span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="c1"># instance attributes</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="c1"># instance method</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="k">def</span> <span class="nf">sing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">song</span><span class="p">):</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> sings </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">song</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="k">def</span> <span class="nf">dance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is now dancing&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="c1"># instantiate the object</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="n">blu</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">(</span><span class="s2">&quot;Blu&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="c1"># call our instance methods</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">blu</span><span class="o">.</span><span class="n">sing</span><span class="p">(</span><span class="s2">&quot;&#39;Happy&#39;&quot;</span><span class="p">))</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">blu</span><span class="o">.</span><span class="n">dance</span><span class="p">())</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="o">---</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="n">Blu</span> <span class="n">sings</span> <span class="s1">&#39;Happy&#39;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="n">Blu</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">dancing</span>
 </code></pre></div></td></tr></table></div>
-<p>En l'anterior programa, la classe Penguin hereda de la classe Bird. La classe derivada hereda el mètode <em>swim()</em>, modifica el mètode <em>whoisThis()</em> i extén amb un nou mètode <em>run()</em>.</p>
-<p>Utilitzem <code>super().__init__()</code> dins de l'<code>__init()__</code> per a inicialitzar la classe pare. </p>
-<h2 id="encapsulament">Encapsulament</h2>
-<p>Podem restringir l’accés a mètodes i variables, és a dir, definir-los com a privats. Això impedeix que les dades es modifiquen directament accedint als atributs, és el que anomenem encapsulament. Definim atributs o mètodes privats utilitzant el guió baix com a prefix, és a dir, simple _ o doble __.</p>
+<p>Hem definit dos mètodes sing() i dnce(), que són mètodes d'instància, ja que es criden sobre un objecte.</p>
+<h2 id="herencia">Herència</h2>
+<p>L'herència és una forma de reutilitzar codi sense tindre-lo que reescriure. Açò facilita el manteniment de les aplicacions. </p>
+<p>Les noves classes s'anomenen classes derivades (o classe filla). La classes de les que deriven són les classes base (o classe pare).</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1007,107 +933,194 @@ Aquí, obj és un objecte de la classe Loro.</p>
 <span class="normal"><a href="#__codelineno-3-18">18</a></span>
 <span class="normal"><a href="#__codelineno-3-19">19</a></span>
 <span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span> <span class="nc">Computer</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="mi">900</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="k">def</span> <span class="nf">sell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selling Price: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span><span class="p">))</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="k">def</span> <span class="nf">setMaxPrice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="n">price</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">c</span> <span class="o">=</span> <span class="n">Computer</span><span class="p">()</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="c1"># change the price</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">c</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="mi">1000</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="c1"># using setter function</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="n">c</span><span class="o">.</span><span class="n">setMaxPrice</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># parent class</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">class</span> <span class="nc">Bird</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bird is ready&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="k">def</span> <span class="nf">whoisThis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bird&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Swim faster&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># child class</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="k">class</span> <span class="nc">Penguin</span><span class="p">(</span><span class="n">Bird</span><span class="p">):</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>        <span class="c1"># call super() function</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin is ready&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>    <span class="k">def</span> <span class="nf">whoisThis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Run faster&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="n">peggy</span> <span class="o">=</span> <span class="n">Penguin</span><span class="p">()</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="n">peggy</span><span class="o">.</span><span class="n">whoisThis</span><span class="p">()</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="n">peggy</span><span class="o">.</span><span class="n">swim</span><span class="p">()</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="n">peggy</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="o">---</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="n">Bird</span> <span class="ow">is</span> <span class="n">ready</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="n">Penguin</span> <span class="ow">is</span> <span class="n">ready</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="n">Penguin</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="n">Swim</span> <span class="n">faster</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="n">Run</span> <span class="n">faster</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Eixida
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Selling Price: 900
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Selling Price: 900
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Selling Price: 1000
+<p>En l'anterior programa, la classe Penguin hereda de la classe Bird. La classe derivada hereda el mètode <em>swim()</em>, modifica el mètode <em>whoisThis()</em> i extén amb un nou mètode <em>run()</em>.</p>
+<p>Utilitzem <code>super().__init__()</code> dins de l'<code>__init()__</code> per a inicialitzar la classe pare. </p>
+<h2 id="encapsulament">Encapsulament</h2>
+<p>Podem restringir l’accés a mètodes i variables, és a dir, definir-los com a privats. Això impedeix que les dades es modifiquen directament accedint als atributs, és el que anomenem encapsulament. Definim atributs o mètodes privats utilitzant el guió baix com a prefix, és a dir, simple _ o doble __.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span> <span class="nc">Computer</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="mi">900</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="k">def</span> <span class="nf">sell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selling Price: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span><span class="p">))</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="k">def</span> <span class="nf">setMaxPrice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="n">price</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">c</span> <span class="o">=</span> <span class="n">Computer</span><span class="p">()</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="c1"># change the price</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="n">c</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="mi">1000</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="c1"># using setter function</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="n">c</span><span class="o">.</span><span class="n">setMaxPrice</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Eixida
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Selling Price: 900
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Selling Price: 900
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Selling Price: 1000
 </code></pre></div></td></tr></table></div>
 <p>Com vegem, per canviar el valor, hem d’utilitzar una funció modificadora <em>setter</em>, és a dir, setMaxPrice (), que pren el preu com a paràmetre.</p>
 <h2 id="polimorfisme">Polimorfisme</h2>
 <p>El polimorfisme és la capacitat d’utilitzar una interfície comuna (crides amb els mateixos noms) en diferents classes derivades.</p>
 <p>Suposem que hem de pintar una forma i que hi ha diverses opcions: rectangle, quadrat, cercle, ... Podríem utilitzar el mateix mètode per a pintar qualsevol forma. Aquest concepte s’anomena polimorfisme.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="k">def</span> <span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parrot can fly&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parrot can&#39;t swim&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="k">class</span> <span class="nc">Penguin</span><span class="p">:</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="k">def</span> <span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin can&#39;t fly&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin can swim&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="c1"># common interface</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="k">def</span> <span class="nf">flying_test</span><span class="p">(</span><span class="n">bird</span><span class="p">):</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a>    <span class="n">bird</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="c1">#instantiate objects</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="n">blu</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">()</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="n">peggy</span> <span class="o">=</span> <span class="n">Penguin</span><span class="p">()</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="c1"># passing the object</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="n">flying_test</span><span class="p">(</span><span class="n">blu</span><span class="p">)</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="n">flying_test</span><span class="p">(</span><span class="n">peggy</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Parrot</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="k">def</span> <span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parrot can fly&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parrot can&#39;t swim&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="k">class</span> <span class="nc">Penguin</span><span class="p">:</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="k">def</span> <span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin can&#39;t fly&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>    <span class="k">def</span> <span class="nf">swim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penguin can swim&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="c1"># common interface</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="k">def</span> <span class="nf">flying_test</span><span class="p">(</span><span class="n">bird</span><span class="p">):</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>    <span class="n">bird</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="c1">#instantiate objects</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="n">blu</span> <span class="o">=</span> <span class="n">Parrot</span><span class="p">()</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="n">peggy</span> <span class="o">=</span> <span class="n">Penguin</span><span class="p">()</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="c1"># passing the object</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="n">flying_test</span><span class="p">(</span><span class="n">blu</span><span class="p">)</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="n">flying_test</span><span class="p">(</span><span class="n">peggy</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Parrot can fly
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Penguin can&#39;t fly
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Parrot can fly
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Penguin can&#39;t fly
 </code></pre></div></td></tr></table></div>
 <p>Al programa anterior, hem definit dues classes Parrot i Penguin. Cadascun d'elles té un mètode comú fly(). No obstant això, les seues funcions són diferents.</p>
 <p>Per utilitzar el polimorfisme, hem creat una interfície comuna, és a dir, la funció flying_test() que pren com a paràmetre qualsevol objecte i crida al mètode fly() de l’objecte. Així, quan passem els objectes blu i peggy a la funció flying_test(), s'executa el mètode corresponent a cadascuna.</p>
 <h3 id="activitat-14">Activitat 14</h3>
-<p>Defineix una jerarquia de figures amb les classes <em>figura</em>, <em>cercle</em>, <em>triangle</em>, <em>rectangle</em> i <em>quadrat</em>.</p>
+<p>Defineix una jerarquia de figures amb les classes <em>Figura</em>, <em>Cercle</em>, <em>Triangle</em>, <em>Rectangle</em> i <em>Quadrat</em>.</p>
 <ul>
-<li>La clase figura tindrá dos métodes abstractes àrea i perímetre, que implementarán la resta de classes.</li>
-<li>El cercle rebrá el radi com a argument al seu constructor, el triangle el costat i el rectangle la base i l'altura.</li>
-<li>Cercle, triangle i rectangle heredarán de figura directament.</li>
-<li>Quadrat heredará de rectangle, però al constructor sols rebrá un argument, el costat.</li>
+<li>
+<p>La clase Figura tindrá dos métodes abstractes <em>area</em> i <em>perimetre</em>, que implementarán la resta de classes. La classe figura serà el que s'anomena una interfície informal, ja que tots els seus mètodes són abstractes. Per a definir que són abstractes, simplement utilitzeu la instrucció <strong>pass</strong> al bloc de la funció.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">area</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="sd">&quot;&quot;&quot;Torna l&#39;àrea d&#39;una Figura&quot;&quot;&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>El Cercle rebrá el radi com a argument al seu constructor, el Triangle el costat i el Rectangle la base i l'altura.</p>
+</li>
+<li>Cercle, Triangle i Rectangle heredarán de Figura directament.</li>
+<li>Quadrat heredará de Rectangle, però al constructor sols rebrá un argument, el costat.</li>
+<li>Crea un objecte de cada tipus i imprimeix les seues característiques.</li>
 </ul>
 
 
