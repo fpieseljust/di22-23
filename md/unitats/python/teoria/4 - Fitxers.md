@@ -50,7 +50,7 @@ A més, podem especificar el mode d'apertura i la codificació.
    El que podeu fer per evitar estos errors és obtindre la ruta des del fitxer font de la següent forma:
    ```py
    ruta_base = os.path.dirname(__file__)
-   ruta_a_recurs = os.path.join(base_path, "arxiu.txt")
+   ruta_a_recurs = os.path.join(ruta_base, "arxiu.txt")
    f = open(ruta_a_recurs)
    ```
 
@@ -121,13 +121,13 @@ També podem utilitzar la funció **readline()** per a llegir una línia, o **re
 
 #### Activitat 11
 
-Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" (una operació per línia). Per exemple:
+Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" que contindrà una operació per línia. Per exemple:
 4 + 4
 
 Haurà de guardar els resultats en un altre arxiu "resultats.txt". Per exemple:
 4 + 4 = 8
 
-Utilitza funcions anònimes per a implementar les operacions.
+Utilitza funcions anònimes per a implementar les operacions de suma, resta, multiplicació i divisió, que seran les úniques operacions reconegudes per la nostra aplicació.
 
 ## Directoris
 

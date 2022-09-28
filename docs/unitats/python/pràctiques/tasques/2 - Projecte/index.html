@@ -684,16 +684,18 @@
 <li>La primera ampliació proposada és un <strong>sistema de puntuacions</strong> que serà visible a la pantalla del joc. Cada vegada que s'esquive un míssil i aquest sobrepasse la part esquerra de la pantalla, es sumaran 10 punts al marcador.</li>
 <li>La segona ampliació serà que el joc anirà canviant cada 20 segons entre <strong>el dia i la nit</strong>, és a dir, el fons canviarà del blau del dia al negre de la nit automàticament.</li>
 <li>La tercera ampliació serà un <strong>sistema de nivells</strong>. Cada vegada que el jugador supere un múltiple de 500 punts, el joc canviarà a un nivell superior, començant la partida en el nivell 1. A més, el nivell serà visible en la pantalla, al costat de la puntuació.</li>
-<li>La quarta ampliació serà que la <strong>dificultat</strong> del joc anirà creixent amb els nivells. Al principi del joc, es crearan enemics cada 500ms i la seua velocitat serà un número aleatori entre 1 i 10. En el segon nivell, la velocitat de creació seran 450 ms i les velocitats aniran entre 3 i 12. La idea és parametritzar els valors segons el nivell, per exemple, per a la velocitat de creació podria ser:</li>
-</ol>
+<li>
+<p>La quarta ampliació serà que la <strong>dificultat</strong> del joc anirà creixent amb els nivells. Al principi del joc, es crearan enemics cada 500ms i la seua velocitat serà un número aleatori entre 1 i 10. En el segon nivell, la velocitat de creació seran 450 ms i les velocitats aniran entre 3 i 12. La idea és parametritzar els valors segons el nivell, per exemple, per a la velocitat de creació podria ser:</p>
 <div class="arithmatex">\[v_c =  100 + (450 - 50 * nivell)\]</div>
 <div class="arithmatex">\[v_e = random(2 * nivell, 10 + 3 * nivell)\]</div>
 <blockquote>
 <p>On <span class="arithmatex">\(v_c\)</span> és la velocitat de creació d'enemics<br />
 On <span class="arithmatex">\(v_e\)</span> és la velocitat de desplaçament dels enemics</p>
 </blockquote>
-<ol>
-<li>Fes que la puntuació, en cas de ser un nou rècord, es guarde en un document de text anomenat <strong>punt_max.txt</strong> en la mateixa carpeta on està el codi del joc. Per a saber si és un nou rècord, quan es carrega el joc, haurà de llegir el document i extraure la puntuació màxima.</li>
+</li>
+<li>
+<p>Fes que la puntuació, en cas de ser un nou rècord, es guarde en un document de text anomenat <strong>punt_max.txt</strong> en la mateixa carpeta on està el codi del joc. Per a saber si és un nou rècord, quan es carrega el joc, haurà de llegir el document i extraure la puntuació màxima.</p>
+</li>
 <li>Afegeix una <strong>pantalla de benvinguda</strong> on es done la benvinguda al joc. A més, ha de mostrar el rècord fins al moment i esperar fins que es polse la tecla p, moment en que es passarà a la pantalla de joc.</li>
 <li>Fes una <strong>pantalla final</strong> on s'indique que la partida ha finalitzat, mostre la puntuació i el nivell al que s'ha arribat, i en cas de ser rècord, ho indique i felicite el jugador.</li>
 <li>Proposeu una funcionalitat extra al joc per fer-lo més interessant. Qualsevol funcionalitat que resulte interessant serà valorada positivament.</li>

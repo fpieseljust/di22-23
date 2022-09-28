@@ -36,7 +36,10 @@ Quan es defineix la classe, només es defineix la descripció de l'objecte. Per 
 
 L'exemple d'objecte de classe lloro pot ser:
 
+```py
 obj = Loro ()
+```
+
 Aquí, obj és un objecte de la classe Loro.
 
 Suposem que tenim detalls de lloros. Ara, podem construir la classe i crear un objecte per a cada lloro.
@@ -110,7 +113,7 @@ Blu sings 'Happy'
 Blu is now dancing
 ```
 
-Hem definit dos mètodes sing() i dnce(), que són mètodes d'instància, ja que es criden sobre un objecte.
+Hem definit dos mètodes sing() i dance(), que són mètodes d'instància, ja que es criden sobre un objecte.
 
 ## Herència
 
@@ -125,7 +128,7 @@ class Bird:
     def __init__(self):
         print("Bird is ready")
 
-    def whoisThis(self):
+    def who_is_this(self):
         print("Bird")
 
     def swim(self):
@@ -139,7 +142,7 @@ class Penguin(Bird):
         super().__init__()
         print("Penguin is ready")
 
-    def whoisThis(self):
+    def who_is_this(self):
         print("Penguin")
 
     def run(self):
@@ -157,7 +160,7 @@ Swim faster
 Run faster
 ~~~
 
-En l'anterior programa, la classe Penguin hereda de la classe Bird. La classe derivada hereda el mètode *swim()*, modifica el mètode *whoisThis()* i extén amb un nou mètode *run()*.
+En l'anterior programa, la classe Penguin hereda de la classe Bird. La classe derivada hereda el mètode *swim()*, modifica el mètode *who_is_this()* i extén amb un nou mètode *run()*.
 
 Utilitzem `super().__init__()` dins de l'`__init()__` per a inicialitzar la classe pare. 
 
@@ -259,3 +262,8 @@ Defineix una jerarquia de figures amb les classes *Figura*, *Cercle*, *Triangle*
 - Cercle, Triangle i Rectangle heredarán de Figura directament.
 - Quadrat heredará de Rectangle, però al constructor sols rebrá un argument, el costat.
 - Crea un objecte de cada tipus i imprimeix les seues característiques.
+
+    !!! info
+        En realitat la classe Figura es pot implementar com a una **classe interfície**, on tots els seus mètodes siguen abstractes. En Python existeixen dos tipus d'interfícies, formals i informals.
+
+        Per altra banda, podem declarar els atributs de les classes com a **atributs privats** i utilitzar els **decoradors @property i @*atribut*.setter** per a indicar els mètodes getters i setters, que seran públics. Fer-ho d'esta forma té alguns avantatges que veurem més endavant.

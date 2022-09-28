@@ -868,7 +868,7 @@
    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">ruta_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">ruta_a_recurs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="s2">&quot;arxiu.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">ruta_a_recurs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ruta_base</span><span class="p">,</span> <span class="s2">&quot;arxiu.txt&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">ruta_a_recurs</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 <h3 id="close">Close</h3>
@@ -946,11 +946,11 @@
 </code></pre></div></td></tr></table></div>
 <p>També podem utilitzar la funció <strong>readline()</strong> per a llegir una línia, o <strong>readlines()</strong> per a que ens torne una llista de línies llegides.</p>
 <h4 id="activitat-11">Activitat 11</h4>
-<p>Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" (una operació per línia). Per exemple:
+<p>Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" que contindrà una operació per línia. Per exemple:
 4 + 4</p>
 <p>Haurà de guardar els resultats en un altre arxiu "resultats.txt". Per exemple:
 4 + 4 = 8</p>
-<p>Utilitza funcions anònimes per a implementar les operacions.</p>
+<p>Utilitza funcions anònimes per a implementar les operacions de suma, resta, multiplicació i divisió, que seran les úniques operacions reconegudes per la nostra aplicació.</p>
 <h2 id="directoris">Directoris</h2>
 <p>Si hi ha una gran quantitat de fitxers i directoris amb els que tractar, disposem del mòdul os (operating system), que ens proporciona mètodes per al seu tractament.</p>
 <p>Per a veure el directori de treball, utilitzem <strong>getcwd()</strong>.</p>
