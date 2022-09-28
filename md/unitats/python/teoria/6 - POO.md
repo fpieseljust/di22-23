@@ -267,3 +267,4 @@ Defineix una jerarquia de figures amb les classes *Figura*, *Cercle*, *Triangle*
         En realitat la classe Figura es pot implementar com a una **classe interfície**, on tots els seus mètodes siguen abstractes. En Python existeixen dos tipus d'interfícies, formals i informals.
 
         Per altra banda, podem declarar els atributs de les classes com a **atributs privats** i utilitzar els **decoradors @property i @*atribut*.setter** per a indicar els mètodes getters i setters, que seran públics. Fer-ho d'esta forma té alguns avantatges que veurem més endavant.
+
