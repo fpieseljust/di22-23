@@ -33,7 +33,7 @@ Podem combinar el bucle for amb la funció **range(principi, fi, pas)**.
 
 #### Activitat 8
 
-Fes una aplicació que imprimisca els primers 100 números imparells.
+Fes una aplicació que imprimisca els números imparells entre l'1 i el 100.
 
 #### Activitat 9
 
