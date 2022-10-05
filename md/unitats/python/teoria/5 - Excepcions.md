@@ -236,10 +236,6 @@ Quan estem desenvolupant un programa gran, és una bona pràctica col·locar tot
 
 #### Activitat 12
 
-Modifica el codi de l'activitat 11 per a que no es produïsquen errors en l'execució, ja siga per introdïur valor no definits per a les funcions, valors que no són numèrics o operacions desconegudes. Controla també que no es produïsquen errors en la lectura/escriptura dels arxius.
-
-#### Activitat 13 
-
 Anem a implementar un xicotet joc per consola. El programa generarà un número aleatori entre 0 i 100 (utilitzeu randint() del mòdul random) i demanarà a l'usuari que introduïsca un número.
 
 Mentre el número siga massa menut, llançarà una excepció ErrorEnterMassaMenut indicant-li-ho. Si per contra és massa gran llançarà ErrorEnterMassaGran.
@@ -247,3 +243,7 @@ Mentre el número siga massa menut, llançarà una excepció ErrorEnterMassaMenu
 Si s'introdueix un valor no numèric, es llançarà una excepció de tipus ErrorNoEsEnter.
 
 El joc acabarà quan s'introduïsca l'enter buscat, felicitant a l'usuari.
+
+#### Activitat 13 
+
+Modifica el codi de l'activitat 11 per a que no es produïsquen errors en l'execució, ja siga per introdïur valor no definits per a les funcions, valors que no són numèrics o operacions desconegudes. Controla també que no es produïsquen errors en la lectura/escriptura dels arxius.
