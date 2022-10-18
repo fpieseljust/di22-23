@@ -1,0 +1,1238 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fpieseljust.github.io/di21-22/unitats/2-intro-interficies/teoria/2%20-%20Usabilitat/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Usabilitat - Desenvolupament d'interfícies 21-22</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-usabilitat" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desenvolupament d'interfícies 21-22
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usabilitat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Desenvolupament d'interfícies 21-22
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Unitat 1 - Programació amb Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 1 - Programació amb Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 1 - Programació amb Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/2%20-%20Control%20de%20fluxe/" class="md-nav__link">
+        Control de fluxe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/3%20-%20Funcions/" class="md-nav__link">
+        Funcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/4%20-%20Fitxers/" class="md-nav__link">
+        Tractament de fitxers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/5%20-%20Excepcions/" class="md-nav__link">
+        Errors i excepcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/6%20-%20POO/" class="md-nav__link">
+        Programació oorientada a objectes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Pràctica 1 - PyGame
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pràctica 1 - PyGame" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pràctica 1 - PyGame
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
+        Disseny del joc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
+        Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
+        Imatges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
+        Sons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
+        Conclusió
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_7" type="checkbox" id="__nav_2_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_7">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
+        Part obligatòria (30%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
+        Part d'ampliació - projecte (70%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
+        Qualificació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Unitat 2 - Introducció a les interfícies d'usuari
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 2 - Introducció a les interfícies d'usuari" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 2 - Introducció a les interfícies d'usuari
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%20-%20Introduccio/" class="md-nav__link">
+        Introducció a les GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Usabilitat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Usabilitat
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-components-de-la-usabilitat" class="md-nav__link">
+    2.1 Components de la usabilitat
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Components de la usabilitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-aprenentatge" class="md-nav__link">
+    A. Aprenentatge.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-eficiencia" class="md-nav__link">
+    B. Eficiència.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-record" class="md-nav__link">
+    C. Record.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-errors" class="md-nav__link">
+    D. Errors.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-satisfaccio" class="md-nav__link">
+    E. Satisfacció.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-avaluacio-de-la-usabilitat" class="md-nav__link">
+    2.2 Avaluació de la usabilitat
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Avaluació de la usabilitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-que-hem-davaluar" class="md-nav__link">
+    A. Què hem d'avaluar?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-qui-participa-en-lavaluacio" class="md-nav__link">
+    B. Qui participa en l'avaluació?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-com-es-fa-lavaluacio" class="md-nav__link">
+    C. Com es fa l'avaluació?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-experiencia-dusuari-ux" class="md-nav__link">
+    2.3 Experiència dusuari (UX)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3%20-%20Pautes%20de%20Disseny/" class="md-nav__link">
+        Pautes de disseny
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Qualificació
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Qualificació" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Qualificació
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Criteris
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Criteris" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Criteris
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../qualificacio/rubrica/" class="md-nav__link">
+        Rúbriques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-components-de-la-usabilitat" class="md-nav__link">
+    2.1 Components de la usabilitat
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Components de la usabilitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-aprenentatge" class="md-nav__link">
+    A. Aprenentatge.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-eficiencia" class="md-nav__link">
+    B. Eficiència.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-record" class="md-nav__link">
+    C. Record.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-errors" class="md-nav__link">
+    D. Errors.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-satisfaccio" class="md-nav__link">
+    E. Satisfacció.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-avaluacio-de-la-usabilitat" class="md-nav__link">
+    2.2 Avaluació de la usabilitat
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Avaluació de la usabilitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-que-hem-davaluar" class="md-nav__link">
+    A. Què hem d'avaluar?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-qui-participa-en-lavaluacio" class="md-nav__link">
+    B. Qui participa en l'avaluació?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-com-es-fa-lavaluacio" class="md-nav__link">
+    C. Com es fa l'avaluació?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-experiencia-dusuari-ux" class="md-nav__link">
+    2.3 Experiència dusuari (UX)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="2-usabilitat">2. Usabilitat</h1>
+<p>No és senzill trobar una definició exacta d'usabilitat, però en termes generals es podria dir que la usabilitat d'un sistema és la <strong>facilitat amb què els usuaris poden fer servir aquest sistema</strong> per a dur a terme una tasca concreta. Però no hem de pensar que la usabilitat és simplement un sinònim de facilitat, ja que com veurem més endavant, hi ha molts altres factors que influeixen en la usabilitat d'una aplicació.</p>
+<p>El terme usabilitat és un neologisme, adaptat del vocable anglés <em>usability</em>. Encara que la Reial Acadèmia Espanyola (RAE) no ho inclou al seu diccionari, el seu ús està acceptat i és molt habitual en l'àmbit tecnològic.</p>
+<p>La usabilitat és un dels conceptes clau dins del procés de disseny centrat en l'usuari que vam veure a l'apartat anterior, i ha d'estar present tant en el disseny de les possibles solucions com en la seua avaluació posterior. </p>
+<p>Són diverses les normes internacionals que inclouen recomanacions relacionades amb la usabilitat, com ara:</p>
+<ul>
+<li>ISO 9241-11 (Usabilitat: definicions i conceptes).</li>
+<li>ISO/IEC 25010 (Qualitat en programari i sistemes).</li>
+<li>ISO/TR 16982 (Mètodes d'usabilitat com a base al disseny centrat en l'usuari).</li>
+</ul>
+<h2 id="21-components-de-la-usabilitat">2.1 Components de la usabilitat</h2>
+<p>La usabilitat d'un producte o sistema es considera habitualment formada per cinc components:</p>
+<p><img alt="components d'usabilitat" src="../images/image3.png" /></p>
+<h3 id="a-aprenentatge">A. Aprenentatge.</h3>
+<p>Un dels components principals de la usabilitat és la facilitat d'aprenentatge, determinada per l'esforç amb què un nou usuari de la nostra aplicació pot arribar a completar una tasca específica. També és important que en els usos successius de l'aplicació l'usuari trobe l'aplicació cada vegada més fàcil d'utilitzar.</p>
+<p>Per facilitar l'aprenentatge, un dels aspectes clau és la consistència amb els estàndards establerts a la resta d'aplicacions. Per exemple, la majoria de les aplicacions associen la drecera de teclat Ctrl+C amb l'acció de copiar. Si ho fem així també al nostre producte, estarem facilitant l'aprenentatge.</p>
+<h3 id="b-eficiencia">B. Eficiència.</h3>
+<p>Un altre requisit per a la bona usabilitat de l'aplicació és l'eficiència. L'usuari, un cop ha aprés el nostre disseny, ha de ser capaç d'executar les tasques per a les quals s'ha creat el producte tan ràpid com siga possible i sense impediments, seguint el procés més senzill.</p>
+<p>Moltes aplicacions ofereixen als usuaris experimentats formes alternatives de dur a terme les tasques que ajuden a millorar l'eficiència, com ara la definició de dreceres de teclat personalitzades o la creació de macros per encadenar diverses accions.</p>
+<h3 id="c-record">C. Record.</h3>
+<p>També és important que si un usuari està un temps sense utilitzar el nostre disseny, l'esforç de recordar quan el torna a fer servir el producte siga el mínim possible. Hem d'evitar que l'usuari haja de memoritzar la manera com es fan les tasques.</p>
+<p>Un recurs que s'utilitza en algunes aplicacions per evitar memoritzar l'usuari són els assistents, que van guiant pas per pas per fer una tasca llarga o especialment complexa.</p>
+<h3 id="d-errors">D. Errors.</h3>
+<p>Una part fonamental de la usabilitat és la relacionada amb els errors. L'aplicació ha de ser capaç de tolerar un ampli ventall d'accions realitzades per l'usuari sense generar un error. En cas que l'error es produïsca, cal informar adequadament l'usuari del tipus d'error i la gravetat, i proporcionar informació per poder corregir l'error. Per a tal finalitat, ens pot ajudar molt un tractament d'excepcions adequat.</p>
+<p>Hem de prestar especial atenció al llenguatge utilitzat en els missatges d'error que es mostren a l'usuari, ja que la forma d'expressar la situació produïda pot tindre una influència negativa. Cal evitar el llenguatge acusatori i intimidador, així com la descripció excessivament tècnica de l'error.</p>
+<h3 id="e-satisfaccio">E. Satisfacció.</h3>
+<p>El darrer component de la usabilitat és la satisfacció de l'usuari en utilitzar el nostre producte. El disseny ha d'aconseguir que l'experiència de l'usuari amb la nostra aplicació siga agradable i la seua sensació subjectiva després de l'ús siga positiva.</p>
+<p>La satisfacció de l'usuari està en gran manera influenciada per la parença visual de la interfície, que hauria de ser estèticament agradable però minimalista. En aquest sentit és important seguir les pautes de disseny que veurem a l'últim apartat de la unitat.</p>
+<h2 id="22-avaluacio-de-la-usabilitat">2.2 Avaluació de la usabilitat</h2>
+<p>Com vam veure a l'apartat anterior, una de les fases del procés de disseny centrat en l'usuari és l'avaluació, i la usabilitat és un dels factors clau que cal avaluar. Des dels primers prototips del nostre producte hem de validar el disseny amb els nostres usuaris, cosa que ens aportarà informació molt valuosa per millorar i evolucionar cap a la solució final.</p>
+<p>Podem destacar els tres objectius següents de l'avaluació de la usabilitat:</p>
+<ul>
+<li>Identificar problemes en el disseny del producte o servei.</li>
+<li>Descobrir noves oportunitats de millora del disseny que no ens havíem plantejat.</li>
+<li>Aprendre sobre el comportament i les preferències dels nostres usuaris.</li>
+</ul>
+<h3 id="a-que-hem-davaluar">A. Què hem d'avaluar?</h3>
+<p>La primera pregunta que hem de respondre a l'hora de plantejar l'avaluació de la usabilitat d'un disseny és què avaluarem. Les sessions d'avaluació de la usabilitat consisteixen a plantejar a un grup d'usuaris la realització d'una sèrie de tasques realistes que podrien fer a la feina diària amb l'aplicació.</p>
+<p>Les tasques que es plantegen poden ser molt específiques o amb un resultat obert, depenent dels objectius de la prova. Però sempre haurem de ser molt curosos amb la manera d'especificar la tasca, per evitar malentesos i confusions a l'usuari. També hem d'evitar dirigir l'usuari excessivament, i permetre que utilitze lliurement el disseny.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>A l'hora d'escollir les tasques que els usuaris hauran de realitzar a la sessió d'avaluació de la usabilitat, hem de prioritzar les més rellevants per a la nostra aplicació. Es recomana que no siguen més de cinc tasques per participant, i que la durada total de la sessió no supere una hora.</p>
+</div>
+<p>A més de les tasques que es plantejaran a l'usuari, hem de decidir què ens interessa mesurar durant la prova. En termes generals, se sol distingir entre dos tipus de mètriques:</p>
+<ul>
+<li>
+<p><strong>Qualitatives</strong>: aquest tipus de mètriques són especialment importants a les primeres fases del disseny, i consisteixen en valoracions subjectives que realitza l'usuari durant la prova o en observacions que podem realitzar del seu comportament . </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Exemples de mètriques qualitatives són el nivell d'estrès de l'usuari (determinat pels seus moviments, gestos o expressions) o la satisfacció de l'usuari després de la prova (que podeu comentar directament o podem recollir amb un qüestionari).</p>
+</div>
+</li>
+<li>
+<p><strong>Quantitatives</strong>: aquestes mètriques es basen en paràmetres quantificables, i s'utilitzen més quan el disseny està quasi acabat o fins i tot quan el producte ja està en funcionament. </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Algunes mètriques quantitatives podrien ser el temps que li costa a un usuari dur a terme una tasca, el nombre de tasques que completa en una sessió o la quantitat de vegades que ha hagut d'anar a l'ajuda.</p>
+</div>
+</li>
+</ul>
+<h3 id="b-qui-participa-en-lavaluacio">B. Qui participa en l'avaluació?</h3>
+<p>A les sessions d'avaluació de la usabilitat podem distingir els rols següents:</p>
+<ul>
+<li>
+<p><strong>Moderador</strong>: és l'encarregat de guiar els usuaris participants durant la sessió d'avaluació. Presentarà les tasques a realitzar, resoldrà els dubtes dels usuaris i obtindrà informació mitjançant l'observació o preguntant als usuaris. És recomanable que siga algú extern a l'equip de desenvolupament del producte, i fins i tot de vegades es recorre a professionals especialitzats en aquest tipus d'avaluacions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>El moderador ha de procurar mantenir-se neutral i no influir en els participants. Ha d'intervenir tan poc com siga possible, i quan ho faça ha d'utilitzar un estil d'interacció obert, que permeta a l'usuari expressar-se amb llibertat. Per exemple, en lloc de preguntar si us sembla bé una funcionalitat és millor preguntar per la vostra opinió sobre aquesta funcionalitat.</p>
+</div>
+</li>
+<li>
+<p><strong>Usuaris</strong>: els participants a la sessió han de ser usuaris potencials del producte o servei que estem dissenyant. Es recomana que a cada sessió d'avaluació participen al voltant de cinc usuaris, ja que a partir d'aquest nombre els problemes d'usabilitat detectats se solen repetir. </p>
+</li>
+</ul>
+<h3 id="c-com-es-fa-lavaluacio">C. Com es fa l'avaluació?</h3>
+<p>Hi ha diferents opcions a l'hora de plantejar l'avaluació de la usabilitat:</p>
+<ul>
+<li><strong>Presencial</strong>: el moderador i els usuaris estan físicament al mateix lloc. Tot i que el moderador sol prendre notes durant la sessió, també és habitual gravar la sessió en vídeo per poder fer una anàlisi més detallada amb posterioritat.</li>
+<li><strong>Remota</strong>: els participants a la sessió estan en llocs diferents. Solen ser menys costoses que les sessions presencials, i en estar els usuaris en el seu propi entorn de treball solen sentir-se més segurs davant de les tasques a realitzar. Podem distingir dos tipus d'avaluacions remotes:<ul>
+<li><strong>Moderades</strong>: encara que el moderador i els usuaris estan en ubicacions físiques diferents, interactuen de manera semblant a les sessions presencials, utilitzant algun programari de comunicació que permeta compartir la pantalla de l'usuari.</li>
+<li><strong>No moderades</strong>: es fa servir algun programari especialitzat per a avaluacions d'usabilitat, on es configuren les tasques a realitzar. Un cop acabada la sessió, el moderador rep el resultat de l'avaluació (normalment, l'enregistrament de la sessió, un test de valoració de l'usuari i les mètriques quantitatives que s'hagen definit).</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-experiencia-dusuari-ux">2.3 Experiència dusuari (UX)</h2>
+<p>El concepte d'experiència d'usuari o <em>UX</em> (de l'anglés, <em>User Experience</em>) fa referència a l'experiència completa de l'usuari en relació amb un producte o servei. Una bona experiència d'usuari donarà com a resultat una percepció subjectiva positiva de l'usuari cap a la nostra aplicació.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>No s'han de confondre els conceptes d'experiència d'usuari i usabilitat, encara que hi ha relació entre ells. La usabilitat és un dels factors que influeixen en una bona experiència d'usuari, però també seran determinants factors com ara la utilitat (que el producte permeta a l'usuari resoldre un problema concret), la credibilitat (que l'usuari confie en el nostre producte) o l'accessibilitat (que el disseny tinga en compte la varietat d'usuaris i dispositius).</p>
+</div>
+<p>Donald Norman (del que ja parlàrem a l'apartat anterior) juntament amb Jakob Nielsen (un dels principals referents en el món de la usabilitat) van proposar els nivells següents en parlar d'experiència d'usuari.</p>
+<p><img alt="Nivells d'UX" src="../images/image4.png" /></p>
+<p>Com veiem, aconseguir una bona experiència d'usuari comença creant un producte o servei que siga útil per a l'usuari i li permeta resoldre un problema concret. El següent pas seria aconseguir que el disseny siga usable, aplicant tot el que hem aprés als apartats anteriors. Una vegada tenim un disseny útil i usable, l'objectiu seria aconseguir un producte atractiu per als usuaris, que han de desitjar utilitzar-lo. L'últim nivell és on s'assoleix una experiència global positiva, aconseguint que la seua opinió subjectiva cap al nostre producte siga bona.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../1%20-%20Introduccio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introducció a les GUI" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introducció a les GUI
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../3%20-%20Pautes%20de%20Disseny/" class="md-footer__link md-footer__link--next" aria-label="Next: Pautes de disseny" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Pautes de disseny
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1325 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fpieseljust.github.io/di21-22/unitats/2-intro-interficies/teoria/3%20-%20Pautes%20de%20Disseny/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Pautes de disseny - Desenvolupament d'interfícies 21-22</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-pautes-de-disseny" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desenvolupament d'interfícies 21-22
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pautes de disseny
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Desenvolupament d'interfícies 21-22
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Unitat 1 - Programació amb Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 1 - Programació amb Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 1 - Programació amb Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/2%20-%20Control%20de%20fluxe/" class="md-nav__link">
+        Control de fluxe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/3%20-%20Funcions/" class="md-nav__link">
+        Funcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/4%20-%20Fitxers/" class="md-nav__link">
+        Tractament de fitxers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/5%20-%20Excepcions/" class="md-nav__link">
+        Errors i excepcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/6%20-%20POO/" class="md-nav__link">
+        Programació oorientada a objectes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Pràctica 1 - PyGame
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pràctica 1 - PyGame" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pràctica 1 - PyGame
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
+        Disseny del joc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
+        Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
+        Imatges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
+        Sons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
+        Conclusió
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_7" type="checkbox" id="__nav_2_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_7">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
+        Part obligatòria (30%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
+        Part d'ampliació - projecte (70%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
+        Qualificació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Unitat 2 - Introducció a les interfícies d'usuari
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 2 - Introducció a les interfícies d'usuari" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 2 - Introducció a les interfícies d'usuari
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%20-%20Introduccio/" class="md-nav__link">
+        Introducció a les GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2%20-%20Usabilitat/" class="md-nav__link">
+        Usabilitat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Pautes de disseny
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Pautes de disseny
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-estructura-de-la-interficie" class="md-nav__link">
+    3.1 Estructura de la interfície
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Estructura de la interfície">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-principis-de-disseny" class="md-nav__link">
+    A. Principis de disseny
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-menus-menus-contextuals-i-barres-de-ferramentes" class="md-nav__link">
+    B. Menús, menús contextuals i barres de ferramentes
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Menús, menús contextuals i barres de ferramentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menus" class="md-nav__link">
+    Menús
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menus-contextuals" class="md-nav__link">
+    Menús contextuals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barres-de-ferramentes" class="md-nav__link">
+    Barres de ferramentes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-controls" class="md-nav__link">
+    3.2 Controls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-aspecte-visual" class="md-nav__link">
+    3.3 Aspecte visual
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Aspecte visual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-color" class="md-nav__link">
+    A. Color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-text" class="md-nav__link">
+    B. Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-icones" class="md-nav__link">
+    C. Icones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-missatges-a-lusuari" class="md-nav__link">
+    3.4 Missatges a l'usuari
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Qualificació
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Qualificació" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Qualificació
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Criteris
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Criteris" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Criteris
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../qualificacio/rubrica/" class="md-nav__link">
+        Rúbriques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-estructura-de-la-interficie" class="md-nav__link">
+    3.1 Estructura de la interfície
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Estructura de la interfície">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-principis-de-disseny" class="md-nav__link">
+    A. Principis de disseny
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-menus-menus-contextuals-i-barres-de-ferramentes" class="md-nav__link">
+    B. Menús, menús contextuals i barres de ferramentes
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Menús, menús contextuals i barres de ferramentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menus" class="md-nav__link">
+    Menús
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menus-contextuals" class="md-nav__link">
+    Menús contextuals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barres-de-ferramentes" class="md-nav__link">
+    Barres de ferramentes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-controls" class="md-nav__link">
+    3.2 Controls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-aspecte-visual" class="md-nav__link">
+    3.3 Aspecte visual
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Aspecte visual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-color" class="md-nav__link">
+    A. Color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-text" class="md-nav__link">
+    B. Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-icones" class="md-nav__link">
+    C. Icones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-missatges-a-lusuari" class="md-nav__link">
+    3.4 Missatges a l'usuari
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3-pautes-de-disseny">3. Pautes de disseny</h1>
+<p>Com hem vist als apartats anteriors, la interfície d'usuari d'una aplicació ha de ser dissenyada amb l'usuari sempre en ment, i tenir com a objectiu que l'experiència global dels usuaris amb la nostra aplicació siga la més satisfactòria possible. Per aconseguir-ho, és de vital importància conéixer les pautes i recomanacions existents per a cadascun dels components de la interfície, que ens ajudaran sobre manera a aconseguir un disseny exitós.</p>
+<p>Les pautes de disseny es troben en diferents tipus de documents, que podem organitzar en els següents nivells:</p>
+<p><img alt="pautes de disseny" src="../images/image5.png" /></p>
+<p>Al nivell més baix tenim els estàndards internacionals, com les normes ISO comentades en apartats anteriors. Serveixen de base per a la resta de pautes, encara que no són documents amb què els dissenyadors d'interfícies treballen habitualment. </p>
+<p>Prenent com a referència els estàndards internacionals s'elaboren les guies de cada plataforma. Per exemple, Microsoft ha desenvolupat una guia de disseny per a aplicacions d'escriptori per al sistema operatiu Windows i Apple una guia per a cadascuna de les seues plataformes (com macOS o iOS). A l'entorn de les aplicacions per a Linux, hi ha una guia per al GNOME i una altra per al KDE.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Les guies de disseny de cada plataforma contenen informació molt útil a l'hora de plantejar el disseny de la interfície d'usuari, i s'han de conéixer i utilitzar per part dels dissenyadors. A les referències de la unitat es pot trobar un enllaç a cadascuna de les guies comentades.</p>
+</div>
+<p>En algunes organitzacions, s'elaboren estàndards corporatius propis relatius al disseny de la interfície, que solen incloure aspectes com la tipografia a utilitzar o les paletes de colors permeses. I respectant aquests estàndards corporatius, de vegades es desenvolupen fins i tot guies de disseny per a aplicacions concretes dins una organització.</p>
+<p>Els apartats següents recullen algunes pautes generals que cal tenir en compte a l'hora de fer el disseny de la nostra interfície.</p>
+<h2 id="31-estructura-de-la-interficie">3.1 Estructura de la interfície</h2>
+<h3 id="a-principis-de-disseny">A. Principis de disseny</h3>
+<p>Pel que fa a com estructurar i organitzar els elements que formen la interfície de la nostra aplicació, s'han de tenir presents en tot moment els principis de disseny següents:</p>
+<ul>
+<li>
+<p><strong>Contrast</strong>: cal utilitzar els contrastos de color i mida per organitzar la informació i dirigir l'atenció de l'usuari.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>S'utilitza habitualment el color roig per advertir l'usuari d'una acció destructiva o que no es pot desfer, ja que contrasta fortament amb els colors que se solen utilitzar com a fons.</p>
+</div>
+</li>
+<li>
+<p><strong>Jerarquia</strong>: agrupar els elements que formen la interfície, ordenant-los segons la seua importància.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Els menús són un exemple típic de jeràrquica a la interfície, ja que ens permeten organitzar les funcionalitats de l'aplicació en categories i subcategories.</p>
+</div>
+</li>
+<li>
+<p><strong>Proximitat</strong>: podem crear una relació entre diferents elements de la interfície si els situem a prop els uns dels altres. De la mateixa manera, quan dos components de la interfície estan allunyats, l'usuari entendrà que no hi ha relació entre ells.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>A les barres de ferramentes els diferents botons solen estar agrupats segons la seva funcionalitat, de manera que els usuaris els poden localitzar més fàcilment. Per exemple, les opcions de negreta, cursiva i subratllat en un processador de text sempre estan juntes.</p>
+</div>
+</li>
+<li>
+<p><strong>Alineació</strong>: la correcta alineació dels diferents components de la interfície facilita a l'usuari processar la informació i ens permet guiar-los més fàcilment per les diferents zones de la interfície. L'alineació entre els elements propers és especialment important per evitar errors i sobreesforços a l'usuari.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Quan dissenyem un formulari perquè l'usuari introdueixi informació, és especialment important l'alineació entre els diferents elements. D'una banda, les etiquetes han d'estar correctament alineades amb els controls que acompanyen. I de l'altra, hem d'alinear uns camps amb els altres per facilitar a l'usuari la seva tasca.</p>
+</div>
+</li>
+</ul>
+<h3 id="b-menus-menus-contextuals-i-barres-de-ferramentes">B. Menús, menús contextuals i barres de ferramentes</h3>
+<p>Gran part de les aplicacions amb interfície gràfica d'usuari compten amb menús i barres de ferramentes per permetre a l'usuari accedir a les diferents funcionalitats de l'aplicació. Veurem algunes de les pautes més importants a tenir en compte quan fem servir aquests elements:</p>
+<h4 id="menus">Menús</h4>
+<p>Si el menú té poques opcions principals (tres o menys) és millor considerar una altra alternativa, com ara una barra amb botons. Si teniu massa opcions principals (més de 10) cal intentar reorganitzar les opcions de menú per reduir-les.</p>
+<p>Cal intentar simplificar l'estructura de menús i de submenús, ja que compliquen a l'usuari trobar l'opció desitjada. Si la jerarquia és massa profunda haurem d'intentar reorganitzar les opcions.</p>
+<p>Les etiquetes han de ser tan simples com siga possible, recomanant-se una sola paraula a les opcions principals del menú.</p>
+<p>Si l'acció associada a una opció de menú requereix obrir una finestra o diàleg, la vostra etiqueta ha d'acabar amb punts suspensius (per exemple, Desa com…).</p>
+<h4 id="menus-contextuals">Menús contextuals</h4>
+<p>Han d'aparéixer en prémer amb el botó dret del ratolí sobre una zona de la interfície, i oferiran un xicotet conjunt d'opcions (no més de 10) relacionades amb l'element sobre el qual heu premut.
+Les opcions del menú contextual també han d'estar disponibles des del menú principal de l'aplicació.</p>
+<p>Ordenar les opcions de més a menys rellevància per a l'usuari.
+Evitar l'ús de submenús als menús contextuals.</p>
+<h4 id="barres-de-ferramentes">Barres de ferramentes</h4>
+<p>Incloure a la barra de ferramentes només les opcions més utilitzades pels usuaris. És recomanable permetre a l'usuari personalitzar els botons presents a les barres de ferramentes.</p>
+<p>Com que, en la majoria de les aplicacions, les barres de ferramentes es poden ocultar, les opcions han de ser accessibles d'altres maneres (per exemple, amb el menú principal de l'aplicació).
+Les icones utilitzades han de ser consistents amb les que l'usuari sol trobar a la majoria de les aplicacions (per exemple, un disquet per a l'opció de guardar). També és recomanable afegir una descripció de cada acció a manera de <em>tooltip</em>.</p>
+<h2 id="32-controls">3.2 Controls</h2>
+<p>Els controls són els components bàsics amb què construïm la interfície gràfica d'una aplicació. </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Alguns exemples de controls són els botons, les caselles de selecció o les llistes desplegables.</p>
+</div>
+<p>La taula següent recull informació sobre l'ús dels principals controls, indicant quan han de ser usats i algunes pautes importants en cadascun.</p>
+<div class="admonition tip">
+<p class="admonition-title">Pautes d'ús dels controls</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Botons</label><label for="__tabbed_1_2">Entrada de text</label><label for="__tabbed_1_3">Llista desplegable</label><label for="__tabbed_1_4">Casella de selecció</label><label for="__tabbed_1_5">Botó de ràdio</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="botons" src="../images/image7.png" /></p>
+<p>Els botons permeten a l'usuari iniciar una acció de manera immediata.</p>
+<ul>
+<li>Utilitzar etiquetes descriptives de lacció.</li>
+<li>Ser consistent en tota l'aplicació (posició, colors, icones, mida,...).</li>
+<li>Situar-los a prop d'altres controls relacionats.</li>
+<li>Agrupar-los de manera lògica.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="entrada de text" src="../images/image6.png" /></p>
+<p>Permet introduir text de forma lliure. No ho utilitzarem quan hi hagi un control especialitzat més adequat (per exemple, un selector de dates) o quan els possibles valors estiguin restringits (per exemple, la província d'una adreça).</p>
+<ul>
+<li>L'etiqueta ha d'indicar clarament a l'usuari què ha d'introduir i ser tan curta com siga possible.</li>
+<li>És preferible situar lʻetiqueta sobre el control, encara que també es pot posar a la seva esquerra.</li>
+<li>L'amplada del control ha de ser adequada al tipus de dada que conté.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="llista desplegable" src="../images/image9.png" /></p>
+<p>S'utilitzen per triar un valor d'una llista de valors possibles. Són especialment útils quan una de les opcions és la predeterminada, o quan lespai disponible és limitat.</p>
+<ul>
+<li>Cadascuna de les opcions ha d'estar formada per poques paraules.</li>
+<li>Les opcions han d'estar ordenades de manera lògica. </li>
+<li>Les meta-opcions (com Cap) s'han de situar a l'inici de la llista i entre parèntesis. </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="caselles de selecció" src="../images/image8.png" /></p>
+<p>S'utilitzen per activar o desactivar una opció, o per seleccionar o deseleccionar una opció dins d'un grup d'opcions. És molt útil quan lusuari pot triar diverses opcions, o no triar cap opció.</p>
+<ul>
+<li>Les diferents caselles d‟un grup han d‟estar alineades verticalment.</li>
+<li>Limitar a 10 el número de caselles en un grup.</li>
+<li>En un grup de caselles totes les etiquetes han de ser homogènies en extensió i en format.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/image10.png" /></p>
+<p>Permet a l'usuari seleccionar una única opció dins d'un grup d'opcions. Són recomanables quan volem que l'usuari vegi totes les opcions alhora, i quan les etiquetes de les opcions sigan extenses.</p>
+<ul>
+<li>El nombre d'opcions ha de ser inferior a 7.</li>
+<li>Ordenar les diferents opcions en un ordre lògic per a l'usuari.</li>
+<li>Seleccionar per defecte l'opció més adequada per a l'usuari.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>A les guies de disseny de cada plataforma s'ofereix informació per a altres tipus de controls més específics, com ara les barres de progrés, els controls lliscants o els selectors de data i hora.</p>
+<h2 id="33-aspecte-visual">3.3 Aspecte visual</h2>
+<p>En aquest apartat es mostren algunes pautes de disseny importants relacionades amb l'aspecte visual de l'aplicació, concretament relatives al color, el text i les icones.</p>
+<h3 id="a-color">A. Color</h3>
+<p>L'ús de diferents colors a la interfície amb fins estètics ha de ser reduït, i s'utilitzarà principalment per comunicar alguna cosa a l'usuari (per exemple, utilitzarem el color roig per comunicar un error o situació perillosa). No obstant això, mai no ha de ser l'única via per comunicar alguna cosa.</p>
+<p>Mai referenciar un element de la interfície pel seu color (per exemple, seria incorrecte indicar a l'usuari “Ha de prémer el botó roig”).</p>
+<p>La interpretació que fem dels diferents colors pot variar depenent de la cultura dels usuaris, per la qual cosa ens haurem d'assegurar que el significat dels colors siga el que pretenem.</p>
+<p>El conjunt de colors que utilitzem en el nostre disseny (conegut com a esquema de color o paleta) han de contrastar de forma adequada.</p>
+<div class="admonition tip">
+<p class="admonition-title">Paleta de colors</p>
+<p>S'aconsella utilitzar les paletes del sistema, o un generador de paletes de colors com el que s'inclou a les referències de la unitat.</p>
+</div>
+<h3 id="b-text">B. Text</h3>
+<p>Es recomana utilitzar les fonts predeterminades de la plataforma a què va destinada l'aplicació (per exemple, les fonts <em>Segoe UI</em> a <em>Microsoft Windows</em> o <em>San Francisco</em> a <em>Apple macOS</em>).</p>
+<p>La mida del text s'ha de determinar de manera que ajude l'usuari a establir la jerarquia entre els elements de la interfície.</p>
+<p>Utilitzar les propietats del text (com la negreta, la cursiva o el subratllat) de forma consistent dins de l'aplicació, i també amb la resta d'aplicacions. Per exemple, els enllaços sempre han d'estar subratllats.</p>
+<h3 id="c-icones">C. Icones</h3>
+<p>Com a regla general, no s'han d'usar etiquetes i icones alhora al mateix control. Cal triar una de les dues opcions.
+Es recomana utilitzar icones fàcilment identificables per l'usuari, que seguisquen les convencions de la resta d'aplicacions (per exemple, una paperera per a l'acció d'esborrar).</p>
+<p>Algunes icones són fàcilment reconeixibles dins d'un grup d'icones, però no fora del grup. Per exemple, una icona amb un quadrat negre representa l'acció de parar en un reproductor multimèdia, però difícilment serà associada a aquesta acció fora del context.</p>
+<p>Convé adaptar-se a l'estil visual de les icones de cada plataforma, encara que actualment el més habitual és utilitzar icones amb un disseny simple que representen clarament una acció.</p>
+<h2 id="34-missatges-a-lusuari">3.4 Missatges a l'usuari</h2>
+<p>La majoria de les aplicacions necessiten mostrar diferents tipus de missatges a l'usuari amb diferents propòsits. Són molt habituals els missatges de confirmació, error o advertència i les notificacions. </p>
+<p>A continuació es llisten algunes recomanacions relacionades amb els missatges a l'usuari:</p>
+<div class="admonition tip">
+<p class="admonition-title">Missatges a l'usuari</p>
+<ul>
+<li>Cal avisar l'usuari abans de començar una acció irreversible i que podria causar una pèrdua d'informació.</li>
+<li>Cal evitar interrompre l'usuari amb missatges que no siguen importants.</li>
+<li>Sempre hem d'utilitzar un llenguatge proper a l'usuari, sense incloure informació interna de l'aplicació (com ara codis d'error que no siguen útils per a l'usuari).</li>
+<li>La manera d'expressar els missatges ha de ser respectuosa amb l'usuari, i utilitzar un estil d'escriptura directe i concís. </li>
+</ul>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../2%20-%20Usabilitat/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Usabilitat" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Usabilitat
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../tasques/1%20-%20Activitats/" class="md-footer__link md-footer__link--next" aria-label="Next: Activitats" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Activitats
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
