@@ -2,8 +2,8 @@
 
 La interfície d'usuari d'un sistema està definida per la manera com els usuaris interactuen amb els components del sistema. Quan parlem de sistemes informàtics, podem distingir dos tipus d'interfícies d'usuari:
 
-- Interfícies de maquinari: els components físics que permeten a l'usuari introduir ordres i dades al sistema, i obtenir els resultats (com ara el teclat, el ratolí o el monitor).
-- Interfícies programari: les aplicacions utilitzades pels usuaris per dur a terme una tasca concreta.
+- **Interfícies de maquinari**: els components físics que permeten a l'usuari introduir ordres i dades al sistema, i obtenir els resultats (com ara el teclat, el ratolí o el monitor).
+- **Interfícies programari**: les aplicacions utilitzades pels usuaris per dur a terme una tasca concreta.
 
 
 !!!note "HCI"
@@ -24,17 +24,17 @@ El procés que s'associa al disseny centrat en l'usuari es resumeix en l'esquema
 
 ![hci](images/image2.png)
 
-- Anàlisi del context d'ús: s'investiguen totes les característiques del context dús del producte o servei, que inclou tant la tasca a realitzar com les particularitats dels usuaris i de l'entorn d'ús.
-- Detallar els requisits: tenint en compte l'anàlisi realitzat al pas anterior, s'especifiquen els requisits que el producte o servei ha de complir. 
-- Dissenyar solucions: a continuació, es començarà amb el disseny de possibles solucions (prototips) que complisquen els requisits detallats. S'evolucionarà des d'un disseny inicial aproximat fins a un disseny complet i detallat. 
-- Avaluar amb els usuaris: l'avaluació de les solucions pels usuaris és un punt de vital importància en el disseny centrat en l'usuari i s'ha de fer des de les primeres versions de la solució. Com a resultat de l'avaluació, és probable que s'haja de tornar a una etapa anterior del procés.
+- **Anàlisi del context d'ús**: s'investiguen totes les característiques del context dús del producte o servei, que inclou tant la tasca a realitzar com les particularitats dels usuaris i de l'entorn d'ús.
+- **Detallar els requisits**: tenint en compte l'anàlisi realitzat al pas anterior, s'especifiquen els requisits que el producte o servei ha de complir. 
+- **Dissenyar solucions**: a continuació, es començarà amb el disseny de possibles solucions (prototips) que complisquen els requisits detallats. S'evolucionarà des d'un disseny inicial aproximat fins a un disseny complet i detallat. 
+- **Avaluar amb els usuaris**: l'avaluació de les solucions pels usuaris és un punt de vital importància en el disseny centrat en l'usuari i s'ha de fer des de les primeres versions de la solució. Com a resultat de l'avaluació, és probable que s'haja de tornar a una etapa anterior del procés.
 
 !!! warning "Important"
     Tot i que l'aplicació del disseny centrat en l'usuari consumeix recursos i comporta un esforç extra en el desenvolupament d'un projecte, contribueix a assegurar l'èxit final i, per tant, s'ha de prendre sempre com a guia.
 
 ## 1.2 Evolució de les interfícies d'usuari
 
-Tenint en compte levolució en el temps de les interfícies programari d'usuari, podem distingir tres grans tipus d'interfícies: CLI, GUI i NUI.
+Tenint en compte l'evolució en el temps de les interfícies programari d'usuari, podem distingir tres grans tipus d'interfícies: CLI, GUI i NUI.
 
 ![Evolució de les interfícies](images/image1.png)
 
@@ -46,7 +46,7 @@ Actualment es continuen utilitzant interfícies tipus CLI en diferents àmbits. 
 
 !!! example "git"
 
-    Un exemple clar dús actual dinterfícies de tipus CLI és el gestor de versions git, utilitzat en multitud de projectes de desenvolupament de programari. Tot i que hi ha diferents interfícies gràfiques per a git, el més habitual és utilitzar-lo per mitjà d'ordres.
+    Un exemple clar dús actual d'interfícies de tipus CLI és el gestor de versions git, utilitzat en multitud de projectes de desenvolupament de programari. Tot i que hi ha diferents interfícies gràfiques per a git, el més habitual és utilitzar-lo per mitjà d'ordres.
 
 !!! example "Cloud"
     La majoria de plataformes de núvol públic (com *Amazon Web Services, Microsoft Azure o Google Cloud*) ofereixen una interfície de tipus CLI per crear i mantenir la infraestructura de serveis al núvol. Aquesta possibilitat permet automatitzar tasques relacionades amb el núvol dins dels processos de desplegament de les aplicacions.

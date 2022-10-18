@@ -3,7 +3,7 @@
 ### Activitat 1
 T'han encarregat que faces el disseny de la interfície d'usuari per a l'aplicació d'una empresa de lloguer de cotxes amb oficina a l'aeroport. L'aplicació serà utilitzada pels empleats de l'oficina situada a la terminal d'arribades de l'aeroport, que atenen directament els viatgers que volen llogar un cotxe de manera presencial. És habitual que a l'oficina hi haja alumnes de pràctiques de Formació Professional realitzant les FCTs.
 
-La primera decisió que has de prendre és el tipus d'interfície que plantejaràs en el teu disseny: CLI, GUI o NUI Justifica la resposta.
+La primera decisió que has de prendre és el tipus d'interfície que plantejaràs en el teu disseny: CLI, GUI o NUI. Justifica la resposta.
 
 ### Activitat 2 - Escola infantil
 
