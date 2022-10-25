@@ -64,7 +64,8 @@ Les interfícies tipus GUI es van popularitzar durant els anys 80 gràcies a la 
 
 Les interfícies NUI o interfícies naturals d'usuari (de l'anglès, *Natural User Interface*) es caracteritzen per oferir a l'usuari un estil d'interacció molt més directe i intuïtiu que amb els tipus d'interfícies anteriors. Solen mancar de dispositiu físic d'entrada (com teclat o ratolí), i en el seu lloc fan ús d'habilitats naturals com el moviment, els gestos o la veu. 
 
-Les interfícies tàctils dels dispositius mòbils (com els telèfons intel·ligents o les tauletes) són un clar exemple d'interfícies NUI, ja que permeten a l'usuari realitzar accions per mitjà de gestos naturals (per exemple, navegar entre imatges fent-les lliscar a la pantalla del dispositiu). També els assistents de veu (com Google Assistant o Amazon Alexa) són exemples d'interfícies naturals, en aquest cas controlades per mitjà de la veu.
+!!! example "NUI"
+    Les interfícies tàctils dels dispositius mòbils (com els telèfons intel·ligents o les tauletes) són un clar exemple d'interfícies NUI, ja que permeten a l'usuari realitzar accions per mitjà de gestos naturals (per exemple, navegar entre imatges fent-les lliscar a la pantalla del dispositiu). També els assistents de veu (com Google Assistant o Amazon Alexa) són exemples d'interfícies naturals, en aquest cas controlades per mitjà de la veu.
 
 
 

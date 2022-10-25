@@ -49,7 +49,7 @@ Hem de prestar especial atenció al llenguatge utilitzat en els missatges d'erro
 
 El darrer component de la usabilitat és la satisfacció de l'usuari en utilitzar el nostre producte. El disseny ha d'aconseguir que l'experiència de l'usuari amb la nostra aplicació siga agradable i la seua sensació subjectiva després de l'ús siga positiva.
 
-La satisfacció de l'usuari està en gran manera influenciada per la parença visual de la interfície, que hauria de ser estèticament agradable però minimalista. En aquest sentit és important seguir les pautes de disseny que veurem a l'últim apartat de la unitat.
+La satisfacció de l'usuari està en gran manera influenciada per l'aparença visual de la interfície, que hauria de ser estèticament agradable però minimalista. En aquest sentit és important seguir les pautes de disseny que veurem a l'últim apartat de la unitat.
 
 
 ## 2.2 Avaluació de la usabilitat
