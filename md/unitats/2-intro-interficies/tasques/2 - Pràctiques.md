@@ -37,10 +37,11 @@ En aquest cas pràctic hauràs de plantejar un exemple de cada heurística en ap
 Com hem vist al llarg de la unitat, el disseny de la interfície d'usuari d'una aplicació comporta tenir en compte múltiples aspectes, sempre amb l'usuari com a referent. A més, és un procés iteratiu, en què el disseny inicial (molt allunyat de la solució final) evolucionarà fins a la versió final (sobre la qual es basarà la construcció de l'aplicació).
 
 Les propostes de disseny que es van elaborant i que s'avaluen amb els usuaris s'anomenen prototips. Segons es va avançant en el procés de disseny, els prototips van guanyant en fidelitat, és a dir, es van semblant cada cop més a la solució final. Segons el grau de fidelitat es pot distingir entre els tipus de prototips següents:
-Prototip de molt baixa fidelitat (en anglés, *sketch*): són els primers esbossos que es fan en iniciar el disseny, i representen les idees generals del projecte. Moltes vegades s'elaboren en paper.
-Prototip de baixa fidelitat (en anglés, *wireframe*): aquest tipus de prototips se centra en l'estructura i l'organització dels continguts del disseny. No incorpora aspectes visuals com ara colors, fonts o imatges, per centrar-se en la funcionalitat i no en la part estètica.
-Prototip de mitja fidelitat (en anglés, *mockup*): en aquest prototip s'incorporen aspectes visuals al prototip de baixa fidelitat obtingut, obtenint un prototip molt proper visualment al producte final, però sense funcionalitat.
-Prototip d'alta fidelitat (en anglés, *prototype*): es realitza en les darreres etapes del disseny, i ja s'hi incorporen algunes funcionalitats, com ara la navegació entre les parts de l'aplicació. 
+
+- **Prototip de molt baixa fidelitat** (en anglés, *sketch*): són els primers esbossos que es fan en iniciar el disseny, i representen les idees generals del projecte. Moltes vegades s'elaboren en paper.
+- **Prototip de baixa fidelitat** (en anglés, *wireframe*): aquest tipus de prototips se centra en l'estructura i l'organització dels continguts del disseny. No incorpora aspectes visuals com ara colors, fonts o imatges, per centrar-se en la funcionalitat i no en la part estètica.
+- **Prototip de mitja fidelitat** (en anglés, *mockup*): en aquest prototip s'incorporen aspectes visuals al prototip de baixa fidelitat obtingut, obtenint un prototip molt proper visualment al producte final, però sense funcionalitat.
+- **Prototip d'alta fidelitat** (en anglés, *prototype*): es realitza en les darreres etapes del disseny, i ja s'hi incorporen algunes funcionalitats, com ara la navegació entre les parts de l'aplicació. 
 
 !!! warning "Important"
     Encara que és important fer avaluacions dels prototips amb els usuaris des de les primeres versions, els tests d'usabilitat i les avaluacions de les heurístiques solen intensificar-se i formalitzar-se amb els prototips d'alta fidelitat.
@@ -51,5 +52,6 @@ La descripció de la funcionalitat que ens ha donat el nostre client és la seg�
 
 “Volem una aplicació perquè els nostres clients puguen fer la comanda de manera autònoma utilitzant una pantalla tàctil situada a l'entrada del restaurant. El client ha de poder afegir a la seua comanda tots els productes que desitge, i els trobareu organitzats per categories (entrants, plats principals, begudes i postres). Quan finalitze la comanda podrà decidir si vol pagar amb targeta de crèdit al mateix terminal o en efectiu en recollir-lo al taulell. També podran triar entre prendre la seua comanda al restaurant o endur-se'l a casa” 
 
-Recorda que un prototip de baixa fidelitat no inclou aspectes estètics com ara colors o imatges, i intenta aplicar tot allò que hem aprés a la unitat a l'hora de plantejar la teua proposta. 
+!!!info "Prototip de baixa fidelitat"
+    Recorda que un prototip de baixa fidelitat no inclou aspectes estètics com ara colors o imatges, i intenta aplicar tot allò que hem aprés a la unitat a l'hora de plantejar la teua proposta. 
 
