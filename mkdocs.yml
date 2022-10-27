@@ -32,6 +32,13 @@ nav:
         - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
         - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
       - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
+    - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
+      - Teoria:
+        - 1 - Tecnologies: unitats/3-GUI-PySide6/teoria/1 - Introducció.md
+        - 2 - Controls d'ús comú: unitats/3-GUI-PySide6/teoria/2 - Controls ús comú.md
+        - 3 - Contenidors de components. Disseny: unitats/3-GUI-PySide6/teoria/3 - Layouts.md
+        - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/3-GUI-PySide6/teoria/4 - Menus.md
+        - 5 - Diàlegs i altres finestres: unitats/3-GUI-PySide6/teoria/5 - Dialegs.md
     - Qualificació:
       - Criteris: 
         - Rúbriques:  qualificacio/rubrica.md

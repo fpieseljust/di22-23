@@ -1,0 +1,1551 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fpieseljust.github.io/di21-22/unitats/3-GUI-PySide6/teoria/2%20-%20Controls%20%C3%BAs%20com%C3%BA/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>2 - Controls d'ús comú - Desenvolupament d'interfícies 21-22</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-components-dus-comu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desenvolupament d'interfícies 21-22
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2 - Controls d'ús comú
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Desenvolupament d'interfícies 21-22
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Unitat 1 - Programació amb Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 1 - Programació amb Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 1 - Programació amb Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/2%20-%20Control%20de%20fluxe/" class="md-nav__link">
+        Control de fluxe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/3%20-%20Funcions/" class="md-nav__link">
+        Funcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/4%20-%20Fitxers/" class="md-nav__link">
+        Tractament de fitxers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/5%20-%20Excepcions/" class="md-nav__link">
+        Errors i excepcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/6%20-%20POO/" class="md-nav__link">
+        Programació oorientada a objectes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Pràctica 1 - PyGame
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pràctica 1 - PyGame" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pràctica 1 - PyGame
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
+        Disseny del joc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
+        Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
+        Imatges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
+        Sons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
+        Conclusió
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_7" type="checkbox" id="__nav_2_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_7">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
+        Part obligatòria (30%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
+        Part d'ampliació - projecte (70%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
+        Qualificació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Unitat 2 - Introducció a les interfícies d'usuari
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 2 - Introducció a les interfícies d'usuari" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 2 - Introducció a les interfícies d'usuari
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/teoria/1%20-%20Introduccio/" class="md-nav__link">
+        1 - Introducció a les interfícies d'usuari
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/teoria/2%20-%20Usabilitat/" class="md-nav__link">
+        2 - Usabilitat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/teoria/3%20-%20Pautes%20de%20Disseny/" class="md-nav__link">
+        3 - Pautes de disseny
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
+        Enllaços
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Unitat 3 - Introducció a les interfícies d'usuari amb PySide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 3 - Introducció a les interfícies d'usuari amb PySide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 3 - Introducció a les interfícies d'usuari amb PySide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%20-%20Introducci%C3%B3/" class="md-nav__link">
+        1 - Tecnologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2 - Controls d'ús comú
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2 - Controls d'ús comú
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-components-programari" class="md-nav__link">
+    2.1 Components programari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-components-a-pyside6" class="md-nav__link">
+    2.2 Components a PySide6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-esdeveniments" class="md-nav__link">
+    2.3 Esdeveniments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#231-senyals-i-ranures" class="md-nav__link">
+    2.3.1 Senyals i ranures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-principals-components-en-formularis" class="md-nav__link">
+    2.4 Principals components en formularis
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3%20-%20Layouts/" class="md-nav__link">
+        3 - Contenidors de components. Disseny
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4%20-%20Menus/" class="md-nav__link">
+        4 - Menús, barres de ferramentes i estat, i components flotants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5%20-%20Dialegs/" class="md-nav__link">
+        5 - Diàlegs i altres finestres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Qualificació
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Qualificació" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Qualificació
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Criteris
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Criteris" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Criteris
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../qualificacio/rubrica/" class="md-nav__link">
+        Rúbriques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-components-programari" class="md-nav__link">
+    2.1 Components programari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-components-a-pyside6" class="md-nav__link">
+    2.2 Components a PySide6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-esdeveniments" class="md-nav__link">
+    2.3 Esdeveniments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#231-senyals-i-ranures" class="md-nav__link">
+    2.3.1 Senyals i ranures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-principals-components-en-formularis" class="md-nav__link">
+    2.4 Principals components en formularis
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="2-components-dus-comu">2. Components d'ús comú.</h1>
+<h2 id="21-components-programari">2.1 Components programari</h2>
+<p>En el desenvolupament de circuits electrònics, el grau de reutilització de components és molt alt, de manera que la construcció d'un circuit electrònic es limita a la integració i acoblament de diferents components comercials. Per exemple, una placa base conté components com resistències, condensadors, relés, xips…, que no han estat fabricats pel fabricant de la placa. Així que, hi ha fabricants especialitzats en components i altres en producte final. Això permet reduir costos quant a temps i diners es refereix.</p>
+<p>En el desenvolupament de programari, la reutilització de codi continua sent relativament escassa, però amb la utilització de components aquest problema es redueix, reduint alhora el temps de desenvolupament, el cost econòmic i els errors de programació.</p>
+<p>El desenvolupament de la interfície d'una aplicació es basa en la construcció d'una aplicació a partir de components programari ja existents, limitant al mínim necessari el desenvolupament de codi nou. Podem imaginar-nos els components com les peces d'un Lego que podem connectar entre ells en una jerarquia d'arbre de components. Qualsevol aplicació pot estar composta per múltiples components, i els components principals tenen components secundaris niats dins seu. </p>
+<p>Vam veure una llista dels principals controls d'usuari a la unitat anterior. En aquesta unitat posarem en pràctica l'ús dels controls o components esmentats amb PySide6.</p>
+<p><img alt="controls" src="../images/Controls.png" /></p>
+<p>A l'exemple anterior, veiem sis components diferents que formen el formulari.</p>
+<h2 id="22-components-a-pyside6">2.2 Components a PySide6</h2>
+<p>Els ginys són els elements bàsics i principals per crear interfícies d'usuari a Qt. Podeu mostrar informació, rebre informació de l'usuari i contenir altres ginys de forma agrupada. Un giny que no està incrustat en un giny pare es mostra en forma de finestra independent.
+Vegem la implementació de “Hola Món!” amb PySide6.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Importem les classes QApplication, QLabel i QWidget</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># del mòdul QtWidgets del paquet PySide6</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">class</span> <span class="nc">Finestra</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sd">    Classe Finestra, hereta de QWidget, component base.</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="sd">    &#39;&#39;&#39;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="c1"># Constructor de la classe Finestra</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>        <span class="c1"># Crida al constructor de la superclasse</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>        <span class="c1"># Assignem el títol de la finestra</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;finestra&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="c1"># Creem una etiqueta amb la finestra com a parent.</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta1</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="c1"># Cada aplicació serà una sola instància de QApplication.</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="c1"># Creem un objecte Finestra.</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">finestra1</span> <span class="o">=</span> <span class="n">Finestra</span><span class="p">()</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="c1"># Mostrem la Finestra, per defecte els components estan ocults.</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">finestra1</span><span class="o">.</span><span class="n">xou</span><span class="p">()</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="c1"># Iniciem el bucle d&#39;esdeveniments.</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>L'aspecte que presenta en executar-lo en un escriptori Kde és el d'una finestra com la següent:</p>
+<p><img alt="Finestra" src="../images/Hola_mundo.png" /></p>
+<p>Dins la finestra estarà continguda tota la interfície de l'usuari. En aquest cas, només conté un component QLabel sense interacció possible, ja que és una etiqueta que mostra un text.<br />
+Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir més. Això ho veurem en seccions posteriors de la unitat. Normalment una aplicació acabarà en tancar la darrera de les finestres.</p>
+<p>Algunes coses que cal tenir en compte del codi:</p>
+<ul>
+<li>Per crear una classe derivada d'una altra, es passa la classe base entre parèntesis. En aquest cas heretem de la classe QWidget per crear la nostra pròpia finestra. super() es refereix a la classe de què s'hereta.</li>
+<li>El constructor de classe és el mètode especial <strong>init</strong>.</li>
+<li>El paràmetre <em>self</em> fa referència a si mateixa, és a dir a la classe que estem implementant.</li>
+<li>Els components estan ocults per defecte. Si els passem el parent en la seua creació es mostraran en mostrar el parent. En cas contrari els podem mostrar amb el mètode xou, però es mostraran com una finestra independent.</li>
+<li>Per accedir o canviar les propietats dels widgets ho fem a través dels seus mètodes públics. Els mètodes d'assignació de valors a propietats, <em>setters</em>, comencen per set seguit del nom de la propietat que volem assignar (setText, setAlignement, setSizePolicy, ...), mentre que els de lectura de valors, <em>getters</em>, solen començar pel nom del domini a llegir (text, alignement, sizePolicy, ...).</li>
+</ul>
+<h2 id="23-esdeveniments">2.3 Esdeveniments</h2>
+<p>Cada interacció de l'usuari amb la interfície, per exemple un clic de ratolí, un doble clic, l'ús d'una tecla, etc. generarà un esdeveniment. Aquest esdeveniment serà afegit a la cua d'esdeveniments (<em>event queue</em>) per ser gestionat.</p>
+<p>El bucle d'esdeveniments (<em>event loop</em>), que és un bucle infinit, comprovarà a cada iteració si hi ha esdeveniments pendents de ser gestionats. En cas de ser així, l'esdeveniment serà gestionat pel gestor d'esdeveniments (event handler) que executarà el vostre manejador. Quan aquest acaba, el control torna al bucle d'esdeveniments per esperar més esdeveniments.</p>
+<p>El bucle d'esdeveniments estarà gestionat per l'objecte QApplication i es llançarà en executar el mètode exec(). En fer clic sobre l'aspa, gestionarà l'esdeveniment de tancar, de manera que la finestra es tancarà i l'aplicació s'acabarà.</p>
+<p><img alt="Exemple slot" src="../images/Exemple.png" /></p>
+<h2 id="231-senyals-i-ranures">2.3.1 Senyals i ranures</h2>
+<p>A l'aplicació de l'exemple anterior, en produir-se un esdeveniment sobre l'etiqueta, l'aplicació no executava cap funcionalitat associada a aquest esdeveniment. Necessitem connectar els esdeveniments a alguna funcionalitat concreta. A Qt, això s'implementa mitjançant senyals i ranures.</p>
+<div class="admonition important">
+<p class="admonition-title">Signals</p>
+<p>Un senyal (signal) a Qt s'emet quan l'usuari produeix un esdeveniment. Les ranures (slots) són escoltadors de senyals que s'executaran en llançar-se l'emissió del senyal al qual estan connectats.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="sd">Unidad 2. Generación de interfaces. Arxiu 2.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="sd">&quot;Exemple de signal-slot&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QMainWindow</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">class</span> <span class="nc">FinestraPrincipal</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="sd">    Classe FinestraPrincipal, hereta de QMainWindow.</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="sd">    El QMainWindow és un component pensat per ser</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="sd">    la finestra principal d&#39;una aplicació.</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="sd">    &#39;&#39;&#39;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;finestra&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton1</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Fes clic!&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>        <span class="c1"># Configurem el botó com a element principal de la finestra.</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>        <span class="c1"># Això és perquè estem usant un QMainWindow. No calia</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>        <span class="c1"># passar-li el parent en la seua creació.</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">boton1</span><span class="p">)</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>        <span class="c1"># Connectem l&#39;esdeveniment clic del botó a la ranura clic_de_boton</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton1</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clic_de_botó</span><span class="p">)</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>    <span class="c1"># Definim la ranura que s&#39;executarà amb el clic del botó</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="k">def</span> <span class="nf">clic_de_botó</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Senyal de clic rebut -&gt; Execució de la ranura&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="n">finestra1</span> <span class="o">=</span> <span class="n">FinestraPrincipal</span><span class="p">()</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>    <span class="n">finestra1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>    <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Ara, l'aspecte de l'aplicació serà el mateix, però en fer clic sobre el botó, la consola des de la qual hem llançat l'aplicació mostrarà el text “Senyal de clic rebut -&gt; Execució de la ranura”.</p>
+<p><img alt="Exemple slot" src="../images/Exemple.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Slots predefinits</p>
+<p>Alguns components tenen ranures predefinides que podem fer servir directament. Farem ús d'aquesta característica en el cas pràctic d'aquest apartat.</p>
+</div>
+<h2 id="24-principals-components-en-formularis">2.4 Principals components en formularis</h2>
+<p>A la primera unitat vam veure un llistat de components habituals juntament amb el seu ús habitual. Farem un llistat amb els components més habituals de PySide6 usats en formularis, juntament amb algun dels seus senyals i funcions més útils. Pel nom de les funcions se'n pot deduir l'ús i el comportament. Veurem i practicarem amb exemples de molts en altres apartats de la unitat. Per obtenir una llista completa i més informació de cadascun, cal consultar la documentació de Qt, disponible als enllaços.</p>
+<div class="admonition example">
+<p class="admonition-title">Widgets</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:15"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><input id="__tabbed_1_14" name="__tabbed_1" type="radio" /><input id="__tabbed_1_15" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">QCheckBox</label><label for="__tabbed_1_2">QLabel</label><label for="__tabbed_1_3">QCheckBox</label><label for="__tabbed_1_4">QComboBox</label><label for="__tabbed_1_5">QCheckBox</label><label for="__tabbed_1_6">QRadioButton</label><label for="__tabbed_1_7">QPushButton</label><label for="__tabbed_1_8">QTabWidget</label><label for="__tabbed_1_9">QTableWidget</label><label for="__tabbed_1_10">QLineEdit</label><label for="__tabbed_1_11">QTextEdit</label><label for="__tabbed_1_12">QProgressBar</label><label for="__tabbed_1_13">QDateTimeEdit</label><label for="__tabbed_1_14">QSlider</label><label for="__tabbed_1_15">QDial</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>stateChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>isChecked()</li>
+<li>setCheckState()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qcheckbox.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Funcions:</p>
+<ul>
+<li>setText()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qlabel.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>stateChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>isChecked()</li>
+<li>setCheckState()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qcheckbox.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>stateChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>isChecked()</li>
+<li>setCheckState()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qcheckbox.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>currentIndexChanged()</li>
+<li>currentTextChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>addItem()</li>
+<li>setCurrentIndex()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qcombobox.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>toggled()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>isChecked()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qradiobutton.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>clicked()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>setCheckable()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qpushbutton.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>currentChanged ()</li>
+<li>tabBarClicked()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>addTab(widget, label)</li>
+<li>setCurrentIndex()</li>
+<li>setCurrentWidget()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qtabwidget.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>cellChanged()</li>
+<li>currentCellChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>clear()</li>
+<li>insertColumn()</li>
+<li>insertRow()</li>
+<li>removeColumn()</li>
+<li>removeRow()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qtablewidget.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>cellChanged()</li>
+<li>currentCellChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>clear()</li>
+<li>insertColumn()</li>
+<li>insertRow()</li>
+<li>removeColumn()</li>
+<li>removeRow()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qtablewidget.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>textChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>textChanged()</li>
+<li>setText()</li>
+<li>clear()</li>
+</ul>
+<p><a href="https://doc-snapshots.qt.io/qt6-dev/qtextedit.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>valueChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>setValue()</li>
+<li>setOrientation()</li>
+<li>setMaximum()</li>
+<li>setMinimum()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qprogressbar.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>dateChanged()</li>
+<li>dateTimeChanged()</li>
+<li>timeChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>setDate()</li>
+<li>setDateTime()</li>
+<li>setTime()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qdatetimeedit.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>valueChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>setValue()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qslider.html">+info</a></p>
+</div>
+<div class="tabbed-block">
+<p>Senyals:</p>
+<ul>
+<li>valueChanged()</li>
+</ul>
+<p>Funcions:</p>
+<ul>
+<li>setValue()</li>
+</ul>
+<p><a href="https://doc.qt.io/qt-6/qdial.html">+info</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../1%20-%20Introducci%C3%B3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1 - Tecnologies" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              1 - Tecnologies
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../3%20-%20Layouts/" class="md-footer__link md-footer__link--next" aria-label="Next: 3 - Contenidors de components. Disseny" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              3 - Contenidors de components. Disseny
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
