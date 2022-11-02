@@ -46,7 +46,7 @@ Vegem la implementació de “Hola Món!” amb PySide6.
         # Creem un objecte Finestra.
         finestra1 = Finestra()
         # Mostrem la Finestra, per defecte els components estan ocults.
-        finestra1.xou()
+        finestra1.show()
         # Iniciem el bucle d'esdeveniments.
         app.exec()
     ~~~
@@ -65,7 +65,7 @@ Algunes coses que cal tenir en compte del codi:
 - Per crear una classe derivada d'una altra, es passa la classe base entre parèntesis. En aquest cas heretem de la classe QWidget per crear la nostra pròpia finestra. super() es refereix a la classe de què s'hereta.
 - El constructor de classe és el mètode especial __init__.
 - El paràmetre *self* fa referència a si mateixa, és a dir a la classe que estem implementant.
-- Els components estan ocults per defecte. Si els passem el parent en la seua creació es mostraran en mostrar el parent. En cas contrari els podem mostrar amb el mètode xou, però es mostraran com una finestra independent.
+- Els components estan ocults per defecte. Si els passem el parent en la seua creació es mostraran en mostrar el parent. En cas contrari els podem mostrar amb el mètode show, però es mostraran com una finestra independent.
 - Per accedir o canviar les propietats dels widgets ho fem a través dels seus mètodes públics. Els mètodes d'assignació de valors a propietats, *setters*, comencen per set seguit del nom de la propietat que volem assignar (setText, setAlignement, setSizePolicy, ...), mentre que els de lectura de valors, *getters*, solen començar pel nom del domini a llegir (text, alignement, sizePolicy, ...).
 
 ## 2.3 Esdeveniments

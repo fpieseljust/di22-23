@@ -1,4 +1,4 @@
-# Introducció
+# 1. Introducció
 En aquest primer apartat de la unitat introduirem les tecnologies que utilitzarem per als nostres desenvolupaments, Python, Qt i PySide6.
 
 ## 1.1 Python

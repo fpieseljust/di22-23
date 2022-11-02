@@ -923,6 +923,67 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1164,7 +1225,7 @@ Vegem la implementació de “Hola Món!” amb PySide6.</p>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="c1"># Creem un objecte Finestra.</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">finestra1</span> <span class="o">=</span> <span class="n">Finestra</span><span class="p">()</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="c1"># Mostrem la Finestra, per defecte els components estan ocults.</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">finestra1</span><span class="o">.</span><span class="n">xou</span><span class="p">()</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">finestra1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="c1"># Iniciem el bucle d&#39;esdeveniments.</span>
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
@@ -1178,7 +1239,7 @@ Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir mé
 <li>Per crear una classe derivada d'una altra, es passa la classe base entre parèntesis. En aquest cas heretem de la classe QWidget per crear la nostra pròpia finestra. super() es refereix a la classe de què s'hereta.</li>
 <li>El constructor de classe és el mètode especial <strong>init</strong>.</li>
 <li>El paràmetre <em>self</em> fa referència a si mateixa, és a dir a la classe que estem implementant.</li>
-<li>Els components estan ocults per defecte. Si els passem el parent en la seua creació es mostraran en mostrar el parent. En cas contrari els podem mostrar amb el mètode xou, però es mostraran com una finestra independent.</li>
+<li>Els components estan ocults per defecte. Si els passem el parent en la seua creació es mostraran en mostrar el parent. En cas contrari els podem mostrar amb el mètode show, però es mostraran com una finestra independent.</li>
 <li>Per accedir o canviar les propietats dels widgets ho fem a través dels seus mètodes públics. Els mètodes d'assignació de valors a propietats, <em>setters</em>, comencen per set seguit del nom de la propietat que volem assignar (setText, setAlignement, setSizePolicy, ...), mentre que els de lectura de valors, <em>getters</em>, solen començar pel nom del domini a llegir (text, alignement, sizePolicy, ...).</li>
 </ul>
 <h2 id="23-esdeveniments">2.3 Esdeveniments</h2>

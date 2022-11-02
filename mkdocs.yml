@@ -39,6 +39,9 @@ nav:
         - 3 - Contenidors de components. Disseny: unitats/3-GUI-PySide6/teoria/3 - Layouts.md
         - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/3-GUI-PySide6/teoria/4 - Menus.md
         - 5 - Diàlegs i altres finestres: unitats/3-GUI-PySide6/teoria/5 - Dialegs.md
+      - Tasques: 
+        - Activitats: unitats/3-GUI-PySide6/tasques/1 - Activitats.md
+        - Pràctiques: unitats/3-GUI-PySide6/tasques/2 - Pràctiques.md
     - Qualificació:
       - Criteris: 
         - Rúbriques:  qualificacio/rubrica.md
