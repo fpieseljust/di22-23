@@ -17,7 +17,7 @@ A l'exemple anterior, veiem sis components diferents que formen el formulari.
 
 ## 2.2 Components a PySide6
 
-Els ginys són els elements bàsics i principals per crear interfícies d'usuari a Qt. Podeu mostrar informació, rebre informació de l'usuari i contenir altres ginys de forma agrupada. Un giny que no està incrustat en un giny pare es mostra en forma de finestra independent.
+Els controls són els elements bàsics i principals per crear interfícies d'usuari a Qt. Podeu mostrar informació, rebre informació de l'usuari i contenir altres controls de forma agrupada. Un control que no està incrustat en un control pare es mostra en forma de finestra independent.
 Vegem la implementació de “Hola Món!” amb PySide6.
 
 !!!example "Exemple"
@@ -75,8 +75,6 @@ Cada interacció de l'usuari amb la interfície, per exemple un clic de ratolí,
 El bucle d'esdeveniments (*event loop*), que és un bucle infinit, comprovarà a cada iteració si hi ha esdeveniments pendents de ser gestionats. En cas de ser així, l'esdeveniment serà gestionat pel gestor d'esdeveniments (event handler) que executarà el vostre manejador. Quan aquest acaba, el control torna al bucle d'esdeveniments per esperar més esdeveniments.
 
 El bucle d'esdeveniments estarà gestionat per l'objecte QApplication i es llançarà en executar el mètode exec(). En fer clic sobre l'aspa, gestionarà l'esdeveniment de tancar, de manera que la finestra es tancarà i l'aplicació s'acabarà.
-
-![Exemple slot](images/Exemple.png)
 
 ## 2.3.1 Senyals i ranures
 
@@ -155,34 +153,8 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
         - setText()
 
         [+info](https://doc.qt.io/qt-6/qlabel.html)
-
-    === "QCheckBox"
-
-        Senyals:
-        
-        - stateChanged()
-        
-        Funcions:
-        
-        - isChecked()
-        - setCheckState()
-
-        [+info](https://doc.qt.io/qt-6/qcheckbox.html)
     
     === "QComboBox"
-
-        Senyals:
-        
-        - stateChanged()
-        
-        Funcions:
-        
-        - isChecked()
-        - setCheckState()
-
-        [+info](https://doc.qt.io/qt-6/qcheckbox.html)
-
-    === "QCheckBox"
 
         Senyals:
         
@@ -256,18 +228,14 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
 
         Senyals:
         
-        - cellChanged()
-        - currentCellChanged()
+        - textChanged()
                 
         Funcions:
         
+        - setText()
         - clear()
-        - insertColumn()
-        - insertRow()
-        - removeColumn()
-        - removeRow()
 
-        [+info](https://doc.qt.io/qt-6/qtablewidget.html)
+        [+info](https://doc-snapshots.qt.io/qt6-dev/qlineedit.html)
 
     === "QTextEdit"
 
@@ -277,7 +245,6 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
                 
         Funcions:
         
-        - textChanged()
         - setText()
         - clear()
 

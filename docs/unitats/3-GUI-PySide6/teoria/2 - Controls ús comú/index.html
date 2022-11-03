@@ -1171,7 +1171,7 @@
 <p><img alt="controls" src="../images/Controls.png" /></p>
 <p>A l'exemple anterior, veiem sis components diferents que formen el formulari.</p>
 <h2 id="22-components-a-pyside6">2.2 Components a PySide6</h2>
-<p>Els ginys són els elements bàsics i principals per crear interfícies d'usuari a Qt. Podeu mostrar informació, rebre informació de l'usuari i contenir altres ginys de forma agrupada. Un giny que no està incrustat en un giny pare es mostra en forma de finestra independent.
+<p>Els controls són els elements bàsics i principals per crear interfícies d'usuari a Qt. Podeu mostrar informació, rebre informació de l'usuari i contenir altres controls de forma agrupada. Un control que no està incrustat en un control pare es mostra en forma de finestra independent.
 Vegem la implementació de “Hola Món!” amb PySide6.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
@@ -1246,7 +1246,6 @@ Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir mé
 <p>Cada interacció de l'usuari amb la interfície, per exemple un clic de ratolí, un doble clic, l'ús d'una tecla, etc. generarà un esdeveniment. Aquest esdeveniment serà afegit a la cua d'esdeveniments (<em>event queue</em>) per ser gestionat.</p>
 <p>El bucle d'esdeveniments (<em>event loop</em>), que és un bucle infinit, comprovarà a cada iteració si hi ha esdeveniments pendents de ser gestionats. En cas de ser així, l'esdeveniment serà gestionat pel gestor d'esdeveniments (event handler) que executarà el vostre manejador. Quan aquest acaba, el control torna al bucle d'esdeveniments per esperar més esdeveniments.</p>
 <p>El bucle d'esdeveniments estarà gestionat per l'objecte QApplication i es llançarà en executar el mètode exec(). En fer clic sobre l'aspa, gestionarà l'esdeveniment de tancar, de manera que la finestra es tancarà i l'aplicació s'acabarà.</p>
-<p><img alt="Exemple slot" src="../images/Exemple.png" /></p>
 <h2 id="231-senyals-i-ranures">2.3.1 Senyals i ranures</h2>
 <p>A l'aplicació de l'exemple anterior, en produir-se un esdeveniment sobre l'etiqueta, l'aplicació no executava cap funcionalitat associada a aquest esdeveniment. Necessitem connectar els esdeveniments a alguna funcionalitat concreta. A Qt, això s'implementa mitjançant senyals i ranures.</p>
 <div class="admonition important">
@@ -1332,7 +1331,7 @@ Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir mé
 <p>A la primera unitat vam veure un llistat de components habituals juntament amb el seu ús habitual. Farem un llistat amb els components més habituals de PySide6 usats en formularis, juntament amb algun dels seus senyals i funcions més útils. Pel nom de les funcions se'n pot deduir l'ús i el comportament. Veurem i practicarem amb exemples de molts en altres apartats de la unitat. Per obtenir una llista completa i més informació de cadascun, cal consultar la documentació de Qt, disponible als enllaços.</p>
 <div class="admonition example">
 <p class="admonition-title">Widgets</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:15"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><input id="__tabbed_1_14" name="__tabbed_1" type="radio" /><input id="__tabbed_1_15" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">QCheckBox</label><label for="__tabbed_1_2">QLabel</label><label for="__tabbed_1_3">QCheckBox</label><label for="__tabbed_1_4">QComboBox</label><label for="__tabbed_1_5">QCheckBox</label><label for="__tabbed_1_6">QRadioButton</label><label for="__tabbed_1_7">QPushButton</label><label for="__tabbed_1_8">QTabWidget</label><label for="__tabbed_1_9">QTableWidget</label><label for="__tabbed_1_10">QLineEdit</label><label for="__tabbed_1_11">QTextEdit</label><label for="__tabbed_1_12">QProgressBar</label><label for="__tabbed_1_13">QDateTimeEdit</label><label for="__tabbed_1_14">QSlider</label><label for="__tabbed_1_15">QDial</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:13"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">QCheckBox</label><label for="__tabbed_1_2">QLabel</label><label for="__tabbed_1_3">QComboBox</label><label for="__tabbed_1_4">QRadioButton</label><label for="__tabbed_1_5">QPushButton</label><label for="__tabbed_1_6">QTabWidget</label><label for="__tabbed_1_7">QTableWidget</label><label for="__tabbed_1_8">QLineEdit</label><label for="__tabbed_1_9">QTextEdit</label><label for="__tabbed_1_10">QProgressBar</label><label for="__tabbed_1_11">QDateTimeEdit</label><label for="__tabbed_1_12">QSlider</label><label for="__tabbed_1_13">QDial</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Senyals:</p>
@@ -1352,30 +1351,6 @@ Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir mé
 <li>setText()</li>
 </ul>
 <p><a href="https://doc.qt.io/qt-6/qlabel.html">+info</a></p>
-</div>
-<div class="tabbed-block">
-<p>Senyals:</p>
-<ul>
-<li>stateChanged()</li>
-</ul>
-<p>Funcions:</p>
-<ul>
-<li>isChecked()</li>
-<li>setCheckState()</li>
-</ul>
-<p><a href="https://doc.qt.io/qt-6/qcheckbox.html">+info</a></p>
-</div>
-<div class="tabbed-block">
-<p>Senyals:</p>
-<ul>
-<li>stateChanged()</li>
-</ul>
-<p>Funcions:</p>
-<ul>
-<li>isChecked()</li>
-<li>setCheckState()</li>
-</ul>
-<p><a href="https://doc.qt.io/qt-6/qcheckbox.html">+info</a></p>
 </div>
 <div class="tabbed-block">
 <p>Senyals:</p>
@@ -1445,18 +1420,14 @@ Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir mé
 <div class="tabbed-block">
 <p>Senyals:</p>
 <ul>
-<li>cellChanged()</li>
-<li>currentCellChanged()</li>
+<li>textChanged()</li>
 </ul>
 <p>Funcions:</p>
 <ul>
+<li>setText()</li>
 <li>clear()</li>
-<li>insertColumn()</li>
-<li>insertRow()</li>
-<li>removeColumn()</li>
-<li>removeRow()</li>
 </ul>
-<p><a href="https://doc.qt.io/qt-6/qtablewidget.html">+info</a></p>
+<p><a href="https://doc-snapshots.qt.io/qt6-dev/qlineedit.html">+info</a></p>
 </div>
 <div class="tabbed-block">
 <p>Senyals:</p>
@@ -1465,7 +1436,6 @@ Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir mé
 </ul>
 <p>Funcions:</p>
 <ul>
-<li>textChanged()</li>
 <li>setText()</li>
 <li>clear()</li>
 </ul>

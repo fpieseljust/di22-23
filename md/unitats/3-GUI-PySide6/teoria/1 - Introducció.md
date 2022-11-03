@@ -15,7 +15,7 @@ Característiques:
 - **Interpretat**: s'executa en qualsevol màquina que tinga un intèrpret de Python. Això suposa un gran avantatge a l'hora de fer petits canvis de forma ràpida, ja que elimina la necessitat de recompilar el codi.
 - **Multiparadigma**: podem fer servir la programació modular, estructurada o l'orientació a objectes segons les nostres necessitats.
 - **Multiplataforma**: permet que el codi siga executat en diferents sistemes operatius.
-- **Lliure**: és propietat de la Python Software Foundation i està publicat sota llicència PSF-License que és compatible amb GPL (Genral Public License), la qual cosa significa que és de lliure ús i distribució, fins i tot per a ús comercial.
+- **Lliure**: és propietat de la Python Software Foundation i està publicat sota llicència PSF-License que és compatible amb GPL (General Public License), la qual cosa significa que és de lliure ús i distribució, fins i tot per a ús comercial.
 - **Net i llegible**: posa l'accent en la seua llegibilitat, cosa que ho fa fàcilment comprensible i fàcil d'aprendre. Si ja heu treballat amb qualsevol altre llenguatge de programació, us resultarà fàcil l'ús de Python.
 - **Tipat fort i dinàmic**: encara que les variables són d'un tipus concret, no tenim la necessitat de declarar-los, sinó que l'assignació de tipus s'anirà en temps d'execució.
 - **Àmplia comunitat**: gràcies a la seua popularitat compta amb un ampli suport i es pot trobar fàcilment molta documentació, esdeveniments, conferències, etc.
@@ -61,6 +61,7 @@ Encara que The Qt Company és el principal impulsor de Qt, ara Qt és desenvolup
 Qt està disponible sota diverses llicències: The Qt Company ven llicències comercials, però Qt també està disponible com a programari lliure sota diverses versions de GPL i LGPL.
 
 Alguns exemples d'aplicacions desenvolupades amb Qt són:
+
 - Adobe Photoshop Album, per organitzar imatges.
 - L'escriptori Kde de les distribucions Linux.
 - Last.fm Player, el client descriptori per a streaming de música i ràdio.
@@ -77,7 +78,8 @@ Alguns exemples d'aplicacions desenvolupades amb Qt són:
 
 PySide és la unió de Python i Qt . Va ser desenvolupat per The Qt Company, com a part del projecte Qt for Python. És una de les alternatives al paquet estàndard Tkinter de Python per crear interfícies. Com Qt, PySide és programari lliure. PySide és compatible amb Linux/X11, macOS i Microsoft Windows, per tant, els nostres desenvolupaments seran compatibles amb qualsevol d'aquestes plataformes amb només un desenvolupament de codi.
 
-Encara que hi ha documentació específica de PySide disponible, també podem i recomanem utilitzar la documentació de Qt per a C++, tenint en compte que caldrà traduir la sintaxi d'objectes i mètodes C++ per adaptar-lo a Python.
+!!!warning "Documentació"
+    Encara que hi ha documentació específica de PySide disponible, també podem i recomanem utilitzar la documentació de Qt per a C++, tenint en compte que caldrà traduir la sintaxi d'objectes i mètodes C++ per adaptar-lo a Python.
 
 Hi ha hagut tres versions principals de PySide:
 

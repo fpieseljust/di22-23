@@ -23,9 +23,9 @@ Desenvolupa una aplicació que tinga l'aspecte següent:
 
 ### **Activitat 3** - Sistema d'ajuda
 
-L'ajuda "What's This?" o "Qué es esto?" és part del sistema d'ajuda en línia d'una aplicació i brinda als usuaris informació sobre la funcionalitat i l'ús d'un giny en particular. 
+L'ajuda "What's This?" o "Qué es esto?" és part del sistema d'ajuda en línia d'una aplicació i brinda als usuaris informació sobre la funcionalitat i l'ús d'un control en particular. 
 
-QWhatsThis proporciona una sola finestra amb un text explicatiu que apareix quan l'usuari fa clic sobre "What's this?" seguit d'un altre clic sobre un giny. La forma per defecte perquè els usuaris facen la pregunta és prémer Shift+F1 per activar el mode *ajuda*. El text d'ajuda apareix al fer clic, amb el mode d'ajuda activat, sobre un control; desapareix quan l'usuari torna a fer clic. 
+QWhatsThis proporciona una sola finestra amb un text explicatiu que apareix quan l'usuari fa clic sobre "What's this?" seguit d'un altre clic sobre un control. La forma per defecte perquè els usuaris facen la pregunta és prémer Shift+F1 per activar el mode *ajuda*. El text d'ajuda apareix al fer clic, amb el mode d'ajuda activat, sobre un control; desapareix quan l'usuari torna a fer clic. 
 
 Per entrar en el mode ajuda necessitem cridar al mètode estàtic (no necessites declarar un objecte de la classe) **enterWhatsThisMode()** mentre que per ixir es cridarà a **leaveWhatsThisMode()**. Podem saber si el tenim activat o no usant **inWhatsThisMode()**.
 
