@@ -4,6 +4,7 @@ docs_dir: 'md'
 site_dir: 'docs'
 nav:
     - Home: index.md
+
     - Unitat 1 - Programació amb Python:
       - Teoria:
         - Introducció: unitats/1-python/teoria/1 - Introducció.md
@@ -23,6 +24,7 @@ nav:
             - Part obligatòria (30%): unitats/1-python/pràctiques/tasques/1 - Obligatori.md
             - Part d'ampliació - projecte (70%): unitats/1-python/pràctiques/tasques/2 - Projecte.md
             - Qualificació: unitats/1-python/pràctiques/tasques/3 - Qualificació.md
+
     - Unitat 2 - Introducció a les interfícies d'usuari:
       - Teoria:
         - 1 - Introducció a les interfícies d'usuari: unitats/2-intro-interficies/teoria/1 - Introduccio.md
@@ -32,6 +34,7 @@ nav:
         - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
         - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
       - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
+    
     - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
       - Teoria:
         - 1 - Tecnologies: unitats/3-GUI-PySide6/teoria/1 - Introducció.md
@@ -42,6 +45,29 @@ nav:
       - Tasques: 
         - Activitats: unitats/3-GUI-PySide6/tasques/1 - Activitats.md
         - Pràctiques: unitats/3-GUI-PySide6/tasques/2 - Pràctiques.md
+
+    - Unitat 4 - Arquitectura Model-Vista de Qt:
+      - Teoria:
+        - 1 - Introducció: unitats/4-ModelView/teoria/1-Introduccio.md
+        - 2 - Connexió a base de dades: unitats/4-ModelView/teoria/2-Connexio a base de dades.md
+        - 3 - Execució de consultes: unitats/4-ModelView/teoria/3-Execucio de consultes.md
+        - 4 - Visualització i edició de dades: unitats/4-ModelView/teoria/4-Visualitzacio i edicio de dades.md
+      - Tasques: 
+        - Activitats: unitats/4-ModelView/tasques/1 - Activitats.md
+        - Pràctiques: unitats/4-ModelView/tasques/2 - Pràctiques.md
+      - Enllaços: unitats/4-ModelView/enllaços/enllaços.md
+
+    - Unitat 5 - Components d'usuari:
+      - Teoria:
+        - 1 - Alternatives en la creació de components: unitats/5-Components-Designer/teoria/1-Alternatives en la creació de components.md
+        - 2 - Creació de nous components per codi: unitats/5-Components-Designer/teoria/2-Nous components.md
+        - 3 - Utilització de nous components en aplicacions: unitats/5-Components-Designer/teoria/3-Utilització dels components.md
+        - 4 - Integració de nous components en ferramentes de disseny: unitats/5-Components-Designer/teoria/4-Integració en dissenyador.md
+      - Tasques: 
+        - Activitats: unitats/5-Components-Designer/tasques/1 - Activitats.md
+        - Pràctiques: unitats/5-Components-Designer/tasques/2 - Pràctiques.md
+      - Enllaços: unitats/5-Components-Designer/enllaços/enllaços.md
+
     - Qualificació:
       - Criteris: 
         - Rúbriques:  qualificacio/rubrica.md

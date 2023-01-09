@@ -81,7 +81,10 @@ El bucle d'esdeveniments estarà gestionat per l'objecte QApplication i es llan�
 A l'aplicació de l'exemple anterior, en produir-se un esdeveniment sobre l'etiqueta, l'aplicació no executava cap funcionalitat associada a aquest esdeveniment. Necessitem connectar els esdeveniments a alguna funcionalitat concreta. A Qt, això s'implementa mitjançant senyals i ranures.
 
 !!!important "Signals"
-    Un senyal (signal) a Qt s'emet quan l'usuari produeix un esdeveniment. Les ranures (slots) són escoltadors de senyals que s'executaran en llançar-se l'emissió del senyal al qual estan connectats.
+    Un senyal (signal) a Qt s'emet quan l'usuari produeix un esdeveniment. 
+    
+!!!important "Slots"
+    Les ranures (slots) són escoltadors de senyals que s'executaran en llançar-se l'emissió del senyal al qual estan connectats.
 
 !!!example "Exemple"
     ~~~Python

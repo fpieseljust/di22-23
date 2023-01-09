@@ -1,0 +1,2199 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fpieseljust.github.io/di21-22/unitats/5-Components-Designer/teoria/2-Nous%20components/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>2 - Creació de nous components per codi - Desenvolupament d'interfícies 21-22</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-creacio-de-nous-components-per-codi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desenvolupament d'interfícies 21-22
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2 - Creació de nous components per codi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Desenvolupament d&#39;interfícies 21-22" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 21-22" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Desenvolupament d'interfícies 21-22
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Unitat 1 - Programació amb Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 1 - Programació amb Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 1 - Programació amb Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/2%20-%20Control%20de%20fluxe/" class="md-nav__link">
+        Control de fluxe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/3%20-%20Funcions/" class="md-nav__link">
+        Funcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/4%20-%20Fitxers/" class="md-nav__link">
+        Tractament de fitxers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/5%20-%20Excepcions/" class="md-nav__link">
+        Errors i excepcions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/teoria/6%20-%20POO/" class="md-nav__link">
+        Programació oorientada a objectes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Pràctica 1 - PyGame
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pràctica 1 - PyGame" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pràctica 1 - PyGame
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
+        Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
+        Disseny del joc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
+        Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
+        Imatges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
+        Sons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
+        Conclusió
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_7" type="checkbox" id="__nav_2_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_7">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
+        Part obligatòria (30%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
+        Part d'ampliació - projecte (70%)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-python/pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
+        Qualificació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Unitat 2 - Introducció a les interfícies d'usuari
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 2 - Introducció a les interfícies d'usuari" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 2 - Introducció a les interfícies d'usuari
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/teoria/1%20-%20Introduccio/" class="md-nav__link">
+        1 - Introducció a les interfícies d'usuari
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/teoria/2%20-%20Usabilitat/" class="md-nav__link">
+        2 - Usabilitat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/teoria/3%20-%20Pautes%20de%20Disseny/" class="md-nav__link">
+        3 - Pautes de disseny
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-intro-interficies/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
+        Enllaços
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Unitat 3 - Introducció a les interfícies d'usuari amb PySide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 3 - Introducció a les interfícies d'usuari amb PySide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 3 - Introducció a les interfícies d'usuari amb PySide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+        1 - Tecnologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/teoria/2%20-%20Controls%20%C3%BAs%20com%C3%BA/" class="md-nav__link">
+        2 - Controls d'ús comú
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/teoria/3%20-%20Layouts/" class="md-nav__link">
+        3 - Contenidors de components. Disseny
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/teoria/4%20-%20Menus/" class="md-nav__link">
+        4 - Menús, barres de ferramentes i estat, i components flotants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/teoria/5%20-%20Dialegs/" class="md-nav__link">
+        5 - Diàlegs i altres finestres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-GUI-PySide6/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Unitat 4 - Arquitectura Model-Vista de Qt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 4 - Arquitectura Model-Vista de Qt" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 4 - Arquitectura Model-Vista de Qt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/teoria/1-Introduccio/" class="md-nav__link">
+        1 - Introducció
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/teoria/2-Connexio%20a%20base%20de%20dades/" class="md-nav__link">
+        2 - Connexió a base de dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/teoria/3-Execucio%20de%20consultes/" class="md-nav__link">
+        3 - Execució de consultes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/teoria/4-Visualitzacio%20i%20edicio%20de%20dades/" class="md-nav__link">
+        4 - Visualització i edició de dades
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-ModelView/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
+        Enllaços
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Unitat 5 - Components d'usuari
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unitat 5 - Components d'usuari" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Unitat 5 - Components d'usuari
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-Alternatives%20en%20la%20creaci%C3%B3%20de%20components/" class="md-nav__link">
+        1 - Alternatives en la creació de components
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2 - Creació de nous components per codi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2 - Creació de nous components per codi
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2-creacio-de-nous-components-per-codi" class="md-nav__link">
+    2. Creació de nous components per codi.
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Creació de nous components per codi.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-components-definits-per-lusuari" class="md-nav__link">
+    2.1 Components definits per l'usuari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-exemple-component-cronometre" class="md-nav__link">
+    2.2 Exemple: component cronòmetre
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Exemple: component cronòmetre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-eleccio-de-lobjecte-base" class="md-nav__link">
+    2.2.1 Elecció de l'objecte base
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-classe-cronometre-sense-interficie" class="md-nav__link">
+    2.2.1 Classe cronòmetre (sense interfície)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-definicio-de-la-interficie-del-component" class="md-nav__link">
+    2.2.2 Definició de la interfície del component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-senyals-definits-per-lusuari" class="md-nav__link">
+    2.2.3 Senyals definits per l'usuari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-logica-interna-del-component" class="md-nav__link">
+    2.2.4 Lògica interna del component
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-Utilitzaci%C3%B3%20dels%20components/" class="md-nav__link">
+        3 - Utilització de nous components en aplicacions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-Integraci%C3%B3%20en%20dissenyador/" class="md-nav__link">
+        4 - Integració de nous components en ferramentes de disseny
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Tasques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tasques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tasques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/1%20-%20Activitats/" class="md-nav__link">
+        Activitats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+        Pràctiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
+        Enllaços
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Qualificació
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Qualificació" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Qualificació
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Criteris
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Criteris" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Criteris
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../qualificacio/rubrica/" class="md-nav__link">
+        Rúbriques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2-creacio-de-nous-components-per-codi" class="md-nav__link">
+    2. Creació de nous components per codi.
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Creació de nous components per codi.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-components-definits-per-lusuari" class="md-nav__link">
+    2.1 Components definits per l'usuari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-exemple-component-cronometre" class="md-nav__link">
+    2.2 Exemple: component cronòmetre
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Exemple: component cronòmetre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-eleccio-de-lobjecte-base" class="md-nav__link">
+    2.2.1 Elecció de l'objecte base
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-classe-cronometre-sense-interficie" class="md-nav__link">
+    2.2.1 Classe cronòmetre (sense interfície)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-definicio-de-la-interficie-del-component" class="md-nav__link">
+    2.2.2 Definició de la interfície del component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-senyals-definits-per-lusuari" class="md-nav__link">
+    2.2.3 Senyals definits per l'usuari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-logica-interna-del-component" class="md-nav__link">
+    2.2.4 Lògica interna del component
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>2 - Creació de nous components per codi</h1>
+
+<h2 id="2-creacio-de-nous-components-per-codi">2. Creació de nous components per codi.</h2>
+<p>Els components són utilitzats, entre altres coses, per amagar la complexitat del programari en parts més manejables. Cada component amaga la seva complexitat darrere d'una interfície formada per les seves propietats i mètodes a què es té accés. Poden introduir-se i eliminar-se, fins i tot ser intercanviats com a part dun tot. </p>
+<p>Això redueix la complexitat del desenvolupament programari i millora el seu manteniment, permetent que el mateix codi pugui ser reutilitzat a diferents llocs. El resultat és un bloc de codi encapsulat en una classe independent que passa a formar part del banc de peces disponibles per formar part de desenvolupaments més complexos.</p>
+<h3 id="21-components-definits-per-lusuari">2.1 Components definits per l'usuari</h3>
+<p>Per començar a desenvolupar un component propi, el més fàcil és buscar un component des del qual partir, de manera que se n'hereten les propietats i mètodes i així poder utilitzar-los en el component que volem crear. Per exemple, si voleu un diàleg customitzat, podem heretar de QDialog, si volem un component botó amb alguna funcionalitat customitzada, podem heretar de QButton. En cas que el nostre component no guardi relació estreta amb altres components, el més adequat serà heretar de QWidget directament, que és la classe base des de la qual hereta la resta de Widgtes.</p>
+<p>A més, podem utilitzar classes privades als nostres components que ens ajudin a produir un codi més organitzat i mantenible.</p>
+<h3 id="22-exemple-component-cronometre">2.2 Exemple: component cronòmetre</h3>
+<p>Il·lustrarem tot això amb un exemple que anirem construint pas a pas.</p>
+<p>En alguna de les nostres aplicacions ens pot fer falta un component visual que serveixi per mesurar el temps transcorregut, per exemple podria servir per mesurar el temps que portem per fer una tasca de classe, per mesurar el transcurs d'una activitat esportiva, etc. Crearem un component que posteriorment podem afegir a diferents aplicacions amb interfície gràfica d'usuari, sense necessitat de tornar-lo a crear a cadascuna, sinó que reutilitzarem el codi generat per a la seva creació.</p>
+<h4 id="221-eleccio-de-lobjecte-base">2.2.1 Elecció de l'objecte base</h4>
+<p>Si pensem en quin component utilitzar com a base, veiem que no hi ha cap component al qual puguem afegir funcionalitat de forma ràpida i que ens serveixi per a la nostra finalitat, així que partim de la classe base QWidget i en farem servir d'altres ginys per construir el nostre component.</p>
+<h4 id="221-classe-cronometre-sense-interficie">2.2.1 Classe cronòmetre (sense interfície)</h4>
+<p>Comencem definint una classe que ens servirà per controlar de manera interna el temps transcorregut i el temps transcorregut entre pauses, ja que construirem un cronòmetre amb la possibilitat de pausa. D'aquesta classe obtindrem, de tant en tant, el temps transcorregut des que vam posar en marxa el cronòmetre i la diferència entre el transcorregut i el pausat en cas d'haver utilitzat alguna pausa. </p>
+<p>La classe utilitzada a Qt per controlar el temps transcorregut és QElapsedTimer. La idea és fer servir el comptador de temps transcorregut (__temps_transcorregut) en posar en marxa el comptador. Si mentre estigueu en marxa, volem pausar el compte, fem ús d'un altre comptador (__temps_pausat) per mesurar el temps que el comptador ha estat pausat, així, mostrarem la diferència entre tots dos per mostrar el temps correcte del cronòmetre. Per controlar tot això definirem la seva interfície a la secció següent.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">QTime</span><span class="p">,</span> <span class="n">QElapsedTimer</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">class</span> <span class="nc">Cronometre</span><span class="p">():</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__temps_transcorregut</span> <span class="o">=</span> <span class="n">QElapsedTimer</span><span class="p">()</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__temps_pausa</span> <span class="o">=</span> <span class="n">QElapsedTimer</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="k">def</span> <span class="nf">reiniciar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__temps_transcorregut</span><span class="o">.</span><span class="n">restart</span><span class="p">()</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="k">def</span> <span class="nf">getTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>        <span class="k">return</span> <span class="n">QTime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">addMSecs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__temps_transcorregut</span><span class="o">.</span><span class="n">elapsed</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="k">def</span> <span class="nf">pausar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__temps_pausa</span><span class="o">.</span><span class="n">restart</span><span class="p">()</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="k">def</span> <span class="nf">continuar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_pausa</span><span class="o">.</span><span class="n">elapsed</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Fixa't que hem definit totes les propietats de l'anterior classe com a privades, ja que van precedides de doble guió baix. De manera que des de fora de la classe no s'hi pot accedir, només podem interactuar amb el control del temps a través dels seus mètodes reiniciar, pausar i continuar. Amb obtenirTemps, obtindríem el temps de marxa del cronòmetre, independentment de si ha estat pausat o no.</p>
+<h4 id="222-definicio-de-la-interficie-del-component">2.2.2 Definició de la interfície del component</h4>
+<p>Un cop tenim definida la classe que controla el nostre temps, és moment de definir la interfície del nostre component que en farà ús.
+Per mostrar el temps transcorregut podem fer ús d‟una etiqueta (QLabel) amb el format hh<img alt="🇲🇲" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1f2-1f1f2.svg" title=":mm:" />ss, on hh són les hores transcorregudes, mm els minuts i ss els segons. Es podria reescriure el codi perquè el cronòmetre tingués la possibilitat d'explicar els mil·lisegons, però per a l'exemple que estem desenvolupant el deixarem en segons.</p>
+<p>Definirem també un parell de botons (QPushButton), un per iniciar/parar i reiniciar el compte i un altre per pausar/continuar.
+A més, el nostre cronòmetre tindrà la possibilitat d'avisar mitjançant l'emissió d'un senyal definit per codi que s'ha arribat al temps marcat a l'avís. Aquest senyal serà emès quan el temps d'avís i el temps del cronòmetre coincideixin, sempre que el checkbox estigui activat. Per introduir el temps fem ús d'un QTimeEdit. La interfície quedaria de la manera següent:</p>
+<p><img alt="cronómetre" src="../images/2-cron%C3%B3metre.png" /></p>
+<p>El codi complet del component és el següent. </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-1-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-1-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-1-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-1-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-1-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-1-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-1-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-1-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-1-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-1-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-1-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-1-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-1-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-1-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-1-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-1-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-1-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-1-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-1-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-1-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-1-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-1-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-1-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-1-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-1-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-1-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-1-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-1-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-1-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-1-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-1-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-1-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-1-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-1-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-1-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-1-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-1-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-1-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-1-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-1-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-1-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-1-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-1-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-1-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-1-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-1-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-1-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-1-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-1-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-1-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-1-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-1-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-1-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-1-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-1-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-1-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-1-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-1-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-1-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-1-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-1-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-1-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-1-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-1-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-1-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-1-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-1-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-1-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-1-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-1-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-1-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-1-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-1-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-1-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-1-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-1-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-1-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-1-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-1-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-1-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-1-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-1-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-1-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-1-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-1-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-1-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-1-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-1-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-1-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-1-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-1-100">100</a></span>
+<span class="normal"><a href="#__codelineno-1-101">101</a></span>
+<span class="normal"><a href="#__codelineno-1-102">102</a></span>
+<span class="normal"><a href="#__codelineno-1-103">103</a></span>
+<span class="normal"><a href="#__codelineno-1-104">104</a></span>
+<span class="normal"><a href="#__codelineno-1-105">105</a></span>
+<span class="normal"><a href="#__codelineno-1-106">106</a></span>
+<span class="normal"><a href="#__codelineno-1-107">107</a></span>
+<span class="normal"><a href="#__codelineno-1-108">108</a></span>
+<span class="normal"><a href="#__codelineno-1-109">109</a></span>
+<span class="normal"><a href="#__codelineno-1-110">110</a></span>
+<span class="normal"><a href="#__codelineno-1-111">111</a></span>
+<span class="normal"><a href="#__codelineno-1-112">112</a></span>
+<span class="normal"><a href="#__codelineno-1-113">113</a></span>
+<span class="normal"><a href="#__codelineno-1-114">114</a></span>
+<span class="normal"><a href="#__codelineno-1-115">115</a></span>
+<span class="normal"><a href="#__codelineno-1-116">116</a></span>
+<span class="normal"><a href="#__codelineno-1-117">117</a></span>
+<span class="normal"><a href="#__codelineno-1-118">118</a></span>
+<span class="normal"><a href="#__codelineno-1-119">119</a></span>
+<span class="normal"><a href="#__codelineno-1-120">120</a></span>
+<span class="normal"><a href="#__codelineno-1-121">121</a></span>
+<span class="normal"><a href="#__codelineno-1-122">122</a></span>
+<span class="normal"><a href="#__codelineno-1-123">123</a></span>
+<span class="normal"><a href="#__codelineno-1-124">124</a></span>
+<span class="normal"><a href="#__codelineno-1-125">125</a></span>
+<span class="normal"><a href="#__codelineno-1-126">126</a></span>
+<span class="normal"><a href="#__codelineno-1-127">127</a></span>
+<span class="normal"><a href="#__codelineno-1-128">128</a></span>
+<span class="normal"><a href="#__codelineno-1-129">129</a></span>
+<span class="normal"><a href="#__codelineno-1-130">130</a></span>
+<span class="normal"><a href="#__codelineno-1-131">131</a></span>
+<span class="normal"><a href="#__codelineno-1-132">132</a></span>
+<span class="normal"><a href="#__codelineno-1-133">133</a></span>
+<span class="normal"><a href="#__codelineno-1-134">134</a></span>
+<span class="normal"><a href="#__codelineno-1-135">135</a></span>
+<span class="normal"><a href="#__codelineno-1-136">136</a></span>
+<span class="normal"><a href="#__codelineno-1-137">137</a></span>
+<span class="normal"><a href="#__codelineno-1-138">138</a></span>
+<span class="normal"><a href="#__codelineno-1-139">139</a></span>
+<span class="normal"><a href="#__codelineno-1-140">140</a></span>
+<span class="normal"><a href="#__codelineno-1-141">141</a></span>
+<span class="normal"><a href="#__codelineno-1-142">142</a></span>
+<span class="normal"><a href="#__codelineno-1-143">143</a></span>
+<span class="normal"><a href="#__codelineno-1-144">144</a></span>
+<span class="normal"><a href="#__codelineno-1-145">145</a></span>
+<span class="normal"><a href="#__codelineno-1-146">146</a></span>
+<span class="normal"><a href="#__codelineno-1-147">147</a></span>
+<span class="normal"><a href="#__codelineno-1-148">148</a></span>
+<span class="normal"><a href="#__codelineno-1-149">149</a></span>
+<span class="normal"><a href="#__codelineno-1-150">150</a></span>
+<span class="normal"><a href="#__codelineno-1-151">151</a></span>
+<span class="normal"><a href="#__codelineno-1-152">152</a></span>
+<span class="normal"><a href="#__codelineno-1-153">153</a></span>
+<span class="normal"><a href="#__codelineno-1-154">154</a></span>
+<span class="normal"><a href="#__codelineno-1-155">155</a></span>
+<span class="normal"><a href="#__codelineno-1-156">156</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QCheckBox</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">QTimeEdit</span><span class="p">,</span> <span class="n">QHBoxLayout</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="p">(</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">QTime</span><span class="p">,</span> <span class="n">QTimer</span><span class="p">,</span> <span class="n">Slot</span><span class="p">,</span> <span class="n">QElapsedTimer</span><span class="p">,</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">Signal</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="kn">import</span> <span class="nn">recursos_cronometre</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="k">class</span> <span class="nc">Cronometro</span><span class="p">():</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_transcurrido</span> <span class="o">=</span> <span class="n">QElapsedTimer</span><span class="p">()</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_pausa</span> <span class="o">=</span> <span class="n">QElapsedTimer</span><span class="p">()</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>    <span class="k">def</span> <span class="nf">iniciar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_transcurrido</span><span class="o">.</span><span class="n">restart</span><span class="p">()</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="k">def</span> <span class="nf">obtenerTiempo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        <span class="k">return</span> <span class="n">QTime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">addMSecs</span><span class="p">(</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_transcurrido</span><span class="o">.</span><span class="n">elapsed</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span><span class="p">)</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="k">def</span> <span class="nf">pausar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_pausa</span><span class="o">.</span><span class="n">restart</span><span class="p">()</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="k">def</span> <span class="nf">continuar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acumulador</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_pausa</span><span class="o">.</span><span class="n">elapsed</span><span class="p">()</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="k">class</span> <span class="nc">CronometroUI</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>    <span class="n">mensaje</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>    <span class="n">CRONOMETRO_RESET</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>    <span class="n">CRONOMETRO_INICIADO</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a>    <span class="n">CRONOMETRO_PAUSADO</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a>    <span class="n">CRONOMETRO_PARADO</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="n">LISTA_ICONOS</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a>        <span class="s1">&#39;play&#39;</span><span class="p">:</span> <span class="s1">&#39;:/icons/play.png&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a>        <span class="s1">&#39;pause&#39;</span><span class="p">:</span> <span class="s1">&#39;:/icons/pause.png&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a>        <span class="s1">&#39;stop&#39;</span><span class="p">:</span> <span class="s1">&#39;:/icons/stop.png&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a>        <span class="s1">&#39;resume&#39;</span><span class="p">:</span> <span class="s1">&#39;:/icons/resume.png&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47"></a>        <span class="s1">&#39;restart&#39;</span><span class="p">:</span> <span class="s1">&#39;:/icons/restart.png&#39;</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48"></a>    <span class="p">}</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49"></a>
+<a id="__codelineno-1-50" name="__codelineno-1-50"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52"></a>        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_RESET</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54"></a>
+<a id="__codelineno-1-55" name="__codelineno-1-55"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__cronometro</span> <span class="o">=</span> <span class="n">Cronometro</span><span class="p">()</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span> <span class="o">=</span> <span class="n">QTimer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_aviso</span> <span class="o">=</span> <span class="n">QTime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59"></a>
+<a id="__codelineno-1-60" name="__codelineno-1-60"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="n">QTime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">(</span><span class="s2">&quot;hh:mm:ss&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">setMinimumHeight</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignCenter</span><span class="p">)</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64"></a>            <span class="s2">&quot;background-color: white;&quot;</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65"></a>            <span class="s2">&quot;border: 2px solid black;&quot;</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66"></a>            <span class="s2">&quot;font-size: 25px&quot;</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67"></a>        <span class="p">)</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68"></a>
+<a id="__codelineno-1-69" name="__codelineno-1-69"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70"></a>            <span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;play&#39;</span><span class="p">]),</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">setIconSize</span><span class="p">(</span><span class="n">QSize</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72"></a>        <span class="c1"># self.boton_inicio.setCheckable(True)</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74"></a>            <span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;pause&#39;</span><span class="p">]),</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">setIconSize</span><span class="p">(</span><span class="n">QSize</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+<a id="__codelineno-1-76" name="__codelineno-1-76"></a>        <span class="c1"># self.boton_inicio.setCheckable(True)</span>
+<a id="__codelineno-1-77" name="__codelineno-1-77"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">setDisabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-78" name="__codelineno-1-78"></a>
+<a id="__codelineno-1-79" name="__codelineno-1-79"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">aviso</span> <span class="o">=</span> <span class="n">QCheckBox</span><span class="p">(</span><span class="s2">&quot;Avisar cuando llegue a ...&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-80" name="__codelineno-1-80"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">editor_tiempo_aviso</span> <span class="o">=</span> <span class="n">QTimeEdit</span><span class="p">(</span><span class="n">QTime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">editor_tiempo_aviso</span><span class="o">.</span><span class="n">setDisplayFormat</span><span class="p">(</span><span class="s2">&quot;hh:mm:ss&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-82" name="__codelineno-1-82"></a>
+<a id="__codelineno-1-83" name="__codelineno-1-83"></a>        <span class="n">layout_horizontal</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+<a id="__codelineno-1-84" name="__codelineno-1-84"></a>        <span class="n">layout_horizontal</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">aviso</span><span class="p">)</span>
+<a id="__codelineno-1-85" name="__codelineno-1-85"></a>        <span class="n">layout_horizontal</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">editor_tiempo_aviso</span><span class="p">)</span>
+<a id="__codelineno-1-86" name="__codelineno-1-86"></a>
+<a id="__codelineno-1-87" name="__codelineno-1-87"></a>        <span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">layout_horizontal</span><span class="p">)</span>
+<a id="__codelineno-1-88" name="__codelineno-1-88"></a>        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="p">)</span>
+<a id="__codelineno-1-89" name="__codelineno-1-89"></a>        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="p">)</span>
+<a id="__codelineno-1-90" name="__codelineno-1-90"></a>        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="p">)</span>
+<a id="__codelineno-1-91" name="__codelineno-1-91"></a>
+<a id="__codelineno-1-92" name="__codelineno-1-92"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">actualizar_tiempo</span><span class="p">)</span>
+<a id="__codelineno-1-93" name="__codelineno-1-93"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iniciar_parar</span><span class="p">)</span>
+<a id="__codelineno-1-94" name="__codelineno-1-94"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pausar_continuar</span><span class="p">)</span>
+<a id="__codelineno-1-95" name="__codelineno-1-95"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">editor_tiempo_aviso</span><span class="o">.</span><span class="n">timeChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<a id="__codelineno-1-96" name="__codelineno-1-96"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">actualizar_tiempo_aviso</span><span class="p">)</span>
+<a id="__codelineno-1-97" name="__codelineno-1-97"></a>
+<a id="__codelineno-1-98" name="__codelineno-1-98"></a>    <span class="nd">@Slot</span><span class="p">()</span>
+<a id="__codelineno-1-99" name="__codelineno-1-99"></a>    <span class="k">def</span> <span class="nf">actualizar_tiempo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-100" name="__codelineno-1-100"></a>        <span class="n">crono_actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cronometro</span><span class="o">.</span><span class="n">obtenerTiempo</span><span class="p">()</span>
+<a id="__codelineno-1-101" name="__codelineno-1-101"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span>
+<a id="__codelineno-1-102" name="__codelineno-1-102"></a>            <span class="n">crono_actual</span><span class="o">.</span><span class="n">toString</span><span class="p">(</span><span class="s2">&quot;hh:mm:ss&quot;</span><span class="p">))</span>
+<a id="__codelineno-1-103" name="__codelineno-1-103"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span>  <span class="c1"># Actualiza el valor antes de lanzar aviso</span>
+<a id="__codelineno-1-104" name="__codelineno-1-104"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">aviso</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+<a id="__codelineno-1-105" name="__codelineno-1-105"></a>            <span class="k">if</span> <span class="o">-</span><span class="mi">200</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_aviso</span><span class="o">.</span><span class="n">msecsTo</span><span class="p">(</span><span class="n">crono_actual</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span>
+<a id="__codelineno-1-106" name="__codelineno-1-106"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">mensaje</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;Tiempo límite alcanzado&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-107" name="__codelineno-1-107"></a>
+<a id="__codelineno-1-108" name="__codelineno-1-108"></a>    <span class="nd">@Slot</span><span class="p">()</span>
+<a id="__codelineno-1-109" name="__codelineno-1-109"></a>    <span class="k">def</span> <span class="nf">iniciar_parar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-110" name="__codelineno-1-110"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_RESET</span><span class="p">:</span>  <span class="c1"># Iniciar</span>
+<a id="__codelineno-1-111" name="__codelineno-1-111"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__cronometro</span><span class="o">.</span><span class="n">iniciar</span><span class="p">()</span>
+<a id="__codelineno-1-112" name="__codelineno-1-112"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<a id="__codelineno-1-113" name="__codelineno-1-113"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_INICIADO</span>
+<a id="__codelineno-1-114" name="__codelineno-1-114"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">setDisabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-1-115" name="__codelineno-1-115"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;stop&#39;</span><span class="p">]))</span>
+<a id="__codelineno-1-116" name="__codelineno-1-116"></a>        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_PARADO</span><span class="p">:</span>  <span class="c1"># Reiniciar</span>
+<a id="__codelineno-1-117" name="__codelineno-1-117"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_RESET</span>
+<a id="__codelineno-1-118" name="__codelineno-1-118"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span>
+<a id="__codelineno-1-119" name="__codelineno-1-119"></a>                <span class="n">QTime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">(</span><span class="s2">&quot;hh:mm:ss&quot;</span><span class="p">))</span>
+<a id="__codelineno-1-120" name="__codelineno-1-120"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;play&#39;</span><span class="p">]))</span>
+<a id="__codelineno-1-121" name="__codelineno-1-121"></a>        <span class="k">else</span><span class="p">:</span>  <span class="c1"># Parar</span>
+<a id="__codelineno-1-122" name="__codelineno-1-122"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-1-123" name="__codelineno-1-123"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_PARADO</span>
+<a id="__codelineno-1-124" name="__codelineno-1-124"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;restart&#39;</span><span class="p">]))</span>
+<a id="__codelineno-1-125" name="__codelineno-1-125"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">setDisabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-126" name="__codelineno-1-126"></a>
+<a id="__codelineno-1-127" name="__codelineno-1-127"></a>    <span class="nd">@Slot</span><span class="p">()</span>
+<a id="__codelineno-1-128" name="__codelineno-1-128"></a>    <span class="k">def</span> <span class="nf">pausar_continuar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-129" name="__codelineno-1-129"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_INICIADO</span><span class="p">:</span>  <span class="c1"># Pausar</span>
+<a id="__codelineno-1-130" name="__codelineno-1-130"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__cronometro</span><span class="o">.</span><span class="n">pausar</span><span class="p">()</span>
+<a id="__codelineno-1-131" name="__codelineno-1-131"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-1-132" name="__codelineno-1-132"></a>
+<a id="__codelineno-1-133" name="__codelineno-1-133"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_PAUSADO</span>
+<a id="__codelineno-1-134" name="__codelineno-1-134"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;resume&#39;</span><span class="p">]))</span>
+<a id="__codelineno-1-135" name="__codelineno-1-135"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">setDisabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-136" name="__codelineno-1-136"></a>        <span class="k">else</span><span class="p">:</span>  <span class="c1"># Continuar</span>
+<a id="__codelineno-1-137" name="__codelineno-1-137"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__cronometro</span><span class="o">.</span><span class="n">continuar</span><span class="p">()</span>
+<a id="__codelineno-1-138" name="__codelineno-1-138"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-1-139" name="__codelineno-1-139"></a>
+<a id="__codelineno-1-140" name="__codelineno-1-140"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__estado</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CRONOMETRO_INICIADO</span>
+<a id="__codelineno-1-141" name="__codelineno-1-141"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_pausa</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LISTA_ICONOS</span><span class="p">[</span><span class="s1">&#39;pause&#39;</span><span class="p">]))</span>
+<a id="__codelineno-1-142" name="__codelineno-1-142"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">boton_inicio</span><span class="o">.</span><span class="n">setDisabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-1-143" name="__codelineno-1-143"></a>
+<a id="__codelineno-1-144" name="__codelineno-1-144"></a>    <span class="nd">@Slot</span><span class="p">()</span>
+<a id="__codelineno-1-145" name="__codelineno-1-145"></a>    <span class="k">def</span> <span class="nf">actualizar_tiempo_aviso</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-146" name="__codelineno-1-146"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tiempo_aviso</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">editor_tiempo_aviso</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<a id="__codelineno-1-147" name="__codelineno-1-147"></a>
+<a id="__codelineno-1-148" name="__codelineno-1-148"></a>
+<a id="__codelineno-1-149" name="__codelineno-1-149"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-1-150" name="__codelineno-1-150"></a>    <span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span>
+<a id="__codelineno-1-151" name="__codelineno-1-151"></a>    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<a id="__codelineno-1-152" name="__codelineno-1-152"></a>
+<a id="__codelineno-1-153" name="__codelineno-1-153"></a>    <span class="n">crono</span> <span class="o">=</span> <span class="n">CronometroUI</span><span class="p">()</span>
+<a id="__codelineno-1-154" name="__codelineno-1-154"></a>    <span class="n">crono</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-1-155" name="__codelineno-1-155"></a>
+<a id="__codelineno-1-156" name="__codelineno-1-156"></a>    <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition important">
+<p class="admonition-title">Ús de recursos</p>
+<p>Si et fixes, a la línia 42, s'ha definit un diccionari amb les rutes a les icones. Per a definir les rutes s'ha utilitzat els dos punt ":" per a fer referència als recursos. No es tracta d'una ruta al disc dur, sinó que s'indica la ruta al recurs. Aquesta s'indica a un arxiu de recursos ".qrc"</p>
+<p><strong>Mira la relació entre ':/icons/play.png' i el següent arxiu .qrc</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">&lt;!DOCTYPE RCC&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">&lt;RCC</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="nt">&lt;qresource</span> <span class="na">prefix=</span><span class="s">&quot;icons&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="nt">&lt;file</span> <span class="na">alias=</span><span class="s">&quot;play.png&quot;</span><span class="nt">&gt;</span>images/play.png<span class="nt">&lt;/file&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="nt">&lt;file</span> <span class="na">alias=</span><span class="s">&quot;pause.png&quot;</span><span class="nt">&gt;</span>images/pause.png<span class="nt">&lt;/file&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="nt">&lt;file</span> <span class="na">alias=</span><span class="s">&quot;resume.png&quot;</span><span class="nt">&gt;</span>images/resume.png<span class="nt">&lt;/file&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="nt">&lt;file</span> <span class="na">alias=</span><span class="s">&quot;stop.png&quot;</span><span class="nt">&gt;</span>images/stop.png<span class="nt">&lt;/file&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>        <span class="nt">&lt;file</span> <span class="na">alias=</span><span class="s">&quot;restart.png&quot;</span><span class="nt">&gt;</span>images/restart.png<span class="nt">&lt;/file&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="nt">&lt;/qresource&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="nt">&lt;/RCC&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Per a indicar la ruta al recurs hem utilitzat el prefix i l'alias, mentre que el contingut de l'etiqueta xml indica la ruta on es troba la imatge al disc dur.</p>
+<p>Per a produir un arxiu .py de recursos, utilitzarem <strong>pyside6-rcc</strong>. Així, generarem l'arxiu <em>recursos_cronometre.py</em> amb la següent ordre:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>pyside6-rcc recursos_cronometre.qrc -o recursos_cronometre.py
+</code></pre></div></td></tr></table></div>
+</div>
+<h4 id="223-senyals-definits-per-lusuari">2.2.3 Senyals definits per l'usuari</h4>
+<p>Com hem comentat anteriorment, farem servir l'emissió d'un senyal per avisar que el temps s'ha complert. Per això, només cal definir un senyal en el nostre component i emetre'l per codi quan es donen les condicions que desitgem, ja sigui un esdeveniment de l'usuari o unes condicions que es compleixin.</p>
+<p>A la definició del senyal, es rep com a paràmetre el tipus d'informació que l'acompanyarà quan s'emeti. En el punt en què emetem el senyal, donarem valor a aquesta informació, definint-ne ja el valor. En aquest cas emetrem al costat del senyal, un missatge indicant que s'ha complert el temps, així que en la seva definició li passarem com a argument un str.
+Aquest senyal definit mitjançant codi, s'utilitzarà igual que qualsevol altre senyal, és a dir, el connectarem a un slot per executar la funcionalitat desitjada quan s'emeti. Mostrem aquí els fragments que afecten la definició i emissió del senyal:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Signal</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">...</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="bp">self</span><span class="o">.</span><span class="n">missatge</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="o">...</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="bp">self</span><span class="o">.</span><span class="n">missatge</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="err">​​</span><span class="s2">&quot;Temps límit assolit&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="224-logica-interna-del-component">2.2.4 Lògica interna del component</h4>
+<p>Només cal definir la lògica interna del component. La idea bàsica és, definim un QTimer, que és la classe Qt utilitzada per implementar temporitzadors. S'usa connectant una ranura al seu senyal timeout, que serà emesa a intervals regulars cada x mil·lisegons. El nombre de mil·lisegons es rep com a argument a la seva funció start(). 
+Veiem aquí la part que fa referència al temporitzador en el nostre component:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">QTimer</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="o">...</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="bp">self</span><span class="o">.</span><span class="n">__temps</span> <span class="o">=</span> <span class="n">QTimer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">actualitzar_temps</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="o">...</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">start</span> <span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="o">...</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Al nostre component definim un QTimer privat, que no podrà ser modificat des de fora del nostre component. Cada segon actualitzarà el temps mostrat al display del component, ja que hem llançat el QTimer amb el paràmetre 1000. 
+En actualitzar el cronòmetre també comprovarà si heu d'emetre el senyal d'avís. En cas que la diferència entre el temps del cronòmetre i de l'avís sigui menor de 200 mil·lisegons, es llançarà l'avís. S'ha de deixar un petit marge perquè es poden produir retards en els processos que s'estan executant a l'ordinador, i de no deixar aquest marge, la comparació entre el temps actual i el del timeout pot ser massa gran i no llançar l'avís, sobretot en ordinadors lents o amb molts processos en execució.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">__temps</span> <span class="o">=</span> <span class="n">QTimer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="bp">self</span><span class="o">.</span><span class="n">__tiempo</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">actualitzar_temps</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nd">@Slot</span><span class="p">()</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">def</span> <span class="nf">actualitzar_temps</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    <span class="n">crono_actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cronometro</span><span class="o">.</span><span class="n">obtenerTemps</span><span class="p">()</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>        <span class="n">crono_actual</span><span class="o">.</span><span class="n">toString</span><span class="p">(</span><span class="s2">&quot;hh:mm:ss&quot;</span><span class="p">))</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">etiqueta</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span> 
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="c1"># Perquè actualitzeu el valor abans de llançar l&#39;avís</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">aviso</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>        <span class="k">if</span> <span class="o">-</span><span class="mi">200</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__temps_aviso</span><span class="o">.</span><span class="n">msecsTo</span><span class="p">(</span><span class="n">crono_actual</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">mensaje</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="err">​​</span><span class="s2">&quot;Temps límit assolit&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Finalment, necessitem representar l'estat intern del cronòmetre per implementar les funcionalitats de parar/iniciar i reiniciar per una banda i les de pausar/continuar per una altra. Per això definim quatre estats:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>    CRONOMETRO_RESET = 0 # Estat inicial
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    CRONOMETRO_INICIADO = 1
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    CRONOMETRO_PAUSADO = 2
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>    CRONOMETRO_PARADO = 3
+</code></pre></div></td></tr></table></div>
+<p>De l'estat inicial passarà a iniciat prement en iniciar (play). Des d'aquest es podrà parar (stop) o pausar (pause), passant als estats aturat i pausat respectivament. En estat pausat podrà iniciar-se novament amb el continuar (continue) i passarà a iniciat. Des de l'estat aturat, si feu clic a reiniciar (restart) tornareu a l'estat inicial. En el diagrama d'estats següent queda reflectit l'anterior comportament.</p>
+<p><img alt="estats" src="../images/3-estats.png" /></p>
+<p>Amb això tenim complet el codi del nostre component, disponible a l'arxiu DI_U04_A02_01.py (recorda que fa ús del fitxer de recursos DI_U04_A02_03.py). Però un component per si mateix no és útil, ja que no podem executar-lo, ja que només conté la definició i la implementació d'una classe, però cap instància de la mateixa. Per això, veurem en el següent apartat, com integrar-lo en una aplicació.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../1-Alternatives%20en%20la%20creaci%C3%B3%20de%20components/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1 - Alternatives en la creació de components" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              1 - Alternatives en la creació de components
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../3-Utilitzaci%C3%B3%20dels%20components/" class="md-footer__link md-footer__link--next" aria-label="Next: 3 - Utilització de nous components en aplicacions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              3 - Utilització de nous components en aplicacions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

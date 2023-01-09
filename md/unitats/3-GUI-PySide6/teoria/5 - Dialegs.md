@@ -5,9 +5,9 @@ Fins ara hem utilitzat el component QMainWindow per treballar amb les nostres ap
 
 ### 5.1.1 QDialog
 
-Tal com el vostre nom indica, els diàlegs són finestres emergents temporals que ens permeten comunicar-nos amb l'usuari de l'aplicació i que apareixen a causa de la producció d'un esdeveniment. Són finestres modals, és a dir, bloquegen la interacció amb la resta de l'aplicació fins que se n'acabe l'execució, siga tancant-los o introduint la informació que es demana. 
+Tal com el seu nom indica, els diàlegs són finestres emergents temporals que ens permeten comunicar-nos amb l'usuari de l'aplicació i que apareixen a causa de la producció d'un esdeveniment. Són finestres modals, és a dir, bloquegen la interacció amb la resta de l'aplicació fins que se n'acabe l'execució, siga tancant-los o introduint la informació que es demana. 
 
-Per aquest motiu, necessiten el vostre propi bucle d'esdeveniments. Es pot evitar el bloqueig de l'execució amb l'ús de fils d'execució, però queda fora de l'abast d'aquest mòdul. S'hi hauria d'aplicar els coneixements adquirits al mòdul de Programació de Serveis i Processos als desenvolupaments en Qt.
+Per aquest motiu, necessiten el seu propi bucle d'esdeveniments. Es pot evitar el bloqueig de l'execució amb l'ús de fils d'execució, però queda fora de l'abast d'aquest mòdul. S'hi hauria d'aplicar els coneixements adquirits al mòdul de Programació de Serveis i Processos als desenvolupaments en Qt.
 
 A Qt els diàlegs s'implementen com a classes de QDialog o les seves derivades. 
 
@@ -159,7 +159,7 @@ Consulteu [https://doc.qt.io/qt-6/qdialog.html](https://doc.qt.io/qt-6/qdialog.h
     ventana_principal.carregar_traductor(app)
     ~~~
 
-![Dialeg Personalitzat](images/dialeg_personalitzat.png)
+![Dialeg Personalitzat](images/dialeg_tradu%C3%AFt.png)
 
 ## 5.2 QMessageBox
 A l'apartat anterior, hem personalitzat un QDialog, però hi ha quadres de diàleg ja predissenyats a Qt. Es troben disponibles al mòdul QMessageBox i hi ha quatre tipus segons el nivell de severitat de la informació (question, information, warning i critical). Realment, lúnica diferència entre ells és la icona que mostren. A la taula següent es mostren els nivells:
@@ -414,7 +414,7 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
         ~~~
 
 ## 5.4 Altres finestres
-Fins ara hem vist diferents diàlegs modals que executen el vostre propi bucle d'esdeveniments i bloquegen la resta de l'aplicació. Però de vegades ens pot interessar obrir una altra finestra sense bloquejar la finestra principal.
+Fins ara hem vist diferents diàlegs modals que executen al seu propi bucle d'esdeveniments i bloquegen la resta de l'aplicació. Però de vegades ens pot interessar obrir una altra finestra sense bloquejar la finestra principal.
 
 !!!warning "Finestres"
     A Qt, qualsevol widget sense parent és una finestra. Això, a efectes pràctics, vol dir que per mostrar una finestra nova, només hem de crear un Widget i cridar al seu mètode show(). Fixa't que fins i tot podríem crear una aplicació amb diversos QMainWindows.

@@ -40,7 +40,7 @@ La primera disposició que estudiarem serà la disposició en vertical. Hi anir�
 !!!example "Exemple"
     ~~~Python
     from PySide6.QtWidgets import (
-        QApplication, QMainWindow, QWidget, QHBoxLayout, QPushButton
+        QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton
     )
 
 
@@ -52,7 +52,7 @@ La primera disposició que estudiarem serà la disposició en vertical. Hi anir�
             self.setWindowTitle("Layout horizontal")
 
             # Creamos un objeto layout horizontal
-            layout_horizontal = QHBoxLayout()
+            layout_horizontal = QVBoxLayout()
 
             # Creamos un componente principal para la ventana
             componente_principal = QWidget()

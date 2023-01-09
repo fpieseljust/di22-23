@@ -18,14 +18,14 @@ Abans de començar a abordar els menús i les barres d'eines, convé estudiar le
 !!!example "Exemple"
     En un processador de textos, en utilitzar el menú “Fitxer -> Guardar”, el botó “Guardar” de la barra d'eines o utilitzar la drecera de teclat, Ctrl + s normalment, el fitxer que estem editant es guardarà a disc. La funcionalitat és la mateixa en els tres casos, però la interfície utilitzada és diferent. A la barra d'estats sol ser visible si el document en qüestió està desat o ha estat modificat.
 
-Podem crear QActions com a objectes oa través de les funcions de la classe QMenu. Un objecte QAction pot contenir una icona, un text de menú, una drecera de teclat, un text d'estat i un text d'ajuda. Alguns d'aquests elements es poden establir al constructor, però també es poden configurar de manera independent amb setIcon(), setText(), setIconText(), setShortcut(), setStatusTip(), setWhatsThis() i setToolTip(). Es pot canviar la font del menú amb setFont().
+Un objecte QAction pot contenir una icona, un text de menú, una drecera de teclat, un text d'estat i un text d'ajuda. Alguns d'aquests elements es poden establir al constructor, però també es poden configurar de manera independent amb setIcon(), setText(), setIconText(), setShortcut(), setStatusTip(), setWhatsThis() i setToolTip(). Es pot canviar la font del menú amb setFont().
 
-Quan s'ha creat una QAction, l'afegim al menú ia la barra d'eines que volem utilitzar i després el connectem a la ranura que executarà la seva funcionalitat.
+Quan s'ha creat una QAction, l'afegim al menú i a la barra d'eines que volem utilitzar i després el connectem a la ranura que executarà la seua funcionalitat.
 
 ## 4.2 Barra de menús
-Per afegir menús a QMainWindow, utilitzarem el mètode .addMenu() de la barra de menús menuBar(). A aquest nou menú us podem afegir nous submenús amb addMenu() i separadors, per organitzar de forma més coherent les opcions, amb addSeparator().
+Per afegir menús a QMainWindow, utilitzarem el mètode .addMenu() de la barra de menús menuBar(). A aquest nou menú podem afegir nous submenús amb addMenu() i separadors, per organitzar de forma més coherent les opcions, amb addSeparator().
 
-Per afegir una opció de menú que respongui a una funcionalitat, utilitzarem els QAction. 
+Per afegir una opció de menú que responga a una funcionalitat, utilitzarem els QAction. 
 
 !!!example "Exemple"
     ~~~Python
@@ -149,10 +149,9 @@ En aquesta secció mostrarem com utilitzar la barra d'estat. El seu ús principa
 
 Cada indicador d'estat pot ser d'una de les tres categories següents:
 
-- **Temporal**: ocupa la barra d'estat mentre el punter està sobre una acció on s'ha configurat un statusTip. També es pot mostrar utilitzant showMessa, en aquest cas s'oculta en véncer el timeout passat al constructor o en trucar al mètode clearMessage. S'utilitza per donar informació sobre eines o entrades de menú.
+- **Temporal**: ocupa la barra d'estat mentre el punter està sobre una acció on s'ha configurat un statusTip. També es pot mostrar utilitzant showMessage, en aquest cas s'oculta en véncer el timeout passat al constructor o en trucar al mètode clearMessage. S'utilitza per donar informació sobre eines o entrades de menú.
 - **Normal**: mostra informació a través de components (QLabel, QProgressBar o fins i tot QToolButton) afegits a la barra d'eines. Un missatge temporal els pot ocultar i s'utilitza normalment per donar informació a l'usuari sobre l'estat de la vostra aplicació, per exemple número de pàgina en un document.
 - **Permanent**: mai no s'amaga i s'utilitza cridant al mètode addPermanentWidget. S'utilitza per a indicacions importants, per exemple, algunes aplicacions col·loquen un indicador de bloqueig de majúscules a la barra d'estat.
-- 
 
 !!!example "Exemple"
     ~~~Python
