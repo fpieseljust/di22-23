@@ -146,3 +146,77 @@ Per editar les dades d'una cel·la de la taula, podeu fer doble clic a la cel·l
 !!!important "Ús de Model-View"
     La capacitat de gestionar i guardar automàticament els canvis a les dades és un dels avantatges més importants de l'ús de les classes Model-View de PySide. L'arquitectura Model-View millorarà la nostra productivitat i reduirà els errors que poden aparèixer quan hem d'escriure el codi de manipulació de dades per nosaltres mateixos.
 
+### Ús de components amb models predefinits
+
+És molt senzill utilitzar un model predefinit per a mostrar i editar informació. Els models predefinits que podem utilitzar a Qt són:
+
+
+- QSqlTableModel (el que hem utilitzat a l'exemple)
+- QStringListModel
+- QStandardItemModel
+- QFileSystemModel
+- QSqlQueryModel
+- QSqlRelationalTableModel
+- QSortFilterProxyModel
+
+Veiem un exemple amb QSqlTableModel, que és dels més utilitzats en aplicacions:
+
+~~~py
+import sys
+import os
+
+from PySide6.QtCore import Qt
+from PySide6.QtSql import QSqlDatabase, QSqlTableModel
+from PySide6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QMessageBox,
+    QTableView,
+)
+
+class Contacts(QMainWindow):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("QTableView Example")
+        self.resize(415, 200)
+        # Set up the model
+        self.model = QSqlTableModel(self)
+        self.model.setTable("contacts")
+        self.model.setEditStrategy(QSqlTableModel.OnFieldChange)
+        self.model.setHeaderData(0, Qt.Horizontal, "ID")
+        self.model.setHeaderData(1, Qt.Horizontal, "Nom")
+        self.model.setHeaderData(2, Qt.Horizontal, "Treball")
+        self.model.setHeaderData(3, Qt.Horizontal, "Correu")
+        self.model.select()
+        # Set up the view
+        self.view = QTableView()
+        self.view.setModel(self.model)
+        self.view.resizeColumnsToContents()
+        self.setCentralWidget(self.view)
+
+def createConnection():
+    con = QSqlDatabase.addDatabase("QSQLITE")
+    con.setDatabaseName(os.path.join(os.path.dirname(__file__),
+                 "contacts.sqlite"))
+    if not con.open():
+        QMessageBox.critical(
+            None,
+            "QTableView Example - Error!",
+            "Database Error: %s" % con.lastError().databaseText(),
+        )
+        return False
+    return True
+
+app = QApplication(sys.argv)
+if not createConnection():
+    sys.exit(1)
+win = Contacts()
+win.show()
+sys.exit(app.exec_())
+~~~
+
+!!!warning "Models predefinits"
+    Sempre que siga possible, utilitzarem models predefinits, ja que ens estalviaran molta feina i ens evitaran errors de programació. Sols si amb la funcionalitat d'aquests no és suficient, implementarem models abstractes.
+
+!!!warning "Models abstractes"
+    L'ús de models abstractes queda fora de l'abasts d'este curs, però podeu trobar exemples al següent [enllaç](https://doc.qt.io/qtforpython/overviews/modelview.html)
