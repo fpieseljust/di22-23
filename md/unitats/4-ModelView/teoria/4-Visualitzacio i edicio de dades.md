@@ -221,6 +221,7 @@ sys.exit(app.exec_())
 !!!warning "Models abstractes"
     L'ús de models abstractes queda fora de l'abasts d'este curs, però podeu trobar exemples al següent [enllaç](https://doc.qt.io/qtforpython/overviews/modelview.html)
 
+
 ## Ús de delegats
 
 Quan la informació que volem editar no és un text, podem fer ús de delegats per modificar-la. Per exemple, un SpinBox per a editar un enter, un ComboBox per a limitar les opcions d'un text, un DateEdit per a editar un data...
