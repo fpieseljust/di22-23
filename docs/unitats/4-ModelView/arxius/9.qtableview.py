@@ -2,7 +2,7 @@ import sys
 import os
 
 from PySide6.QtCore import Qt
-from PySide6.QtSql import QSqlDatabase, QSqlTableModel
+from PySide6.QtSql import QSqlDatabase, QSqlTableModel, QSqlQuery
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow,
@@ -20,14 +20,16 @@ class Contacts(QMainWindow):
         self.model.setTable("contacts")
         self.model.setEditStrategy(QSqlTableModel.OnFieldChange)
         self.model.setHeaderData(0, Qt.Horizontal, "ID")
-        self.model.setHeaderData(1, Qt.Horizontal, "Name")
-        self.model.setHeaderData(2, Qt.Horizontal, "Job")
-        self.model.setHeaderData(3, Qt.Horizontal, "Email")
+        self.model.setHeaderData(1, Qt.Horizontal, "Nom")
+        self.model.setHeaderData(2, Qt.Horizontal, "Treball")
+        self.model.setHeaderData(3, Qt.Horizontal, "Correu")
+        #self.model.setFilter("id = 2")
         self.model.select()
         # Set up the view
         self.view = QTableView()
         self.view.setModel(self.model)
         self.view.resizeColumnsToContents()
+        #self.view.hideColumn(0)
         self.setCentralWidget(self.view)
 
 def createConnection():
